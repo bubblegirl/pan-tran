@@ -4,6 +4,21 @@ from glob import glob
 from collections import defaultdict
 from re import sub
 
+def cdhit1():
+
+def transdec(): #fix extensions
+	TransDecoder.LongOrfs -t CG15_Gambierdiscus-polynesiensis_assembly_cdhit.fasta
+
+	TransDecoder.Predict  --retain_long_orfs 100 --cpu 15 -t CG15_Gambierdiscus-polynesiensis_assembly_cdhit.fasta
+
+def cdhit2(): #fix extensions
+	for file in glob('../transdecoder/*_cdhit.fasta.transdecoder.pep'):
+#	fileID = file.split(".")[0]
+		with open(file, 'r'):
+			cdhit_cmd = "/mnt/wonderworld/programs/cd-hit-v4.6.8-2017-0621/cd-hit-est -i " + file + " -o " + file + ".CDS-clust.clstr -T 10 -M 5000 -G 0 -c 0.98 -aS 1.00 -aL 0.005"
+# -aS value varied in paper.
+			os.system(cdhit_cmd)
+
 def extrclustID(): #make doc of all rep seq IDs of clusters per organisms
 	for file in glob('*-clust.clstr.clstr'):
 		strain = file.split("_")[0]
@@ -55,7 +70,7 @@ def extrseq(): # rifle through transdecoder file for rep seq per cluster, extr a
 		strain = file.split("_")[0]
 		ident = file.split("_")[1]
 		species = strain + '_' + ident
-		with open(species + '_transdec_cd-hit_cluster-out.fasta', 'w') as gold:
+		with open(species + '_transdec_cd-hit_cluster-out.faa', 'w') as gold:
 			with open(file, 'r') as AAfile:
 				with open(species +'_cluster-reps.txt', 'r') as repids:
 					colnames = ['a']
@@ -74,6 +89,8 @@ def extrseq(): # rifle through transdecoder file for rep seq per cluster, extr a
 								gold.write("\n")
 #						gold.write(rstrip())
 
+
+cdhit2()
 extrclustID()
 singlelineFASTA()
 extrseq()		

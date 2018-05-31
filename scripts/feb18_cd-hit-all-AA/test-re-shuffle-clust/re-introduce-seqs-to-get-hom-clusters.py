@@ -17,7 +17,7 @@ def splitclusters():
 			clustfi.write(line.strip())
 			clustfi.write("\n")
 
-def takeoutrep():
+def repname():
 	for file in glob('Cluster-*_int.txt'):
 		naming = file.split('_')
 		namings = naming[0]
@@ -31,10 +31,57 @@ def takeoutrep():
 					toe = sock[1]
 					woot = toe[:-3]
 #					print woot
-					open(namings + '_' + woot + '.txt', 'w')
+					datone = open(namings + '_' + woot + '.txt', 'w')
 				else:
-					continue
-			for line in elf:
+ 					continue
+#whaaaat if I glob the write file and then extract the cluster name from there? all followed bu int so that should be doable
+def takeoutrep():
+	for file in glob('Cluster-*>*.txt'):
+		naming = file.split('_')
+		namings = naming[0]
+		with open(file, 'w') as yaarp:
+			with open(namings + '_int.txt', 'r') as snarfle:
+				for line in snarfle:
+					if '*' in line:
+						continue
+					else:
+						nosey = line.split("\t")
+						wosey = nosey[1]
+						whisker = wosey.split()
+						twitch = whisker[1]
+						wiggle = twitch[:-3]
+						yaarp.write(wiggle.strip())
+						yaarp.write("\n")
+#next need to go through each cluster file
+def lookupAA():
+	for file in glob('Cluster-*>*.txt'):
+		with open(file, 'r+') as flower:
+			with open('allAA_clust-namefix.fasta', 'r') as field:
+				for line in flower:
+					petal = line
+					for line in field:
+						blade = line
+						print petal
+						print blade
+#incompatibility in na,ing convention between the files
+						if petal in blade:
+							print petal					
+#			with open('all-trans_AA_clust-namefix.clstr', 'r') as field:
+#				leaf = line in field
+					
+
+#			for line in elf:
+#				print line
+#				with open(datone, 'w') as yesssz:
+#					if '*' in line:
+#						continue
+#					else:
+#						plz = line.split("\t")
+#						works = plz[1]
+#						wif = works.split()
+#						stoopid = wif[1]
+#						nestings = stoopid[:-3]
+#						print nestings				
 				#how the fuck do I open the next write file with the actual ID? Ideally I'd read from elf, then print any line wihtout a wild card in it into the new file which has the the cluster and rep ID in the name.
 #	for file in glob('Cluster-*_int.txt'):
 #		nam = file.split('_')
@@ -70,6 +117,8 @@ def takeoutrep():
 	
 
 splitclusters()
+repname()
 takeoutrep()
+lookupAA()
 #diffaprroach()
 #extrotherseqs()

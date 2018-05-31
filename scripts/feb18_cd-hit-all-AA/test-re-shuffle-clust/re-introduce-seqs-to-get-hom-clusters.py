@@ -32,6 +32,15 @@ def takeoutrep():
 					woot = toe[:-3]
 #					print woot
 					open(namings + '_' + woot + '.txt', 'w')
+				else:
+					continue
+			for line in elf:
+				#how the fuck do I open the next write file with the actual ID? Ideally I'd read from elf, then print any line wihtout a wild card in it into the new file which has the the cluster and rep ID in the name.
+#	for file in glob('Cluster-*_int.txt'):
+#		nam = file.split('_')
+#		nams = nam[0]
+#		with open(nams + "_>*.txt", 'r') as cerne:
+#			print cerne
 #need something in here to discern the rep seq.... *
 #			if "*" in line:
 #				l = line.split("\t")

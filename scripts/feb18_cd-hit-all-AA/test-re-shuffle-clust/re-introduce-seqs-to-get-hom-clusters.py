@@ -58,14 +58,20 @@ def lookupAA():
 		with open(file, 'r+') as flower:
 			with open('allAA_clust-namefix.fasta', 'r') as field:
 				for line in flower:
+#I think I need to turn flower into a list/dataframe so it's not two sets of line commands that  are getting searched
 					petal = line
+#wrong way aropund? Should be going through flower and searching field, not other way around
 					for line in field:
-						blade = line
-						print petal
-						print blade
+							if '>' in line:
+								print petal
+								blade = line.split()
+								blades = blade[0]
+								print blade
+#								if blades in petal:
+#									print petal
 #incompatibility in na,ing convention between the files
-						if petal in blade:
-							print petal					
+#						if petal in blade:
+#							print petal					
 #			with open('all-trans_AA_clust-namefix.clstr', 'r') as field:
 #				leaf = line in field
 					

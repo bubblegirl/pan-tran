@@ -19,7 +19,7 @@
  \addtolength{\voffset}{-1cm}
  \setlength{\parindent}{0pt}
  
-\title{Pan-transcriptomics of \emph{Gambierdiscus}, with a focus on \emph{G. polynesiensis}. $^{1}$}
+\title{Using transcriptomics to investigate evolution and toxicology in \textit{Gambierdiscus}. $^{1}$}
 \author{Key words: \emph{Gambierdiscus}, ciguatoxin, pan-transcriptome}
 \date{}
 
@@ -39,49 +39,80 @@ The ithree institute, University of Technology Sydney, Ultimo, 2007 NSW, Austral
 Climate Change Cluster (C3), University of Technology Sydney, Ultimo, 2007 NSW, Australia
 \newpage
 \section*{Abstract}
-
-
-
 Species of the genus \textit{Gambierdiscus} produce Ciguatoxins (CTXs), the causative agent of ciguatera fish poisoning, a potentially debilitating seafood borne illness. 
-Species of \textit{Gambierdiscus} possess very large genomes, ~35 Gbp, and, as with other dinoflagellates, possess unique genomic characteristics, e.g. highly repetitive and complex genome architecture, meaning that genomic sequencing remains infeasible. 
-While \textit{G. polyneisensis} is the only species verified as CTX producers (through LC-MS/MS), others produce different types of toxins such as Maitotoxins, Gambierol, and other uncharacterized compounds. 
-Understanding the evolution of Gambierdiscus and their toxins requires knowledge about their genetic and metabolic potential. 
-Transcriptomic approaches circumvent the challenges of whole genome sequencing and enable the investigation of the core-transcriptome of \textit{Gambierdiscus} species. 
+Species of \textit{Gambierdiscus} possess very large genomes, 32 - 35 Gbp, and, as with other dinoflagellates, possess unique genomic characteristics, such as highly repetitive and complex genome architecture. 
+The exact toxins produced by species of \textit{Gambierdiscus} remain largely unclear. 
+It has been verified using LCMS on multiple strains that the species \textit{Gambierdiscus polynesiensis} produces anaologs of CTXs. 
+Other species appear to produce maitotoxins, gambierol, and other uncharacterised toxins. 
+An understanding of the evolution of \textit{Gambierdiscus} and their toxins requires information regarding their genetics. 
+Transcriptomic sequencing is a feasible alternative to genome sequencing. 
 In this study, we generated de novo RNA-seq libraries for \textit{Gambierdiscus polynesiensis}, \textit{Gambierdiscus carpenteri}, \textit{Gambierdiscus} cf. \textit{silvae} and \textit{Gambierdiscus lapillus}, compared these to a previously sequenced \textit{Gambierdiscus australes}, to discover a set of core genes shared by all species. 
 We present a Gambierdiscus core transcriptome, which might be used to investigate candidate genes related to toxin production.\\
 Further to investigate CTX production more specifically, we compared two CTX -producing strains of \textit{Gambierdiscus polynesiensis} to one non-CTX producing strain, verified by LC-MS/MS, to look for clues about pathways involved in ciguatoxin production.
 
 \newpage
 \section*{Introduction}
--protist genome sizes, obstacles with sequencing, lack of reference genomes available \\
-- transcriptomes as alternative, dino genetic elements, transcriptomes a good stand in for ref genome\\
-- Gambierdiscus intro, clinical relevance of CFP, interest in monitoring\\
-- G. polynesiensis and implications in CFP specifically, CTX and associated search for PKS genes\\
-- focus of study: core-transcriptome for \textit{Gambierdiscus} for RNA-seq reference purposes and polynesiensis comparison to look for expression differences between toxic and non-toxic strains
+%more shit for manuscript:
+%- Gambierdiscus intro, clinical relevance of CFP, interest in monitoring\\
+%-protist genome sizes, obstacles with sequencing, lack of reference genomes available \\
+%- transcriptomes as alternative, dino genetic elements, transcriptomes a good stand in for ref genome\\
+%- G. polynesiensis and implications in CFP specifically, CTX and associated search for PKS genes\\
+%- focus of study: core-transcriptome for \textit{Gambierdiscus} for RNA-seq reference purposes and polynesiensis comparison to look for expression differences between toxic and non-toxic strains
+
+%chapter intro stuff:
+%-general dino stuff
+
+%- importance of ref genome
+The analysis of any genetic data relies on the reference to a known, closely related entity. 
+Without a functional protein or genome reference database, the generation of sequencing data would be like pissing in the wind. 
+A reference is essential in determining both the adequacy of the sequencing methodology as well as interpretation of results. 
+           
+
+%- due to no ref gen, importance of transciptome and features that allow for approximation
+
+%- other pan-tran work ie koid and bacterial.. yeast?
+
+%- In this study.. go through LC-MS and toxicology info
+
 \newpage
 \section*{Methods}
+%more shit for manuscript:
+%\subsection*{Culture conditions}
+% Kirsty to insert method but not in chapter
+%\subsection*{RNA isolation}
+% Kirsty to insert method but not in chapter
+%\subsection*{Library prep and sequencing}
+% Kirsty to insert method but not in chapter
+\subsection*{Transcriptome assembly}
+Transcriptomes used in this chapter were the RNA-seq libraries for \textit{G. carpenteri} (UTSMER9A3), \textit{G. lapillus} (HG4), \textit{G. polynesiensis} (CG15) and \textit{G.} cf. \textit{silvae} (HG5) generated for \textbf{chapter 4}. 
+\textit{G. australes} (MMETSP0776) RNA-seq library was downloaded from the MMETSP public database. 
+Seq libraries were assembled as per the transcriptome assembly subsection in the methods of \textit{chapter 4}, without diginorm. 
+Interpro scan annotations were obtained.
 
-\subsection*{Culture conditions}
-%TODO Kirsty to insert method
-\subsection*{RNA isolation}
-%TODO Kirsty to insert method
-\subsection*{Library prep and sequencing}
-%TODO Kirsty to insert method
-\subsection*{Transcriptome assembly \& annotation}
+\subsection*{Homolog clustering}
+-cdhit
+-transdecoder
+-get_hom
+-analysis
+-scripts
 
-\subsection*{Publicly available transcriptomes}
+\subsection*{PKS search}
+-interpro scan output 
+-scripts
 
-\subsection*{Pan-transcriptome generation}
+Hmmer libraries of PKS active domains are available on r
 
-\subsection*{\textit{G. polynesiensis} comparison}
+%\subsection*{\textit{G. polynesiensis} comparison}
 \newpage
 \section*{Results}
 \FloatBarrier
-\subsection*{Transcriptome overview}
-- seq and annotation stats for \textit{Gambierdiscus polynesiensis} CAWD254 and Table ~\ref{tbl:SeqTable}
-\subsection*{\emph{Gambierdiscus} inter-species core \& pan transcriptome}
+%\subsection*{Transcriptome overview}
+%- seq and annotation stats for \textit{Gambierdiscus polynesiensis} CAWD254 and Table ~\ref{tbl:SeqTable}
+\subsection*{\emph{Gambierdiscus} inter-species core-transcriptome}
 
-\subsection*{\emph{Gambierdiscus polynesiensis} intra-species core \& pan transcriptome}
+\subsection*{\emph{Gambierdiscus} inter-species pan-transcriptome}
+
+%\subsection*{\emph{Gambierdiscus polynesiensis} intra-species core \& pan transcriptome}
 
 \subsubsection*{Polyketide synthase genes}
 \begin{table}
@@ -103,10 +134,10 @@ Further to investigate CTX production more specifically, we compared two CTX -pr
 \textit{Gambierdiscus polynesiensis}&CG15&CTX +ve; MTX +ve&CTX N/A; MTX N/A&SRR6821723
 &Kretzschmar '18 in prep\\
 \hline
-\textit{Gambierdiscus polynesiensis}&CAWD212&CTX +ve; MTX +ve&CTX N/A; MTX N/A&Kohli pers. comm.&\cite{rhodes2014production}\\
-\hline
-\textit{Gambierdiscus polynesiensis}&CAWD254&CTX -ve; MTX -ve&CTX N/A; MTX N/A&&This study\\
-\hline
+%\textit{Gambierdiscus polynesiensis}&CAWD212&CTX +ve; MTX +ve&CTX N/A; MTX N/A&Kohli pers. comm.&\cite{rhodes2014production}\\
+%\hline
+%\textit{Gambierdiscus polynesiensis}&CAWD254&CTX -ve; MTX -ve&CTX N/A; MTX N/A&&This study\\
+%\hline
 \textit{Gambierdiscus} cf. \textit{silvae}&HG5&CTX -ve; MTX +ve&CTX +ve; MTX +ve&SRR6821721
 &Kretzschmar '18 in prep, \cite{larsson2018toxicology,kretzschmar2017characterization}\\
 \hline

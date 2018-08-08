@@ -60,7 +60,19 @@ Further to investigate CTX production more specifically, we compared two CTX -pr
 %- focus of study: core-transcriptome for \textit{Gambierdiscus} for RNA-seq reference purposes and polynesiensis comparison to look for expression differences between toxic and non-toxic strains
 
 %chapter intro stuff:
-%-general dino stuff
+%-general dino stuff, genetic peculiarities
+ 
+- loss of nucleosomes \cite{rizzo1972chromosomal}
+- high DNA content \cite{lajeunesse2005symbiodinium}
+- thymine nucleotide replacement with uracil \cite{rae1976hydroxymethyluracil}
+- plastic and mitochondrial genes widely incorporated into - genome \cite{bachvaroff2004dinoflagellate}
+- horizontal gene transfer rife
+- potential unlinking of transciptome and observed protein expression \cite{bachvaroff2008stop}
+- large gene families 
+- trans-splicing creates pool of fully mature, useable mRNA that can then be selected from .. may be why transcriptome good approximation of genome \cite{lidie2007spliced,zhang2007spliced}
+- werid as fuck transcription factors \cite{guillebault2002new}
+- dinoSL .. trans-spliced leader present in 2/3 of genes detected and in 12/15 of highly expressed \cite{bachvaroff2008stop}
+- genes of highly expressed proteins are present in tandem arrays \cite{bachvaroff2008stop}
 
 %- importance of ref genome
 The analysis of any genetic data relies on the reference to a known, closely related entity. 
@@ -92,7 +104,7 @@ Interpro scan annotations were obtained.
 \subsection*{Homolog clustering}
 -cdhit
 -transdecoder
--get_hom
+-get\_hom
 -analysis
 -scripts
 
@@ -120,26 +132,25 @@ Hmmer libraries of PKS active domains are available on r
 \label{tbl:SeqTable}
 \begin{tabular}{ | p{3cm} | p{2cm} | p{2.5cm} | p{2.5cm} | p{2cm} | p{2cm}|}
 \hline
-\textbf{Species} & \textbf{Strain}& \textbf{LC-MS/MS} & \textbf{N2A
-} & \textbf{Accession ID} & \textbf{References} \\
+\textbf{Species} & \textbf{Source location}&\textbf{LC-MS/MS} & \textbf{Toxicity via bioassay} & \textbf{Accession ID} & \textbf{References} \\
 \hline
-\textit{Gambierdiscus australes}&CAWD149& CTX -ve; MTX +ve&CTX +ve; MTX N/A&MMETSP0766&\cite{keeling2014marine,rhodes2010toxic,rhodes2014production}\\
+\textit{Gambierdiscus australes} (CAWD149)&Rarotonga, Cook Islands& CTX -ve; MTX +ve&CTX +ve; MTX N/A&MMETSP0766&\cite{keeling2014marine,rhodes2010toxic,rhodes2014production,munday2017ciguatoxins}\\
 \hline
-\textit{Gambierdiscus carpenteri}&UTSMER9A&CTX -ve; MTX -ve&CTX -ve; MTX +ve&SRR6821720
-&Kretzschmar '18 in prep, \cite{larsson2018toxicology}\\
+\textit{Gambierdiscus carpenteri} (UTSMER9A)&Merimbula, NSW, Australia&CTX -ve; MTX -ve&CTX -ve; MTX +ve&SRR6821720
+&\textbf{chapter 4} \& \cite{larsson2018toxicology}\\
 \hline
-\textit{Gambierdiscus lapillus}&HG4&CTX -ve; MTX +ve&CTX +ve; MTX +ve&SRR6821722
-&Kretzschmar '18 in prep, \cite{larsson2018toxicology,kretzschmar2017characterization}\\
+\textit{Gambierdiscus lapillus} (HG4)&Heron Island, QLD, Australia&CTX -ve; MTX +ve&CTX +ve; MTX +ve&SRR6821722
+&\textbf{chapter 4} \& \cite{larsson2018toxicology,kretzschmar2017characterization}\\
 \hline
-\textit{Gambierdiscus polynesiensis}&CG15&CTX +ve; MTX +ve&CTX N/A; MTX N/A&SRR6821723
-&Kretzschmar '18 in prep\\
+\textit{Gambierdiscus polynesiensis} (CG15)&Rarotonga, Cook Islands&CTX +ve; MTX +ve&CTX N/A; MTX N/A&SRR6821723
+&\textbf{chapter 4} \\
 \hline
 %\textit{Gambierdiscus polynesiensis}&CAWD212&CTX +ve; MTX +ve&CTX N/A; MTX N/A&Kohli pers. comm.&\cite{rhodes2014production}\\
 %\hline
 %\textit{Gambierdiscus polynesiensis}&CAWD254&CTX -ve; MTX -ve&CTX N/A; MTX N/A&&This study\\
 %\hline
-\textit{Gambierdiscus} cf. \textit{silvae}&HG5&CTX -ve; MTX +ve&CTX +ve; MTX +ve&SRR6821721
-&Kretzschmar '18 in prep, \cite{larsson2018toxicology,kretzschmar2017characterization}\\
+\textit{Gambierdiscus} cf. \textit{silvae} (HG5)&Heron Island, QLD, Australia&CTX -ve; MTX +ve&CTX +ve; MTX +ve&SRR6821721
+&\textbf{chapter 4} \& \cite{larsson2018toxicology,kretzschmar2017characterization}\\
 \hline
 \end{tabular}
 \end{table}
@@ -148,14 +159,16 @@ Hmmer libraries of PKS active domains are available on r
 \section*{Discussion}
 -overall summary of study
 \subsection*{core \textit{Gambierdiscus} transcriptome}
--discuss common gene pathways found\\
--discuss usefulness for future studies\\
--discuss potential short commings from different seq runs and methods and number of species used with only one rep per species
+- \cite{lidie2005gene} comprehensive index of genes in K. brevis
+\subsubsection*{discuss common gene pathways found}
+\subsubsection*{discuss usefulness for future studies}
+\subsubsection*{discuss potential short commings} 
+- from different seq runs and methods and number of species used with only one rep per species \\
 
-\subsection*{core \textit{G. polynesiensis} transcriptome}
-- discuss common gene pathways found \\
--discuss usefulness for future studies\\
--discuss potential short commings
+%\subsection*{core \textit{G. polynesiensis} transcriptome}
+%- discuss common gene pathways found \\
+%-discuss usefulness for future studies\\
+%-discuss potential short commings
 \subsubsection*{Expression of genes involved in polyketide production}
 - discuss if different gene sets were expressed between toxic and non- toxic strains\\
 - discuss if diff genes between all 3 strains\\

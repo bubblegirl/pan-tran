@@ -61,18 +61,19 @@ Further to investigate CTX production more specifically, we compared two CTX -pr
 
 %chapter intro stuff:
 \subsection*{general dino stuff, genetic peculiarities}
- - loss of nucleosomes \cite{rizzo1972chromosomal}
-- high DNA content \cite{lajeunesse2005symbiodinium}
-- thymine nucleotide replacement with uracil \cite{rae1976hydroxymethyluracil}
-- plastic and mitochondrial genes widely incorporated into - genome \cite{bachvaroff2004dinoflagellate}
-- horizontal gene transfer rife
-- potential unlinking of transciptome and observed protein expression \cite{bachvaroff2008stop}
-- large gene families 
-- trans-splicing creates pool of fully mature, useable mRNA that can then be selected from .. may be why transcriptome good approximation of genome \cite{lidie2007spliced,zhang2007spliced}
-- werid as fuck transcription factors \cite{guillebault2002new}
-- dinoSL .. trans-spliced leader present in 2/3 of genes detected and in 12/15 of highly expressed \cite{bachvaroff2008stop,lidie2007spliced}
-- genes of highly expressed proteins are present in tandem arrays \cite{bachvaroff2008stop}
-- post-transcriptional control of protein expression and extremely long mRNA half lives \cite{morey2013global}
+ - loss of nucleosomes \cite{rizzo1972chromosomal}\\
+- high DNA content \cite{lajeunesse2005symbiodinium}\\
+- thymine nucleotide replacement with uracil \cite{rae1976hydroxymethyluracil}\\
+- plastic and mitochondrial genes widely incorporated into - genome \cite{bachvaroff2004dinoflagellate}\\
+- horizontal gene transfer rife\\
+- potential unlinking of transciptome and observed protein expression \cite{bachvaroff2008stop}\\
+- large gene families \\
+- trans-splicing creates pool of fully mature, useable mRNA that can then be selected from .. may be why transcriptome good approximation of genome \cite{lidie2007spliced,zhang2007spliced}\\
+- werid as fuck transcription factors \cite{guillebault2002new}\\
+- dinoSL .. trans-spliced leader present in 2/3 of genes detected and in 12/15 of highly expressed \cite{bachvaroff2008stop,lidie2007spliced}\\
+- genes of highly expressed proteins are present in tandem arrays \cite{bachvaroff2008stop}\\
+- post-transcriptional control of protein expression and extremely long mRNA half lives \cite{morey2013global}\\
+- smRNA as possible post-transcriptional regulation mechanism \cite{baumgarten2013integrating}
 
 \subsection*{importance of ref genome}
 The analysis of any genetic data relies on the reference to a known, closely related entity. 
@@ -102,17 +103,15 @@ Seq libraries were assembled as per the transcriptome assembly subsection in the
 Interpro scan annotations were obtained.
 
 \subsection*{Homolog clustering}
--cdhit
--transdecoder
--get\_hom
--analysis
--scripts
-
+-cdhit\\
+-transdecoder\\
+-get\_hom \\
+-analysis \\
+-scripts 
 \subsection*{PKS search}
--interpro scan output 
+-interpro scan output \\
+- hmmer libs \\
 -scripts
-
-Hmmer libraries of PKS active domains are available on r
 
 %\subsection*{\textit{G. polynesiensis} comparison}
 \newpage
@@ -121,12 +120,45 @@ Hmmer libraries of PKS active domains are available on r
 %\subsection*{Transcriptome overview}
 %- seq and annotation stats for \textit{Gambierdiscus polynesiensis} CAWD254 and Table ~\ref{tbl:SeqTable}
 \subsection*{\emph{Gambierdiscus} inter-species core-transcriptome}
-
+\subsubsection*{General info}
+- number of clusters\\
+- percentage annotated \\
+- highest number of contigs per cluster and what pathway\\
+- heatmap if I can get it working
+\subsubsection*{All species}
+- number of clusters\\
+- percentage annotated \\
+- pathways present
+\subsubsection*{Softcore - 4 of 5 species}
+- number of clusters\\
+- percentage annotated \\
+- pathways present\\
+- which most commonly not present
 \subsection*{\emph{Gambierdiscus} inter-species pan-transcriptome}
+- which species most commonly solo\\
+- number of clusters\\
+- percentage annotated \\
+- pathways present\\
+- any change in contig numbers between species within clusters
+\subsubsection*{Unique clusters}
+- which species most commonly solo\\
+- number of clusters\\
+- percentage annotated \\
+- pathways present\\
+
 
 %\subsection*{\emph{Gambierdiscus polynesiensis} intra-species core \& pan transcriptome}
-
+\subsection*{Looking into toxin producers}
+\subsubsection*{Clusters with \textit{G. lapillus}, \textit{G. polynesiensis} \& \textit{G. cf. silvae}}
+\subsubsection*{\textit{G. polynesiensis solo clusters}}
+- number of clusters\\
+- percentage annotated \\
+- pathways present\\
 \subsubsection*{Polyketide synthase genes}
+- number of contigs found in each transcriptome\\
+- how many clusters do they end up in and what is the proportion of species in there \\
+- any multi-domain ones?\\
+
 \begin{table}
 \caption{\emph{Gambierdiscus} species transcriptomes used in this study along with their toxicity, toxin profile, accession numbers and source.}
 \label{tbl:SeqTable}
@@ -160,19 +192,24 @@ Hmmer libraries of PKS active domains are available on r
 -overall summary of study
 \subsection*{core \textit{Gambierdiscus} transcriptome}
 - \cite{lidie2005gene} comprehensive index of genes in K. brevis to compare to 
-\subsubsection*{discuss common gene pathways found}
-\subsubsection*{discuss usefulness for future studies}
-\subsubsection*{discuss potential short commings} 
-- from different seq runs and methods and number of species used with only one rep per species \\
 
+\subsubsection*{discuss common gene pathways found}
+
+\subsubsection*{discuss usefulness for future studies}
+
+\subsubsection*{Expression of genes involved in polyketide production}
+- discuss if different gene sets were expressed between toxic and non- toxic strains\\
+- discuss if diff genes between all 3 strains\\
+- discuss short comings with CAWD254 not having bioassays run, sequencing differences etc
+
+\subsubsection*{discuss potential short commings} 
+- from different seq runs and methods and seq depth may vary, especially \textit{G. australes} \\
+- intra-speces variation so one isolate per species may not be representative \\
+- unknown if processes other than PKS play a role in toxin production
 %\subsection*{core \textit{G. polynesiensis} transcriptome}
 %- discuss common gene pathways found \\
 %-discuss usefulness for future studies\\
 %-discuss potential short commings
-\subsubsection*{Expression of genes involved in polyketide production}
-- discuss if different gene sets were expressed between toxic and non- toxic strains\\
-- discuss if diff genes between all 3 strains\\
-- discuss short comings with CAWD254 not having bioassays run, sequencing differneces etc
 
 %\newpage
 \section*{Conclusion}

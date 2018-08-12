@@ -96,15 +96,17 @@ A reference is essential in determining both the adequacy of the sequencing meth
 % Kirsty to insert method but not in chapter
 %\subsection*{Library prep and sequencing}
 % Kirsty to insert method but not in chapter
-\subsection*{Transcriptome assembly}
+\subsection*{Transcriptome acquisition}
 Transcriptomes used in this chapter were the RNA-seq libraries for \textit{G. carpenteri} (UTSMER9A3), \textit{G. lapillus} (HG4), \textit{G. polynesiensis} (CG15) and \textit{G.} cf. \textit{silvae} (HG5) generated for \textbf{chapter 4}. 
 \textit{G. australes} (MMETSP0776) RNA-seq library was downloaded from the MMETSP public database. 
 Seq libraries were assembled as per the transcriptome assembly subsection in the methods of \textit{chapter 4}, without diginorm. 
-Interpro scan annotations were obtained.
+
 
 \subsection*{Homolog clustering}
--cdhit\\
--transdecoder\\
+Cd-hit was used to cluster the contigs from assemblies with the flags T 10 -M 5000 -G 0 -c 1.00 -aS 1.00 -aL 0.005 \cite{fu2012cd}. 
+Then Transdecoder predicted the protein coding regions of the nucleotide clusters which were subsequently clustered adain with cd-hit as before with the exception of -c 0.98 \cite{haas2016transdecoder}.
+Protein clusters were annotated with Interproscan v5.27 with local lookup server \cite{quevillon2005interproscan}.
+
 -get\_hom \\
 -analysis \\
 -scripts \\
@@ -121,12 +123,56 @@ Interpro scan annotations were obtained.
 %\subsection*{Transcriptome overview}
 %- seq and annotation stats for \textit{Gambierdiscus polynesiensis} CAWD254 and Table ~\ref{tbl:SeqTable}
 \subsection*{\emph{Gambierdiscus} inter-species core-transcriptome}
+
 \subsubsection*{General info}
 - number of clusters\\
 - percentage annotated \\
 - highest number of contigs per cluster and what pathway\\
 - heatmap if I can get it working
-\subsubsection*{All species}
+- annotation differences between transcriptomes
+\begin{figure} 
+\includegraphics[scale=.78]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum1-bio.png} 
+\caption{Summary of biological processes GO annotations between core, softcore and unique clusters at GOSUM level 1.} 
+\label{fig:SpecGo1Bio}
+\end{figure} 
+\FloatBarrier
+
+\begin{figure} 
+\includegraphics[scale=.8]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum1-cell.png} 
+\caption{Summary of cellular GO annotations between core, softcore and unique clusters at GOSUM level 1.} 
+\label{fig:SpecGo1Cell}
+\end{figure} 
+\FloatBarrier
+
+\begin{figure} 
+\includegraphics[scale=1]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum1-molec.png} 
+\caption{Summary of molecular GO annotations between core, softcore and unique clusters at GOSUM level 1.} 
+\label{fig:SpecGo1Molec}
+\end{figure} 
+\FloatBarrier
+
+\begin{figure} 
+\includegraphics[scale=.9]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum2-bio.png} 
+\caption{Summary of biological processes GO annotations between core, softcore and unique clusters at GOSUM level 2.} 
+\label{fig:SpecGo2Bio}
+\end{figure} 
+\FloatBarrier
+
+\begin{figure} 
+\includegraphics[scale=1]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum2-cell.png} 
+\caption{Summary of cellular GO annotations between core, softcore and unique clusters at GOSUM level 2.} 
+\label{fig:SpecGo2Cell}
+\end{figure} 
+\FloatBarrier
+
+\begin{figure} 
+\includegraphics[scale=.85]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum2-molec.png} 
+\caption{Summary of molecular GO annotations between core, softcore and unique clusters at GOSUM level 2.} 
+\label{fig:SpecGo2Molec}
+\end{figure} 
+\FloatBarrier
+
+\subsubsection*{Core transcritome}
 - number of clusters\\
 - percentage annotated \\
 - GOSUM summary \\
@@ -192,50 +238,51 @@ Interpro scan annotations were obtained.
 \newpage
 \section*{Discussion}
 -overall summary of study
+
 \subsection*{core \textit{Gambierdiscus} transcriptome}
 - \cite{lidie2005gene} comprehensive index of genes in K. brevis to compare to 
 
 \subsubsection*{discuss common \& different gene pathways found}
 
 \begin{figure} 
-\includegraphics[scale=.6]{3Aug18_cluster-investigation/figures/Gambi-gosum1-bio-graph.png} 
+\includegraphics[scale=.6]{3Aug18_cluster-investigation/figures/gosum-pan/Pan-gosum1-bio-graph.png} 
 \caption{Summary of biological processes GO annotations between core, softcore and unique clusters at GOSUM level 1.} 
-\label{fig:}
+\label{fig:PanGo1Bio}
 \end{figure} 
 \FloatBarrier
 
 \begin{figure} 
-\includegraphics[scale=.8]{3Aug18_cluster-investigation/figures/Gambi-gosum1-cell-graph.png} 
+\includegraphics[scale=.8]{3Aug18_cluster-investigation/figures/gosum-pan/Pan-gosum1-cell-graph.png} 
 \caption{Summary of cellular GO annotations between core, softcore and unique clusters at GOSUM level 1.} 
-\label{fig:}
+\label{fig:PanGo1Cell}
 \end{figure} 
 \FloatBarrier
 
 \begin{figure} 
-\includegraphics[scale=.65]{3Aug18_cluster-investigation/figures/Gambi-gosum1-molec-graph.png} 
+\includegraphics[scale=.65]{3Aug18_cluster-investigation/figures/gosum-pan/Pan-gosum1-molec-graph.png} 
 \caption{Summary of molecular GO annotations between core, softcore and unique clusters at GOSUM level 1.} 
-\label{fig:}
+\label{fig:PanGo1Molec}
 \end{figure} 
 \FloatBarrier
 
 \begin{figure} 
-\includegraphics[scale=.75]{3Aug18_cluster-investigation/figures/Gambi-gosum2-bio-graph.png} 
+\includegraphics[scale=.75]{3Aug18_cluster-investigation/figures/gosum-pan/Pan-gosum2-bio-graph.png} 
 \caption{Summary of biological processes GO annotations between core, softcore and unique clusters at GOSUM level 2.} 
-\label{fig:}
+\label{fig:PanGo2Bio}
 \end{figure} 
 \FloatBarrier
 
 \begin{figure} 
-\includegraphics[scale=.8]{3Aug18_cluster-investigation/figures/Gambi-gosum2-cell-graph.png} 
+\includegraphics[scale=.8]{3Aug18_cluster-investigation/figures/gosum-pan/Pan-gosum2-cell-graph.png} 
 \caption{Summary of cellular GO annotations between core, softcore and unique clusters at GOSUM level 2.} 
-\label{fig:}
+\label{fig:PanGo2Cell}
 \end{figure} 
 \FloatBarrier
 
 \begin{figure} 
-\includegraphics[scale=.75]{3Aug18_cluster-investigation/figures/Gambi-gosum2-molec-graph.png} 
+\includegraphics[scale=.6]{3Aug18_cluster-investigation/figures/gosum-pan/Pan-gosum2-molec-graph.png} 
 \caption{Summary of molecular GO annotations between core, softcore and unique clusters at GOSUM level 2.} 
-\label{fig:}
+\label{fig:PanGo2Molec}
 \end{figure} 
 \FloatBarrier
 
@@ -257,6 +304,10 @@ Interpro scan annotations were obtained.
 
 %\newpage
 \section*{Conclusion}
+
+
+\section*{Supplementary}
+- gosum tables with GO annotations
 
 
 \newpage

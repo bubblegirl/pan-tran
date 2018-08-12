@@ -96,6 +96,7 @@ A reference is essential in determining both the adequacy of the sequencing meth
 % Kirsty to insert method but not in chapter
 %\subsection*{Library prep and sequencing}
 % Kirsty to insert method but not in chapter
+Scripts used for this project are available on Github under hydrahamster/pan-tran.
 \subsection*{Transcriptome acquisition}
 Transcriptomes used in this chapter were the RNA-seq libraries for \textit{G. carpenteri} (UTSMER9A3), \textit{G. lapillus} (HG4), \textit{G. polynesiensis} (CG15) and \textit{G.} cf. \textit{silvae} (HG5) generated for \textbf{chapter 4}. 
 \textit{G. australes} (CAWD149) RNA-seq library was downloaded from the MMETSP public database. 
@@ -106,17 +107,14 @@ Seq libraries were assembled as per the transcriptome assembly subsection in the
 Cd-hit was used to cluster the contigs from assemblies with the flags T 10 -M 5000 -G 0 -c 1.00 -aS 1.00 -aL 0.005 \cite{fu2012cd}. 
 Then Transdecoder predicted the protein coding regions of the nucleotide clusters which were subsequently clustered adain with cd-hit as before with the exception of -c 0.98 \cite{haas2016transdecoder}.
 Protein clusters were annotated with Interproscan v5.27 with local lookup server \cite{quevillon2005interproscan}.
-Protein clusters were processed to include the species of 
+Protein clusters were processed to include the species of origin instead of the TRINITY tag and concatenated for input to get\_homologues \cite{vinuesa2015robust}. 
+The -t 0 flag was used for get\_homologues to acquire all possible clusters even with only one species representative, and -G for the OMCL algorithm. 
+The resulting pan-, core- and softcore-clusters were matched with their interpro annotations and GO terms were queried with GOSUM \textbf{-- Tim how do I cit this?}. 
+GOSUM was run at both levels 1 and 2 of gene ontology counts with the go-basic gene ontology version. 
 
-
--get\_hom \\
--analysis \\
--scripts \\
-- GOSUM
 \subsection*{PKS search}
--interpro scan output \\
-- hmmer libs \\
--scripts
+The transcriptome assemblies were queried for the five conserved PKS active domains using hmmer \cite{eddy2015hmmer} with libraries developed for this project. 
+The identified contigs for an active domain was then searched for within the clusters to identify how the active domains grouped together between species.
 
 %\subsection*{\textit{G. polynesiensis} comparison}
 \newpage
@@ -125,7 +123,7 @@ Protein clusters were processed to include the species of
 %\subsection*{Transcriptome overview}
 %- seq and annotation stats for \textit{Gambierdiscus polynesiensis} CAWD254 and Table ~\ref{tbl:SeqTable}
 \subsection*{General info}
-
+The progression of clustering and annotation results per transcriptome can be found in ~\ref{tbl:ClustTable}.
 \begin{table}
 \caption{Progression of clusters found in each \emph{Gambierdiscus} transcriptome during processing.}
 \label{tbl:ClustTable}
@@ -133,7 +131,7 @@ Protein clusters were processed to include the species of
 \hline
 \textbf{Species}& \textit{G. australes} (CAWD149)& \emph{G. carpenteri} (UTSMER9A3)&\emph{G. lapillus} (HG4)&\emph{G. polynesiensis} (CG15)&\emph{G.} cf. \emph{silvae} (HG5)\\
 \hline
-\textbf{Contigs}&263,829&148,972&&270,315&191,224\\
+\textbf{Contigs}&&263,829&148,972&270,315&191,224\\
 \hline
 \textbf{Nucleotide clusters}&102,861&263,743&148,966&270,265&191,205\\
 \hline

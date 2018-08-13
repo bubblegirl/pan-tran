@@ -146,7 +146,7 @@ The progression of clustering and annotation results per transcriptome can be fo
 \FloatBarrier
 \newpage
 
-\subsection*{\emph{Gambierdiscus} inter-species core-transcriptome}
+\subsection*{\emph{Gambierdiscus} inter-species core- and pan-transcriptome}
 - number of clusters\\
 - percentage annotated \\
 - highest number of contigs per cluster and what pathway\\
@@ -203,7 +203,7 @@ The predicted protein coding regions for the other nine clusters, in descending 
 A total of 3,943 core clusters contained 10 or more contigs, so 71.32 \% of the total core clusters consisted of less than 10 contigs. 
 The majority of  clusters fell within metabolic processes, cellular processes and catalytic activity with \%, \% and \% of annotated clusters respectively. \textbf{Tim - so adding up the lvl1 gosum counts for bio, cell and molec doesn't add up to the total annotated clusters.. how does this work?}
 
-\subsubsection*{Softcore - 4 of 5 species}
+\subsubsection*{Softcore transcriptome}
 A softcore with 4 out of the five \textit{Gambierdiscus} species examined was identified. 
 The softcore consisted of an additional 16,980 clusters of which 48 \% were annotated  (Suppl. table ~\ref{tbl:PanGO1} \& ~\ref{tbl:PanGO2}). 
 The most prolific cluster in the softcore contained 163 contigs with unknown function, where \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G.} cf. \textit{silvae} contained 50, 42, 41 \& 30 contigs respectively. 
@@ -214,33 +214,53 @@ Of the six clusters with over 100 contigs, none had representatives contigs from
 In descending order of contigs, they matched to: a protein involved in selective protein binding; a protein involved in actin binding; a protein involved in calcium binding; and a protein with cysteine-type peptidase activity. 
 Of the softcore, 14,035 clusters contained 10 or more contigs. 
 
+- pathways present\\
 
-- number of clusters\\
-- percentage annotated \\
-- pathways present\\
-- which most commonly not present
-\subsection*{\emph{Gambierdiscus} inter-species pan-transcriptome}
-- which species most commonly solo\\
-- number of clusters\\
-- percentage annotated \\
-- pathways present\\
-- any change in contig numbers between species within clusters
-\subsubsection*{Unique clusters}
-- which species most commonly solo\\
-- number of clusters\\
-- percentage annotated \\
+\subsubsection*{Pan-transcriptome}
+Clusters with single species representatives, or the pan-transcriptome to the five \textit{Gambierdiscus} species examined, numbered 231,310 clusters. 
+Of the unique clusters, only 15.23 \% of clusters were annotated. 
+Single species clusters from \emph{G. australes}, \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G.} cf. \textit{silvae} numbered 35,356, 62,494, 32,341, 60,796 \& 41,350 clusters respectively. 
+%discussion: numbers mirror depth of sequencing ie. shittiest trans has least unique
+The highest number of contigs in a unique cluster were 37, found in two clusters from \textit{G. carpenteri}. 
+One of these was annotated for RNA and metal ion binding activity. 
+Of the unique clusters, 83.1 \% contained only one contig and 97.8 \% of clusters have 5 contigs or less. 
 - pathways present\\
 
 
 %\subsection*{\emph{Gambierdiscus polynesiensis} intra-species core \& pan transcriptome}
 \subsection*{Looking into toxin producers}
 \subsubsection*{Clusters with \textit{G. lapillus}, \textit{G. polynesiensis} \& \textit{G. cf. silvae}}
+
 \subsubsection*{\textit{G. polynesiensis solo clusters}}
 - number of clusters\\
 - percentage annotated \\
 - pathways present\\
 \subsubsection*{Polyketide synthase genes}
 
+\begin{table}
+\caption{PKS active domains found in the \emph{Gambierdiscus} species queries.}
+\label{tbl:PKSTable}
+\begin{tabular}{ | p{3cm} | p{2cm} | p{2.5cm} | p{2.5cm} | p{2cm} | p{2cm}|}
+\hline
+\textbf{Active domain}& \textit{G. australes} (CAWD149)& \emph{G. carpenteri} (UTSMER9A3)&\emph{G. lapillus} (HG4)&\emph{G. polynesiensis} (CG15)&\emph{G.} cf. \emph{silvae} (HG5)\\
+\hline
+ACP domain&&&&&\\
+\hline
+AT domain&&&&&\\
+\hline
+DR domain&&&&&\\
+\hline
+ET domain&&&&&\\
+\hline
+KS domain&&195&150&221&154\\
+\hline
+KR domain&&&&&\\
+\hline
+TE domain&&&&&\\
+\hline
+\end{tabular}
+\end{table}
+\FloatBarrier
 
 - number of contigs found in each transcriptome\\
 - how many clusters do they end up in and what is the proportion of species in there \\
@@ -277,6 +297,7 @@ Of the softcore, 14,035 clusters contained 10 or more contigs.
 \newpage
 \section*{Discussion}
 -overall summary of study
+- core and pan more likely to be accurate without being axenic unless same contamination
 
 \subsection*{core \textit{Gambierdiscus} transcriptome}
 - \cite{lidie2005gene} comprehensive index of genes in K. brevis to compare to 
@@ -336,6 +357,7 @@ Of the softcore, 14,035 clusters contained 10 or more contigs.
 - from different seq runs and methods and seq depth may vary, especially \textit{G. australes} \\
 - intra-speces variation so one isolate per species may not be representative \\
 - unknown if processes other than PKS play a role in toxin production
+- not axenic
 %\subsection*{core \textit{G. polynesiensis} transcriptome}
 %- discuss common gene pathways found \\
 %-discuss usefulness for future studies\\

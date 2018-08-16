@@ -116,6 +116,10 @@ GOSUM was run at both levels 1 and 2 of gene ontology counts with the go-basic g
 The transcriptome assemblies were queried for the five conserved PKS active domains using hmmer \cite{eddy2015hmmer} with libraries developed for this project. 
 The identified contigs for an active domain was then searched for within the clusters to identify how the active domains grouped together between species.
 
+\subsection*{Search for bacterial contigs}
+basta\\
+dinoSL
+
 %\subsection*{\textit{G. polynesiensis} comparison}
 \newpage
 \section*{Results}
@@ -123,7 +127,7 @@ The identified contigs for an active domain was then searched for within the clu
 %\subsection*{Transcriptome overview}
 %- seq and annotation stats for \textit{Gambierdiscus polynesiensis} CAWD254 and Table ~\ref{tbl:SeqTable}
 \subsection*{General info}
-The progression of clustering and annotation results per transcriptome can be found in ~\ref{tbl:ClustTable}.
+The progression of clustering and annotation results per transcriptome can be found in Table ~\ref{tbl:ClustTable}.
 \begin{table}
 \caption{Progression of clusters found in each \emph{Gambierdiscus} transcriptome during processing.}
 \label{tbl:ClustTable}
@@ -133,11 +137,11 @@ The progression of clustering and annotation results per transcriptome can be fo
 \hline
 \textbf{Contigs}&&263,829&148,972&270,315&191,224\\
 \hline
-\textbf{Nucleotide clusters}&102,861&263,743&148,966&270,265&191,205\\
+\textbf{Nucleotide clusters (cd-hit)}&102,861&263,743&148,966&270,265&191,205\\
 \hline
-\textbf{Predicted coding regions}&63,299&180,568&111,862&176,290&132,688\\
+\textbf{Predicted coding regions (Interpro scan)}&63,299&180,568&111,862&176,290&132,688\\
 \hline
-\textbf{Protein clusters}&60,166&139,699&92,418&139,487&107,766\\
+\textbf{Protein clusters (cd-hit)}&60,166&139,699&92,418&139,487&107,766\\
 \hline
 %\hline
 %&&&&&\\
@@ -146,25 +150,12 @@ The progression of clustering and annotation results per transcriptome can be fo
 \FloatBarrier
 \newpage
 
-\subsubsection*{Bacterial presence in assemblies}
-BASTA results:
-- australes: 0 bact, 53 Unknown
-- carp: 3 bact, 72 Unknown
-UTSMER9A3_Gambierdiscus-carpenteri_DN31153_c0_g1_i1.p2	Bacteria;Proteobacteria;Gammaproteobacteria; -- in unique 236528_UTSMER9A3_Gambierdiscus-carpenteri_DN31153_c0_g1_i1.p2.faa	not annotated
-UTSMER9A3_Gambierdiscus-carpenteri_DN20628_c0_g1_i1.p1	Bacteria;Proteobacteria; -- in unique 233838_UTSMER9A3_Gambierdiscus-carpenteri_DN20628_c0_g1_i1.p1.faa	not annotated
-UTSMER9A3_Gambierdiscus-carpenteri_DN27575_c0_g1_i1.p2	Bacteria;Proteobacteria; -- in unique 235579_UTSMER9A3_Gambierdiscus-carpenteri_DN27575_c0_g1_i1.p2.faa	involved in ATP binding
-- lap: 3 bact, 72 Unknown
-HG4_Gambierdiscus-lapillus_DN47596_c0_g1_i1.p1	Bacteria;Proteobacteria;Gammaproteobacteria; -- in unique 351586_HG4_Gambierdiscus-lapillus_DN47596_c0_g1_i1.p1.faa	a structural constituent of ribosome involved n mRNA translation
-HG4_Gambierdiscus-lapillus_DN13474_c0_g2_i1.p2	Bacteria;Proteobacteria; -- in unique 247208_HG4_Gambierdiscus-lapillus_DN13474_c0_g2_i1.p2.faa	binds guanosine triphosphate
-HG4_Gambierdiscus-lapillus_DN47695_c0_g1_i1.p2	Bacteria;Proteobacteria;Gammaproteobacteria; -- in unique 351653_HG4_Gambierdiscus-lapillus_DN47695_c0_g1_i1.p2.faa	involved in mRNA translation
-- pol: 0 bact, 95 Unknown
-- sil: 0 bact, 56 Unknown
 
-\subsection*{\emph{Gambierdiscus} inter-species core- and pan-transcriptome}
-- number of clusters\\
-- percentage annotated \\
-- highest number of contigs per cluster and what pathway\\
-- heatmap if I can get it working
+\subsubsection*{Comparison of \emph{Gambierdiscus} inter-species transcriptome annotations}
+- number of clusters (cd-hit?)\\
+- percentage annotated with interpro scan\\
+- gosum tables of what functions\\
+- heatmap from get\_hom is throwing up errors
 - annotation differences between transcriptomes
 \begin{figure} 
 \includegraphics[scale=.78]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum1-bio.png} 
@@ -208,6 +199,7 @@ HG4_Gambierdiscus-lapillus_DN47695_c0_g1_i1.p2	Bacteria;Proteobacteria;Gammaprot
 \end{figure} 
 \FloatBarrier
 
+\subsection*{Transcriptome similarity clustering}
 \subsubsection*{Core transcritome}
 A set of core genes common to all five species of \textit{Gambierdiscus} were found. 
 This set consisted of 13,750 amino acid clusters of which 45 \% were annotated with GO terms (Suppl. table ~\ref{tbl:PanGO1} \& ~\ref{tbl:PanGO2}). 
@@ -240,37 +232,97 @@ One of these was annotated for RNA and metal ion binding activity.
 Of the unique clusters, 83.1 \% contained only one contig and 97.8 \% of clusters have 5 contigs or less. 
 - pathways present\\
 
+\subsection*{Last common ancestor identification of contigs}
+
+\begin{table}
+\caption{basta stuff found in each \emph{Gambierdiscus} transcriptome during processing.}
+\label{tbl:bastaTable}
+\begin{tabular}{ | p{3cm} | p{2cm} | p{2.5cm} | p{2.5cm} | p{2cm} | p{2cm}|}
+\hline
+\textbf{Species}& \textit{G. australes} (CAWD149)& \emph{G. carpenteri} (UTSMER9A3)&\emph{G. lapillus} (HG4)&\emph{G. polynesiensis} (CG15)&\emph{G.} cf. \emph{silvae} (HG5)\\
+\hline
+\textbf{Swissprot hits on contigs}&176,000&&&&\\ %cut -f 1 carpenteri_BASTA/blast_output/UTSMER9A3_Gambierdiscus-carpenteri_blast.out |uniq| wc -l
+\hline
+\textbf{BASTA positive ID}&60,811&&&&\\ % -m 1
+\hline
+\textbf{Bacterial origin}&&&&&\\
+\hline
+\textbf{Unknown origin}&&&&&\\
+\hline
+%\hline
+%&&&&&\\
+\end{tabular}
+\end{table}
+\FloatBarrier
+\newpage
+
+\subsubsection*{Unknown origin}
+\textbf{To do:}
+\begin{itemize}
+\item work out if PKS domains are within unknown
+\item decide whether to keep unknown in 
+\end{itemize}
+\subsubsection*{Bacterial origin}
+\textbf{To do:}
+\begin{itemize}
+\item dinoSL search to see if any of bact origin are from dinos
+\item look if in unique or core clusters
+\item look for geographic link in clustering
+\end{itemize}
+
+BASTA results, default -l and -m flags ie. likely going to change as swissprot percentage match super low:\\
+- australes: 0 bact, 53 Unknown \\
+- carp: 3 bact (all unique clusters, one annotated as ATP binding), 72 Unknown \\
+%UTSMER9A3_Gambierdiscus-carpenteri_DN31153_c0_g1_i1.p2	Bacteria;Proteobacteria;Gammaproteobacteria; -- in unique 236528_UTSMER9A3_Gambierdiscus-carpenteri_DN31153_c0_g1_i1.p2.faa	not annotated
+%UTSMER9A3_Gambierdiscus-carpenteri_DN20628_c0_g1_i1.p1	Bacteria;Proteobacteria; -- in unique 233838_UTSMER9A3_Gambierdiscus-carpenteri_DN20628_c0_g1_i1.p1.faa	not annotated
+%UTSMER9A3_Gambierdiscus-carpenteri_DN27575_c0_g1_i1.p2	Bacteria;Proteobacteria; -- in unique 235579_UTSMER9A3_Gambierdiscus-carpenteri_DN27575_c0_g1_i1.p2.faa	involved in ATP binding
+- lap: 3 bact (all in unique clusters all annotated with mRNA processing roles) 72 Unknown \\
+%HG4_Gambierdiscus-lapillus_DN47596_c0_g1_i1.p1	Bacteria;Proteobacteria;Gammaproteobacteria; -- in unique 351586_HG4_Gambierdiscus-lapillus_DN47596_c0_g1_i1.p1.faa	a structural constituent of ribosome involved n mRNA translation
+%HG4_Gambierdiscus-lapillus_DN13474_c0_g2_i1.p2	Bacteria;Proteobacteria; -- in unique 247208_HG4_Gambierdiscus-lapillus_DN13474_c0_g2_i1.p2.faa	binds guanosine triphosphate
+%HG4_Gambierdiscus-lapillus_DN47695_c0_g1_i1.p2	Bacteria;Proteobacteria;Gammaproteobacteria; -- in unique 351653_HG4_Gambierdiscus-lapillus_DN47695_c0_g1_i1.p2.faa	involved in mRNA translation
+- pol: 0 bact, 95 Unknown \\
+- sil: 0 bact, 56 Unknown \\
+- -m 1 \& -l 80 for carp with swissprot db had much higher bact contamn: 2,784 seqs bact, 22,429 seqs unknown, 35,263 seqs eukar .. contamination potentially a problem here \\
+\textbf{To do:}
+\begin{itemize}
+\item re-running with uniprot\_trembl.fasta to see how percentage identity values differ to swissprot database
+\item make new directory with bacterial origin 
+\item check if core bacteriome (how wanky is that word) or any species specific; also if it's regional.. 2 species from Heron Island from same collection, two from Rarotonga collected 9 years apart, one from temperate Merimbula
+\item hmmsearch for dinoSL to see if any of the bact origin clusters have been incorporated into genome
+\end{itemize}
 
 %\subsection*{\emph{Gambierdiscus polynesiensis} intra-species core \& pan transcriptome}
 \subsection*{Looking into toxin producers}
 \subsubsection*{Clusters with \textit{G. lapillus}, \textit{G. polynesiensis} \& \textit{G. cf. silvae}}
+- boot this - don;t know enough about uncharacterized bioassay indicative toxin production.. or no difference could be interesting too
 
 \subsubsection*{\textit{G. polynesiensis solo clusters}}
 - number of clusters\\
 - percentage annotated \\
 - pathways present\\
-\subsubsection*{Polyketide synthase genes}
+
+\subsubsection*{Polyketide synthase active domain search}
 
 \begin{table}
 \caption{PKS active domains found in the \emph{Gambierdiscus} species queries.}
 \label{tbl:PKSTable}
-\begin{tabular}{ | p{3cm} | p{2cm} | p{2.5cm} | p{2.5cm} | p{2cm} | p{2cm}|}
+\begin{tabular}{ | p{1.65cm} | p{1.5cm} | p{1.5cm} | p{1.5cm} | p{1.7cm} | p{1.5cm}| p{1.5cm}| p{1.5cm}|}
 \hline
-\textbf{Active domain}& \textit{G. australes} (CAWD149)& \emph{G. carpenteri} (UTSMER9A3)&\emph{G. lapillus} (HG4)&\emph{G. polynesiensis} (CG15)&\emph{G.} cf. \emph{silvae} (HG5)\\
+\textbf{Active domain}& \textit{G. australes}& \emph{G. carpenteri}&\emph{G. lapillus}&\emph{G. polynesiensis}&\emph{G.} cf. \emph{silvae}&\textbf{Total contigs}&\textbf{\# clusters}\\
 \hline
-ACP domain&&&&&\\
+ACP&&&&&&&\\
 \hline
-AT domain&&&&&\\
+AT&&&&&&&\\
 \hline
-DR domain&&&&&\\
+DR&&&&&&&\\
 \hline
-ET domain&&&&&\\
+ET&&&&&&&\\
 \hline
-KS domain&130&195&150&221&154\\
+KS&130&195&150&221&154&850&314\\
 \hline
-KR domain&&&&&\\
+KR&&&&&&&\\
 \hline
-TE domain&&&&&\\
+TE&&&&&&&\\
 \hline
 \end{tabular}
 \end{table}
@@ -281,50 +333,6 @@ TE domain&&&&&\\
 - number of contigs found in each transcriptome\\
 - how many clusters do they end up in and what is the proportion of species in there \\
 - any multi-domain ones?\\
-
-\begin{table}
-\caption{\emph{Gambierdiscus} species transcriptomes used in this study along with their toxicity, toxin profile, accession numbers and source.}
-\label{tbl:SeqTable}
-\begin{tabular}{ | p{3cm} | p{2cm} | p{2.5cm} | p{2.5cm} | p{2cm} | p{2cm}|}
-\hline
-\textbf{Species} & \textbf{Source location}&\textbf{LC-MS/MS} & \textbf{Toxicity via bioassay} & \textbf{Accession ID} & \textbf{References} \\
-\hline
-\textit{Gambierdiscus australes} (CAWD149)&Rarotonga, Cook Islands& CTX -ve; MTX +ve&CTX +ve; MTX N/A&MMETSP0766&\cite{keeling2014marine,rhodes2010toxic,rhodes2014production,munday2017ciguatoxins}\\
-\hline
-\textit{Gambierdiscus carpenteri} (UTSMER9A)&Merimbula, NSW, Australia&CTX -ve; MTX -ve&CTX -ve; MTX +ve&SRR6821720
-&\textbf{chapter 4} \& \cite{larsson2018toxicology}\\
-\hline
-\textit{Gambierdiscus lapillus} (HG4)&Heron Island, QLD, Australia&CTX -ve; MTX +ve&CTX +ve; MTX +ve&SRR6821722
-&\textbf{chapter 4} \& \cite{larsson2018toxicology,kretzschmar2017characterization}\\
-\hline
-\textit{Gambierdiscus polynesiensis} (CG15)&Rarotonga, Cook Islands&CTX +ve; MTX +ve&CTX N/A; MTX N/A&SRR6821723
-&\textbf{chapter 4} \\
-\hline
-%\textit{Gambierdiscus polynesiensis}&CAWD212&CTX +ve; MTX +ve&CTX N/A; MTX N/A&Kohli pers. comm.&\cite{rhodes2014production}\\
-%\hline
-%\textit{Gambierdiscus polynesiensis}&CAWD254&CTX -ve; MTX -ve&CTX N/A; MTX N/A&&This study\\
-%\hline
-\textit{Gambierdiscus} cf. \textit{silvae} (HG5)&Heron Island, QLD, Australia&CTX -ve; MTX +ve&CTX +ve; MTX +ve&SRR6821721
-&\textbf{chapter 4} \& \cite{larsson2018toxicology,kretzschmar2017characterization}\\
-\hline
-\end{tabular}
-\end{table}
-\FloatBarrier
-\newpage
-
-\subsubsection*{Bacterial presence in assemblies}
-BASTA results:
-- australes: 0 bact, 53 Unknown
-- carp: 3 bact, 72 Unknown
-UTSMER9A3_Gambierdiscus-carpenteri_DN31153_c0_g1_i1.p2	Bacteria;Proteobacteria;Gammaproteobacteria;
-UTSMER9A3_Gambierdiscus-carpenteri_DN20628_c0_g1_i1.p1	Bacteria;Proteobacteria;
-UTSMER9A3_Gambierdiscus-carpenteri_DN27575_c0_g1_i1.p2	Bacteria;Proteobacteria;
-- lap: 3 bact, 72 Unknown
-HG4_Gambierdiscus-lapillus_DN47596_c0_g1_i1.p1	Bacteria;Proteobacteria;Gammaproteobacteria;
-HG4_Gambierdiscus-lapillus_DN13474_c0_g2_i1.p2	Bacteria;Proteobacteria;
-HG4_Gambierdiscus-lapillus_DN47695_c0_g1_i1.p2	Bacteria;Proteobacteria;Gammaproteobacteria;
-- pol: 0 bact, 95 Unknown
-- sil: 0 bact, 56 Unknown
 
 \section*{Discussion}
 -overall summary of study
@@ -377,18 +385,48 @@ HG4_Gambierdiscus-lapillus_DN47695_c0_g1_i1.p2	Bacteria;Proteobacteria;Gammaprot
 \end{figure} 
 \FloatBarrier
 
-\subsubsection*{discuss usefulness for future studies}
-
 \subsubsection*{Expression of genes involved in polyketide production}
 - discuss if different gene sets were expressed between toxic and non- toxic strains\\
 - discuss if diff genes between all 3 strains\\
 - discuss short comings with CAWD254 not having bioassays run, sequencing differences etc
 
+\begin{table}
+\caption{\emph{Gambierdiscus} species transcriptomes used in this study along with their toxicity, toxin profile, accession numbers and source.}
+\label{tbl:SeqTable}
+\begin{tabular}{ | p{3cm} | p{2cm} | p{2.5cm} | p{2.5cm} | p{2cm} | p{2cm}|}
+\hline
+\textbf{Species} & \textbf{Source location}&\textbf{LC-MS/MS} & \textbf{Toxicity via bioassay} & \textbf{Accession ID} & \textbf{References} \\
+\hline
+\textit{Gambierdiscus australes} (CAWD149)&Rarotonga, Cook Islands 2007& CTX -ve; MTX +ve&CTX +ve; MTX N/A&MMETSP0766&\cite{keeling2014marine,rhodes2010toxic,rhodes2014production,munday2017ciguatoxins}\\
+\hline
+\textit{Gambierdiscus carpenteri} (UTSMER9A)&Merimbula, Australia 2014&CTX -ve; MTX -ve&CTX -ve; MTX +ve&SRR6821720
+&\textbf{chapter 4} \& \cite{larsson2018toxicology}\\
+\hline
+\textit{Gambierdiscus lapillus} (HG4)&Heron Island, Australia 2014&CTX -ve; MTX +ve&CTX +ve; MTX +ve&SRR6821722
+&\textbf{chapter 4} \& \cite{larsson2018toxicology,kretzschmar2017characterization}\\
+\hline
+\textit{Gambierdiscus polynesiensis} (CG15)&Rarotonga, Cook Islands 2014&CTX +ve; MTX +ve&CTX N/A; MTX N/A&SRR6821723
+&\textbf{chapter 4} \\
+\hline
+%\textit{Gambierdiscus polynesiensis}&CAWD212&CTX +ve; MTX +ve&CTX N/A; MTX N/A&Kohli pers. comm.&\cite{rhodes2014production}\\
+%\hline
+%\textit{Gambierdiscus polynesiensis}&CAWD254&CTX -ve; MTX -ve&CTX N/A; MTX N/A&&This study\\
+%\hline
+\textit{Gambierdiscus} cf. \textit{silvae} (HG5)&Heron Island, Australia 2014&CTX -ve; MTX +ve&CTX +ve; MTX +ve&SRR6821721
+&\textbf{chapter 4} \& \cite{larsson2018toxicology,kretzschmar2017characterization}\\
+\hline
+\end{tabular}
+\end{table}
+\FloatBarrier
+\newpage
+
+
+\subsubsection*{discuss usefulness for future studies}
+
 \subsubsection*{discuss potential short commings} 
 - from different seq runs and methods and seq depth may vary, especially \textit{G. australes} \\
 - intra-speces variation so one isolate per species may not be representative \\
 - unknown if processes other than PKS play a role in toxin production
-- not axenic
 %\subsection*{core \textit{G. polynesiensis} transcriptome}
 %- discuss common gene pathways found \\
 %-discuss usefulness for future studies\\

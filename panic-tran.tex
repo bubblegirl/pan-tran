@@ -102,6 +102,8 @@ Transcriptomes used in this chapter were the RNA-seq libraries for \textit{G. ca
 \textit{G. australes} (CAWD149) RNA-seq library was downloaded from the MMETSP public database. 
 Seq libraries were assembled as per the transcriptome assembly subsection in the methods of \textit{chapter 4}, without diginorm. 
 
+\subsection*{Spliced leader search}
+hmmersearch 
 
 \subsection*{Homolog clustering}
 Cd-hit was used to cluster the contigs from assemblies with the flags T 10 -M 5000 -G 0 -c 1.00 -aS 1.00 -aL 0.005 \cite{fu2012cd}. 
@@ -127,15 +129,19 @@ dinoSL
 %\subsection*{Transcriptome overview}
 %- seq and annotation stats for \textit{Gambierdiscus polynesiensis} CAWD254 and Table ~\ref{tbl:SeqTable}
 \subsection*{General info}
-The progression of clustering and annotation results per transcriptome can be found in Table ~\ref{tbl:ClustTable}.
+The progression of clustering and annotation results per transcriptome can be found in Table ~\ref{tbl:ClustTable}.\\
+- spliced leader sites really low. potentially interesting - the two highest ones are from same taxonomic cluster, while the other three are representatives from the other two main clades. Also poly and silvae are from separate seq runs, so not an artefact from that front.
+
 \begin{table}
 \caption{Progression of clusters found in each \emph{Gambierdiscus} transcriptome during processing.}
 \label{tbl:ClustTable}
 \begin{tabular}{ | p{3cm} | p{2cm} | p{2.5cm} | p{2.5cm} | p{2cm} | p{2cm}|}
 \hline
-\textbf{Species}& \textit{G. australes} (CAWD149)& \emph{G. carpenteri} (UTSMER9A3)&\emph{G. lapillus} (HG4)&\emph{G. polynesiensis} (CG15)&\emph{G.} cf. \emph{silvae} (HG5)\\
+\textbf{Species}& \textit{G. australes}& \emph{G. carpenteri}&\emph{G. lapillus}&\emph{G. polynesiensis}&\emph{G.} cf. \emph{silvae}\\
 \hline
-\textbf{Contigs}&&263,829&148,972&270,315&191,224\\
+\textbf{Contigs}&102,863&263,829&148,972&270,315&191,224\\
+\hline
+\textbf{dinoSL}&304&683&232&1,570&1,524\\
 \hline
 \textbf{Nucleotide clusters (cd-hit)}&102,861&263,743&148,966&270,265&191,205\\
 \hline
@@ -143,7 +149,7 @@ The progression of clustering and annotation results per transcriptome can be fo
 \hline
 \textbf{Protein clusters (cd-hit)}&60,166&139,699&92,418&139,487&107,766\\
 \hline
-\textbf{Contigs annotated (Interpro Scan)}&131,970&334,737&225,324&225,324&254,844\\ %wtf is happening with australes and what the fuck is it with file names and two fuckin gsilvae gff3 files... rm *fasta_interpro-annot.gff3 files before rerunningscrub as well as RENAME
+\textbf{Contigs annotated (Interpro Scan)}&131,970&334,737&225,324&225,324&254,844\\ 
 \hline
 %\hline
 %&&&&&\\
@@ -329,12 +335,10 @@ TE&&&&&&&\\
 \end{tabular}
 \end{table}
 \FloatBarrier
-
-315 KS clusters!!
-
-- number of contigs found in each transcriptome\\
-- how many clusters do they end up in and what is the proportion of species in there \\
 - any multi-domain ones?\\
+\paragraph*{KS domains.}
+A total of 850 contigs were identified with KS domains which assembled into 315 clusters (table ~\ref{tbl:PKSTable}). 
+Nine clusters contained more than 10 contigs, with the highest number of 130 contigs from all species 
 
 \section*{Discussion}
 -overall summary of study
@@ -399,7 +403,7 @@ TE&&&&&&&\\
 \hline
 \textbf{Species} & \textbf{Source location}&\textbf{LC-MS/MS} & \textbf{Toxicity via bioassay} & \textbf{Accession ID} & \textbf{References} \\
 \hline
-\textit{Gambierdiscus australes} (CAWD149)&Rarotonga, Cook Islands 2007& CTX -ve; MTX +ve&CTX +ve; MTX N/A&MMETSP0766&\cite{keeling2014marine,rhodes2010toxic,rhodes2014production,munday2017ciguatoxins}\\
+\textit{Gambierdiscus australes} (CAWD149)&Rarotonga, Cook Islands 2007& CTX -ve; MTX +ve&CTX +ve; MTX N/A&MMETSP0766&\cite{keeling2014marine,rhodes2010toxic,munday2017ciguatoxins}\\
 \hline
 \textit{Gambierdiscus carpenteri} (UTSMER9A)&Merimbula, Australia 2014&CTX -ve; MTX -ve&CTX -ve; MTX +ve&SRR6821720
 &\textbf{chapter 4} \& \cite{larsson2018toxicology}\\
@@ -526,6 +530,15 @@ GO:0038024&cargo receptor activity&1&1&1&1\\
 \hline
 GO:0060089&molecular transducer activity&8&8&8&10\\
 \hline
+%988_MMETSP0766_Gambierdiscus-australes_DN11896_c0_g2_i1.p1.faa	6	40	29	24	31	130 \\ WTF IS THIS
+%8866_MMETSP0766_Gambierdiscus-australes_DN22301_c0_g2_i1.p1.faa	3	24	14	24	16	81
+%3681_MMETSP0766_Gambierdiscus-australes_DN15885_c0_g1_i1.p1.faa	7	14	16	9	12	58
+%1921_MMETSP0766_Gambierdiscus-australes_DN13038_c0_g1_i1.p1.faa	3	10	6	4	6	29
+%46550_MMETSP0766_Gambierdiscus-australes_DN42196_c9_g13_i1.p1.faa	3	4	1	8	5	21
+%215601_UTSMER9A3_Gambierdiscus-carpenteri_DN18221_c2_g10_i1.p1.faa	0	4	1	8	5	18
+%360_MMETSP0766_Gambierdiscus-australes_DN10555_c0_g1_i1.p1.faa	1	4	3	3	4	15
+%15645_MMETSP0766_Gambierdiscus-australes_DN27800_c0_g2_i1.p1.faa	4	2	0	4	1	11
+%132980_UTSMER9A3_Gambierdiscus-carpenteri_DN14854_c1_g5_i1.p1.faa	0	1	4	3	2	10
 GO:0098772&molecular function regulator&23&23&21&22\\
 \hline
 GO:0140104&molecular carrier activity&1&0&0&0\\
@@ -1235,6 +1248,644 @@ GO:1901567&fatty acid derivative binding&1&1&1\\
 GO:1901681&sulfur compound binding&3&3&3\\ 
  \hline 
 \end{longtable}
+
+\FloatBarrier
+\begin{longtable}{ | p{2cm} | p{2cm} |p{2.5cm} | p{2cm} | p{2.5cm} |  p{2cm} | p{2cm} |}
+\caption{KS domains found per cluster and total number of contigs present.}\\
+\hline
+\label{tbl:KS}
+\textbf{Cluster ID}&\textit{G. australes}&\emph{G. carpenteri}&\emph{G. lapillus}&\emph{G. polynesiensis}&\emph{G.} cf. \emph{silvae}&\textbf{Total contigs}\\
+ \hline 
+ 988&6&40&29&24&31&130\\ % 988\_MMETSP0766\_Gambierdiscus-australes\_DN11896\_c0\_g2\_i1.p1.faa
+ \hline 
+8866&3&24&14&24&16&81\\ %8866\_MMETSP0766\_Gambierdiscus-australes\_DN22301\_c0\_g2\_i1.p1.faa
+ \hline 
+3681&7&14&16&9&12&58\\ %3681\_MMETSP0766\_Gambierdiscus-australes\_DN15885\_c0\_g1\_i1.p1.faa
+ \hline 
+1921&3&10&6&4&6&29\\ %1921\_MMETSP0766\_Gambierdiscus-australes\_DN13038\_c0\_g1\_i1.p1.faa
+ \hline 
+46550&3&4&1&8&5&21\\ %46550\_MMETSP0766\_Gambierdiscus-australes\_DN42196\_c9\_g13\_i1.p1.faa
+ \hline 
+215601&0&4&1&8&5&18\\ %215601\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN18221\_c2\_g10\_i1.p1.faa
+ \hline 
+360&1&4&3&3&4&15\\ %360\_MMETSP0766\_Gambierdiscus-australes\_DN10555\_c0\_g1\_i1.p1.faa
+ \hline 
+15645&4&2&0&4&1&11\\%15645\_MMETSP0766\_Gambierdiscus-australes\_DN27800\_c0\_g2\_i1.p1.faa 
+ \hline 
+132980&0&1&4&3&2&10\\ %132980\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN14854\_c1\_g5\_i1.p1.faa
+ \hline 
+45086&1&3&1&1&3&9\\ %45086\_MMETSP0766\_Gambierdiscus-australes\_DN42104\_c9\_g9\_i1.p1.faa
+ \hline 
+78009&0&2&2&3&2&9\\ %78009\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN12833\_c1\_g3\_i1.p1.faa
+ \hline 
+38915&2&2&2&1&2&9\\ %38915\_MMETSP0766\_Gambierdiscus-australes\_DN41569\_c0\_g1\_i1.p1.faa
+ \hline 
+109763&0&2&0&5&1&8\\% 109763\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN13976\_c1\_g2\_i1.p1.faa 
+ \hline 
+37859&2&2&1&2&1&8\\ %37859\_MMETSP0766\_Gambierdiscus-australes\_DN41388\_c0\_g1\_i1.p1.faa
+ \hline 
+24847&1&1&1&3&2&8\\ %24847\_MMETSP0766\_Gambierdiscus-australes\_DN35413\_c0\_g1\_i1.p1.faa
+ \hline 
+162333&0&2&2&2&1&7\\ %162333\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN15967\_c2\_g7\_i2.p1.faa
+ \hline 
+52333&1&2&1&1&1&6\\ %52333\_MMETSP0766\_Gambierdiscus-australes\_DN44912\_c0\_g1\_i1.p1.faa
+ \hline 
+136782&0&1&2&1&2&6\\%136782\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN15006\_c0\_g1\_i1.p1.faa 
+ \hline 
+301971&0&0&2&2&2&6\\%301971\_HG4\_Gambierdiscus-lapillus\_DN38722\_c0\_g2\_i1.p1.faa 
+ \hline 
+152898&0&3&1&1&0&5\\%152898\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN15616\_c0\_g5\_i1.p1.faa 
+ \hline 
+117472&0&2&1&1&1&5\\%117472\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN14266\_c3\_g6\_i1.p1.faa 
+ \hline 
+196360&0&2&1&1&1&5\\%196360\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN17371\_c0\_g1\_i1.p1.faa 
+ \hline 
+145445&0&1&1&2&1&5\\%145445\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN15339\_c3\_g6\_i2.p1.faa 
+ \hline 
+131919&0&1&0&1&3&5\\%131919\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN14815\_c2\_g4\_i1.p1.faa 
+ \hline 
+59207&1&1&1&1&1&5\\%59207\_MMETSP0766\_Gambierdiscus-australes\_DN56703\_c0\_g1\_i1.p1.faa 
+ \hline 
+31669&1&1&1&1&1&5\\%31669\_MMETSP0766\_Gambierdiscus-australes\_DN39295\_c0\_g3\_i1.p1.faa 
+ \hline 
+55678&1&1&1&1&1&5\\%55678\_MMETSP0766\_Gambierdiscus-australes\_DN50627\_c0\_g1\_i1.p1.faa 
+ \hline 
+40462&1&1&1&1&1&5\\ %40462\_MMETSP0766\_Gambierdiscus-australes\_DN41785\_c0\_g5\_i1.p1.faa
+ \hline 
+46899&1&1&1&1&1&5\\%46899\_MMETSP0766\_Gambierdiscus-australes\_DN42219\_c6\_g11\_i1.p1.faa 
+ \hline 
+37886&1&1&1&1&1&5\\%37886\_MMETSP0766\_Gambierdiscus-australes\_DN41392\_c1\_g1\_i1.p1.faa 
+ \hline 
+475329&0&0&0&4&1&5\\ %475329\_CG15\_Gambierdiscus-polynesiensis\_DN39159\_c1\_g2\_i1.p1.faa
+ \hline 
+162320\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN15967\_c2\_g1\_i2.p1.faa&0&3&0&1&0&4\\ 
+ \hline 
+21082\_MMETSP0766\_Gambierdiscus-australes\_DN32692\_c0\_g1\_i1.p1.faa&0&1&0&2&1&4\\ 
+ \hline 
+195242\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN17326\_c2\_g5\_i1.p1.faa&0&1&1&1&1&4\\ 
+ \hline 
+83891\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN13035\_c1\_g4\_i1.p1.faa&0&1&1&1&1&4\\ 
+ \hline 
+99486\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN13588\_c0\_g3\_i1.p1.faa&0&1&1&1&1&4\\ 
+ \hline 
+328911\_HG4\_Gambierdiscus-lapillus\_DN41464\_c0\_g1\_i1.p1.faa&0&0&1&3&0&4\\ 
+ \hline 
+643864\_HG5\_Gambierdiscus-silvae\_DN47931\_c1\_g3\_i1.p2.faa&0&0&0&0&4&4\\ 
+ \hline 
+186957\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN16979\_c3\_g3\_i1.p1.faa&0&1&1&1&0&3\\ 
+ \hline 
+193820\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN17268\_c1\_g8\_i4.p1.faa&0&1&1&1&0&3\\ 
+ \hline 
+147284\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN15408\_c1\_g3\_i2.p1.faa&0&1&1&1&0&3\\ 
+ \hline 
+116539\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN14227\_c2\_g1\_i4.p1.faa&0&1&2&0&0&3\\ 
+ \hline 
+242595\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN9176\_c0\_g1\_i3.p1.faa&0&1&2&0&0&3\\ 
+ \hline 
+524928\_CG15\_Gambierdiscus-polynesiensis\_DN43543\_c1\_g1\_i1.p1.faa&0&0&0&3&0&3\\ 
+ \hline 
+1040\_MMETSP0766\_Gambierdiscus-australes\_DN11947\_c0\_g1\_i1.p1.faa&1&0&0&0&2&3\\ 
+ \hline 
+38402\_MMETSP0766\_Gambierdiscus-australes\_DN41494\_c1\_g1\_i3.p1.faa&2&0&1&0&0&3\\ 
+ \hline 
+154624\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN15679\_c0\_g6\_i1.p1.faa&0&2&0&0&0&2\\ 
+ \hline 
+63665\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN10182\_c0\_g1\_i2.p1.faa&0&2&0&0&0&2\\ 
+ \hline 
+205876\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN17803\_c0\_g4\_i1.p1.faa&0&2&0&0&0&2\\ 
+ \hline 
+224239\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN18618\_c3\_g6\_i1.p1.faa&0&2&0&0&0&2\\ 
+ \hline 
+196786\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN17387\_c2\_g2\_i1.p1.faa&0&1&0&1&0&2\\ 
+ \hline 
+131133\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN14782\_c2\_g4\_i3.p1.faa&0&1&0&0&1&2\\ 
+ \hline 
+19133\_MMETSP0766\_Gambierdiscus-australes\_DN30780\_c0\_g2\_i1.p1.faa&1&1&0&0&0&2\\ 
+ \hline 
+37007\_MMETSP0766\_Gambierdiscus-australes\_DN41205\_c1\_g7\_i1.p1.faa&1&1&0&0&0&2\\ 
+ \hline 
+424979\_CG15\_Gambierdiscus-polynesiensis\_DN34166\_c0\_g9\_i1.p1.faa&0&0&0&2&0&2\\ 
+ \hline 
+358554\_CG15\_Gambierdiscus-polynesiensis\_DN15070\_c0\_g1\_i1.p2.faa&0&0&0&2&0&2\\ 
+ \hline 
+408901\_CG15\_Gambierdiscus-polynesiensis\_DN32288\_c2\_g1\_i1.p1.faa&0&0&0&2&0&2\\ 
+ \hline 
+479997\_CG15\_Gambierdiscus-polynesiensis\_DN39607\_c0\_g2\_i1.p1.faa&0&0&0&1&1&2\\ 
+ \hline 
+485470\_CG15\_Gambierdiscus-polynesiensis\_DN40097\_c0\_g1\_i2.p1.faa&0&0&0&1&1&2\\ 
+ \hline 
+258909\_HG4\_Gambierdiscus-lapillus\_DN22432\_c0\_g1\_i2.p1.faa&0&0&0&1&1&2\\ 
+ \hline 
+263811\_HG4\_Gambierdiscus-lapillus\_DN25138\_c0\_g1\_i1.p1.faa&0&0&1&0&1&2\\ 
+ \hline 
+319034\_HG4\_Gambierdiscus-lapillus\_DN40675\_c3\_g1\_i2.p1.faa&0&0&1&0&1&2\\ 
+ \hline 
+319505\_HG4\_Gambierdiscus-lapillus\_DN40711\_c1\_g8\_i1.p1.faa&0&0&1&0&1&2\\ 
+ \hline 
+1041\_MMETSP0766\_Gambierdiscus-australes\_DN11947\_c0\_g2\_i1.p1.faa&1&0&0&0&1&2\\ 
+ \hline 
+27066\_MMETSP0766\_Gambierdiscus-australes\_DN36729\_c0\_g1\_i1.p2.faa&1&0&0&0&1&2\\ 
+ \hline 
+274389\_HG4\_Gambierdiscus-lapillus\_DN30113\_c0\_g1\_i2.p1.faa&0&0&2&0&0&2\\ 
+ \hline 
+46553\_MMETSP0766\_Gambierdiscus-australes\_DN42196\_c9\_g4\_i1.p1.faa&2&0&0&0&0&2\\ 
+ \hline 
+148669\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN15462\_c1\_g7\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+234513\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN23482\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+63664\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN10182\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+72166\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN1258\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+210660\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN18011\_c6\_g4\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+88291\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN13188\_c2\_g8\_i2.p2.faa&0&1&0&0&0&1\\ 
+ \hline 
+235070\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN25711\_c0\_g1\_i1.p2.faa&0&1&0&0&0&1\\ 
+ \hline 
+236919\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN33286\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+234708\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN24051\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+75892\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN12749\_c1\_g2\_i3.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+207498\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN17871\_c4\_g9\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+234298\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN22896\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+84448\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN13053\_c3\_g3\_i4.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+104611\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN13776\_c4\_g7\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+242597\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN9176\_c0\_g2\_i2.p2.faa&0&1&0&0&0&1\\ 
+ \hline 
+233698\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN2009\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+115505\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN14189\_c2\_g12\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+238946\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN4887\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+208524\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN17914\_c1\_g3\_i4.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+131131\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN14782\_c2\_g4\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+215621\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN18221\_c2\_g6\_i3.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+225926\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN18701\_c1\_g3\_i2.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+239297\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN5390\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+233616\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN19857\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+208525\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN17914\_c1\_g3\_i5.p2.faa&0&1&0&0&0&1\\ 
+ \hline 
+236171\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN30145\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+241217\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN7872\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+212813\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN18098\_c3\_g3\_i2.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+147705\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN15422\_c1\_g3\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+242594\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN9176\_c0\_g1\_i2.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+86631\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN13131\_c1\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+238247\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN38343\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+212812\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN18098\_c3\_g3\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+211703\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN18052\_c3\_g5\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+239230\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN5288\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+103957\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN13754\_c3\_g2\_i4.p1.faa&0&1&0&0&0&1\\ 
+ \hline 
+462243\_CG15\_Gambierdiscus-polynesiensis\_DN37930\_c0\_g1\_i2.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+355979\_CG15\_Gambierdiscus-polynesiensis\_DN10471\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+524904\_CG15\_Gambierdiscus-polynesiensis\_DN43540\_c1\_g1\_i2.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+471036\_CG15\_Gambierdiscus-polynesiensis\_DN38733\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+527904\_CG15\_Gambierdiscus-polynesiensis\_DN43803\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+494332\_CG15\_Gambierdiscus-polynesiensis\_DN40908\_c1\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+475327\_CG15\_Gambierdiscus-polynesiensis\_DN39159\_c1\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+446377\_CG15\_Gambierdiscus-polynesiensis\_DN36357\_c3\_g7\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+415511\_CG15\_Gambierdiscus-polynesiensis\_DN33112\_c0\_g1\_i3.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+524930\_CG15\_Gambierdiscus-polynesiensis\_DN43543\_c1\_g1\_i4.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+500254\_CG15\_Gambierdiscus-polynesiensis\_DN41444\_c1\_g3\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+408903\_CG15\_Gambierdiscus-polynesiensis\_DN32288\_c3\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+211708\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN18052\_c3\_g5\_i7.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+524905\_CG15\_Gambierdiscus-polynesiensis\_DN43540\_c1\_g1\_i3.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+528784\_CG15\_Gambierdiscus-polynesiensis\_DN47453\_c0\_g1\_i1.p3.faa&0&0&0&1&0&1\\ 
+ \hline 
+528223\_CG15\_Gambierdiscus-polynesiensis\_DN44935\_c0\_g1\_i1.p2.faa&0&0&0&1&0&1\\ 
+ \hline 
+362866\_CG15\_Gambierdiscus-polynesiensis\_DN18821\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+408898\_CG15\_Gambierdiscus-polynesiensis\_DN32288\_c1\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+473656\_CG15\_Gambierdiscus-polynesiensis\_DN39000\_c2\_g2\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+505619\_CG15\_Gambierdiscus-polynesiensis\_DN41913\_c1\_g3\_i1.p2.faa&0&0&0&1&0&1\\ 
+ \hline 
+357110\_CG15\_Gambierdiscus-polynesiensis\_DN13123\_c0\_g1\_i2.p2.faa&0&0&0&1&0&1\\ 
+ \hline 
+529123\_CG15\_Gambierdiscus-polynesiensis\_DN48937\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+419597\_CG15\_Gambierdiscus-polynesiensis\_DN33575\_c2\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+486622\_CG15\_Gambierdiscus-polynesiensis\_DN40207\_c2\_g2\_i2.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+518712\_CG15\_Gambierdiscus-polynesiensis\_DN43045\_c0\_g2\_i6.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+505617\_CG15\_Gambierdiscus-polynesiensis\_DN41913\_c1\_g2\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+419857\_CG15\_Gambierdiscus-polynesiensis\_DN33604\_c1\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+319033\_HG4\_Gambierdiscus-lapillus\_DN40675\_c3\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+505612\_CG15\_Gambierdiscus-polynesiensis\_DN41913\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+505621\_CG15\_Gambierdiscus-polynesiensis\_DN41913\_c1\_g5\_i1.p2.faa&0&0&0&1&0&1\\ 
+ \hline 
+368243\_CG15\_Gambierdiscus-polynesiensis\_DN21805\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+531066\_CG15\_Gambierdiscus-polynesiensis\_DN7198\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+411779\_CG15\_Gambierdiscus-polynesiensis\_DN32643\_c5\_g2\_i3.p2.faa&0&0&0&1&0&1\\ 
+ \hline 
+529709\_CG15\_Gambierdiscus-polynesiensis\_DN51840\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+424815\_CG15\_Gambierdiscus-polynesiensis\_DN34144\_c0\_g1\_i6.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+388829\_CG15\_Gambierdiscus-polynesiensis\_DN29147\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+528991\_CG15\_Gambierdiscus-polynesiensis\_DN4849\_c0\_g1\_i1.p2.faa&0&0&0&1&0&1\\ 
+ \hline 
+529886\_CG15\_Gambierdiscus-polynesiensis\_DN52795\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+517572\_CG15\_Gambierdiscus-polynesiensis\_DN42942\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+162319\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN15967\_c2\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+486374\_CG15\_Gambierdiscus-polynesiensis\_DN40177\_c0\_g2\_i3.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+424977\_CG15\_Gambierdiscus-polynesiensis\_DN34166\_c0\_g6\_i1.p2.faa&0&0&0&1&0&1\\ 
+ \hline 
+480000\_CG15\_Gambierdiscus-polynesiensis\_DN39607\_c0\_g2\_i4.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+524933\_CG15\_Gambierdiscus-polynesiensis\_DN43543\_c1\_g1\_i7.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+529340\_CG15\_Gambierdiscus-polynesiensis\_DN50363\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+382787\_CG15\_Gambierdiscus-polynesiensis\_DN27509\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+455767\_CG15\_Gambierdiscus-polynesiensis\_DN37290\_c0\_g4\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+454667\_CG15\_Gambierdiscus-polynesiensis\_DN37192\_c1\_g3\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+505616\_CG15\_Gambierdiscus-polynesiensis\_DN41913\_c1\_g1\_i3.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+408904\_CG15\_Gambierdiscus-polynesiensis\_DN32288\_c3\_g2\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+519735\_CG15\_Gambierdiscus-polynesiensis\_DN43127\_c3\_g5\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+524932\_CG15\_Gambierdiscus-polynesiensis\_DN43543\_c1\_g1\_i6.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+419608\_CG15\_Gambierdiscus-polynesiensis\_DN33575\_c2\_g2\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+489214\_CG15\_Gambierdiscus-polynesiensis\_DN40447\_c0\_g1\_i2.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+407098\_CG15\_Gambierdiscus-polynesiensis\_DN32057\_c0\_g1\_i2.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+486620\_CG15\_Gambierdiscus-polynesiensis\_DN40207\_c2\_g1\_i2.p2.faa&0&0&0&1&0&1\\ 
+ \hline 
+529847\_CG15\_Gambierdiscus-polynesiensis\_DN52688\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+355910\_CG15\_Gambierdiscus-polynesiensis\_DN1036\_c0\_g1\_i1.p2.faa&0&0&0&1&0&1\\ 
+ \hline 
+419599\_CG15\_Gambierdiscus-polynesiensis\_DN33575\_c2\_g1\_i11.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+368244\_CG15\_Gambierdiscus-polynesiensis\_DN21805\_c0\_g2\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+528301\_CG15\_Gambierdiscus-polynesiensis\_DN45312\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+431157\_CG15\_Gambierdiscus-polynesiensis\_DN34812\_c2\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+429838\_CG15\_Gambierdiscus-polynesiensis\_DN3467\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+485799\_CG15\_Gambierdiscus-polynesiensis\_DN40132\_c0\_g3\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+449384\_CG15\_Gambierdiscus-polynesiensis\_DN36673\_c0\_g1\_i3.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+530384\_CG15\_Gambierdiscus-polynesiensis\_DN55090\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+357109\_CG15\_Gambierdiscus-polynesiensis\_DN13123\_c0\_g1\_i1.p2.faa&0&0&0&1&0&1\\ 
+ \hline 
+466543\_CG15\_Gambierdiscus-polynesiensis\_DN38313\_c1\_g3\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+367731\_CG15\_Gambierdiscus-polynesiensis\_DN21547\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+438506\_CG15\_Gambierdiscus-polynesiensis\_DN35575\_c0\_g1\_i7.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+491823\_CG15\_Gambierdiscus-polynesiensis\_DN40690\_c4\_g5\_i2.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+530249\_CG15\_Gambierdiscus-polynesiensis\_DN54681\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
+ \hline 
+661643\_HG5\_Gambierdiscus-silvae\_DN57114\_c0\_g1\_i1.p1.faa&0&0&0&0&1&1\\ 
+ \hline 
+601478\_HG5\_Gambierdiscus-silvae\_DN43780\_c7\_g8\_i1.p1.faa&0&0&0&0&1&1\\ 
+ \hline 
+567939\_HG5\_Gambierdiscus-silvae\_DN35530\_c0\_g3\_i1.p1.faa&0&0&0&0&1&1\\ 
+ \hline 
+593688\_HG5\_Gambierdiscus-silvae\_DN42661\_c0\_g1\_i1.p1.faa&0&0&0&0&1&1\\ 
+ \hline 
+540524\_HG5\_Gambierdiscus-silvae\_DN20879\_c0\_g2\_i1.p1.faa&0&0&0&0&1&1\\ 
+ \hline 
+649671\_HG5\_Gambierdiscus-silvae\_DN48408\_c0\_g1\_i4.p1.faa&0&0&0&0&1&1\\ 
+ \hline 
+620146\_HG5\_Gambierdiscus-silvae\_DN45801\_c1\_g1\_i1.p2.faa&0&0&0&0&1&1\\ 
+ \hline 
+589550\_HG5\_Gambierdiscus-silvae\_DN41996\_c3\_g12\_i1.p1.faa&0&0&0&0&1&1\\ 
+ \hline 
+643868\_HG5\_Gambierdiscus-silvae\_DN47931\_c1\_g3\_i5.p1.faa&0&0&0&0&1&1\\ 
+ \hline 
+657026\_HG5\_Gambierdiscus-silvae\_DN48988\_c0\_g3\_i1.p1.faa&0&0&0&0&1&1\\ 
+ \hline 
+589562\_HG5\_Gambierdiscus-silvae\_DN41996\_c3\_g5\_i1.p2.faa&0&0&0&0&1&1\\ 
+ \hline 
+608846\_HG5\_Gambierdiscus-silvae\_DN44648\_c2\_g1\_i1.p1.faa&0&0&0&0&1&1\\ 
+ \hline 
+593690\_HG5\_Gambierdiscus-silvae\_DN42661\_c0\_g2\_i3.p1.faa&0&0&0&0&1&1\\ 
+ \hline 
+550256\_HG5\_Gambierdiscus-silvae\_DN27602\_c0\_g2\_i1.p1.faa&0&0&0&0&1&1\\ 
+ \hline 
+608853\_HG5\_Gambierdiscus-silvae\_DN44648\_c2\_g6\_i1.p1.faa&0&0&0&0&1&1\\ 
+ \hline 
+559711\_HG5\_Gambierdiscus-silvae\_DN32102\_c0\_g1\_i2.p1.faa&0&0&0&0&1&1\\ 
+ \hline 
+575231\_HG5\_Gambierdiscus-silvae\_DN38322\_c1\_g2\_i1.p1.faa&0&0&0&0&1&1\\ 
+ \hline 
+591087\_HG5\_Gambierdiscus-silvae\_DN42232\_c1\_g4\_i1.p2.faa&0&0&0&0&1&1\\ 
+ \hline 
+657027\_HG5\_Gambierdiscus-silvae\_DN48988\_c0\_g3\_i2.p1.faa&0&0&0&0&1&1\\ 
+ \hline 
+540525\_HG5\_Gambierdiscus-silvae\_DN20879\_c0\_g3\_i1.p1.faa&0&0&0&0&1&1\\ 
+ \hline 
+601479\_HG5\_Gambierdiscus-silvae\_DN43780\_c7\_g9\_i1.p1.faa&0&0&0&0&1&1\\ 
+ \hline 
+589619\_HG5\_Gambierdiscus-silvae\_DN42009\_c0\_g1\_i3.p1.faa&0&0&0&0&1&1\\ 
+ \hline 
+596728\_HG5\_Gambierdiscus-silvae\_DN43120\_c1\_g4\_i4.p1.faa&0&0&0&0&1&1\\ 
+ \hline 
+254977\_HG4\_Gambierdiscus-lapillus\_DN19871\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+244474\_HG4\_Gambierdiscus-lapillus\_DN10661\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+354441\_HG4\_Gambierdiscus-lapillus\_DN7536\_c0\_g1\_i1.p2.faa&0&0&1&0&0&1\\ 
+ \hline 
+277633\_HG4\_Gambierdiscus-lapillus\_DN31491\_c0\_g2\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+312699\_HG4\_Gambierdiscus-lapillus\_DN40082\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+319501\_HG4\_Gambierdiscus-lapillus\_DN40711\_c1\_g5\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+244476\_HG4\_Gambierdiscus-lapillus\_DN10661\_c0\_g2\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+355588\_HG4\_Gambierdiscus-lapillus\_DN9793\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+351360\_HG4\_Gambierdiscus-lapillus\_DN46619\_c0\_g1\_i1.p2.faa&0&0&1&0&0&1\\ 
+ \hline 
+319490\_HG4\_Gambierdiscus-lapillus\_DN40711\_c1\_g10\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+249529\_HG4\_Gambierdiscus-lapillus\_DN15767\_c0\_g4\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+350445\_HG4\_Gambierdiscus-lapillus\_DN4403\_c0\_g2\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+249527\_HG4\_Gambierdiscus-lapillus\_DN15767\_c0\_g2\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+247959\_HG4\_Gambierdiscus-lapillus\_DN14263\_c0\_g2\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+354628\_HG4\_Gambierdiscus-lapillus\_DN8017\_c0\_g2\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+327310\_HG4\_Gambierdiscus-lapillus\_DN41349\_c0\_g1\_i2.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+245201\_HG4\_Gambierdiscus-lapillus\_DN11411\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+328839\_HG4\_Gambierdiscus-lapillus\_DN41459\_c1\_g5\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+332373\_HG4\_Gambierdiscus-lapillus\_DN41718\_c2\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+310068\_HG4\_Gambierdiscus-lapillus\_DN39797\_c2\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+355491\_HG4\_Gambierdiscus-lapillus\_DN9601\_c0\_g2\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+264742\_HG4\_Gambierdiscus-lapillus\_DN25642\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+310329\_HG4\_Gambierdiscus-lapillus\_DN39821\_c0\_g4\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+351275\_HG4\_Gambierdiscus-lapillus\_DN46352\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+298246\_HG4\_Gambierdiscus-lapillus\_DN38038\_c1\_g5\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+312700\_HG4\_Gambierdiscus-lapillus\_DN40082\_c0\_g2\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+245202\_HG4\_Gambierdiscus-lapillus\_DN11411\_c0\_g1\_i2.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+270811\_HG4\_Gambierdiscus-lapillus\_DN28598\_c0\_g3\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+311957\_HG4\_Gambierdiscus-lapillus\_DN40004\_c3\_g1\_i2.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+270397\_HG4\_Gambierdiscus-lapillus\_DN2840\_c0\_g1\_i2.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+351199\_HG4\_Gambierdiscus-lapillus\_DN46156\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+308197\_HG4\_Gambierdiscus-lapillus\_DN39584\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+354586\_HG4\_Gambierdiscus-lapillus\_DN792\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+350059\_HG4\_Gambierdiscus-lapillus\_DN43172\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+264744\_HG4\_Gambierdiscus-lapillus\_DN25642\_c0\_g2\_i1.p1.faa&0&0&1&0&0&1\\ 
+ \hline 
+27277\_MMETSP0766\_Gambierdiscus-australes\_DN36847\_c0\_g3\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+38401\_MMETSP0766\_Gambierdiscus-australes\_DN41494\_c1\_g1\_i2.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+14801\_MMETSP0766\_Gambierdiscus-australes\_DN27057\_c0\_g3\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+38397\_MMETSP0766\_Gambierdiscus-australes\_DN41494\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+19134\_MMETSP0766\_Gambierdiscus-australes\_DN30780\_c0\_g3\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+33030\_MMETSP0766\_Gambierdiscus-australes\_DN39895\_c0\_g4\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+35041\_MMETSP0766\_Gambierdiscus-australes\_DN40638\_c0\_g8\_i1.p2.faa&1&0&0&0&0&1\\ 
+ \hline 
+40251\_MMETSP0766\_Gambierdiscus-australes\_DN41766\_c4\_g24\_i2.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+18687\_MMETSP0766\_Gambierdiscus-australes\_DN30415\_c0\_g4\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+18486\_MMETSP0766\_Gambierdiscus-australes\_DN30257\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+61098\_MMETSP0766\_Gambierdiscus-australes\_DN6084\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+36998\_MMETSP0766\_Gambierdiscus-australes\_DN41205\_c1\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+13967\_MMETSP0766\_Gambierdiscus-australes\_DN26272\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+19163\_MMETSP0766\_Gambierdiscus-australes\_DN30800\_c0\_g7\_i1.p2.faa&1&0&0&0&0&1\\ 
+ \hline 
+35033\_MMETSP0766\_Gambierdiscus-australes\_DN40638\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+18548\_MMETSP0766\_Gambierdiscus-australes\_DN30296\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+36992\_MMETSP0766\_Gambierdiscus-australes\_DN41205\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+36641\_MMETSP0766\_Gambierdiscus-australes\_DN41111\_c0\_g2\_i2.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+37002\_MMETSP0766\_Gambierdiscus-australes\_DN41205\_c1\_g4\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+28106\_MMETSP0766\_Gambierdiscus-australes\_DN37278\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+72\_MMETSP0766\_Gambierdiscus-australes\_DN10092\_c0\_g1\_i1.p2.faa&1&0&0&0&0&1\\ 
+ \hline 
+15646\_MMETSP0766\_Gambierdiscus-australes\_DN27800\_c0\_g3\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+27067\_MMETSP0766\_Gambierdiscus-australes\_DN36729\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+24849\_MMETSP0766\_Gambierdiscus-australes\_DN35413\_c0\_g3\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+35035\_MMETSP0766\_Gambierdiscus-australes\_DN40638\_c0\_g3\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+35352\_MMETSP0766\_Gambierdiscus-australes\_DN40756\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+13100\_MMETSP0766\_Gambierdiscus-australes\_DN25567\_c0\_g3\_i1.p2.faa&1&0&0&0&0&1\\ 
+ \hline 
+38396\_MMETSP0766\_Gambierdiscus-australes\_DN41494\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+27068\_MMETSP0766\_Gambierdiscus-australes\_DN36729\_c0\_g3\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+35359\_MMETSP0766\_Gambierdiscus-australes\_DN40756\_c1\_g4\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+30964\_MMETSP0766\_Gambierdiscus-australes\_DN38922\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+30406\_MMETSP0766\_Gambierdiscus-australes\_DN38631\_c0\_g4\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+36994\_MMETSP0766\_Gambierdiscus-australes\_DN41205\_c0\_g3\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+13103\_MMETSP0766\_Gambierdiscus-australes\_DN25567\_c0\_g6\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+18485\_MMETSP0766\_Gambierdiscus-australes\_DN30257\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+23610\_MMETSP0766\_Gambierdiscus-australes\_DN34624\_c0\_g3\_i1.p2.faa&1&0&0&0&0&1\\ 
+ \hline 
+18487\_MMETSP0766\_Gambierdiscus-australes\_DN30257\_c0\_g2\_i2.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+46548\_MMETSP0766\_Gambierdiscus-australes\_DN42196\_c9\_g10\_i1.p2.faa&1&0&0&0&0&1\\ 
+ \hline 
+15765\_MMETSP0766\_Gambierdiscus-australes\_DN27921\_c0\_g3\_i1.p2.faa&1&0&0&0&0&1\\ 
+ \hline 
+30418\_MMETSP0766\_Gambierdiscus-australes\_DN38640\_c0\_g5\_i1.p2.faa&1&0&0&0&0&1\\ 
+ \hline 
+17953\_MMETSP0766\_Gambierdiscus-australes\_DN29796\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+37006\_MMETSP0766\_Gambierdiscus-australes\_DN41205\_c1\_g6\_i1.p2.faa&1&0&0&0&0&1\\ 
+ \hline 
+13101\_MMETSP0766\_Gambierdiscus-australes\_DN25567\_c0\_g4\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+46559\_MMETSP0766\_Gambierdiscus-australes\_DN42196\_c9\_g6\_i3.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+17396\_MMETSP0766\_Gambierdiscus-australes\_DN2924\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+18547\_MMETSP0766\_Gambierdiscus-australes\_DN30296\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+7245\_MMETSP0766\_Gambierdiscus-australes\_DN20901\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+17216\_MMETSP0766\_Gambierdiscus-australes\_DN29099\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+30404\_MMETSP0766\_Gambierdiscus-australes\_DN38631\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+40250\_MMETSP0766\_Gambierdiscus-australes\_DN41766\_c4\_g23\_i1.p2.faa&1&0&0&0&0&1\\ 
+ \hline 
+41420\_MMETSP0766\_Gambierdiscus-australes\_DN41862\_c2\_g4\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+26875\_MMETSP0766\_Gambierdiscus-australes\_DN36626\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+28107\_MMETSP0766\_Gambierdiscus-australes\_DN37278\_c0\_g4\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+14799\_MMETSP0766\_Gambierdiscus-australes\_DN27057\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+37863\_MMETSP0766\_Gambierdiscus-australes\_DN41388\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+38400\_MMETSP0766\_Gambierdiscus-australes\_DN41494\_c1\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+23609\_MMETSP0766\_Gambierdiscus-australes\_DN34624\_c0\_g2\_i1.p2.faa&1&0&0&0&0&1\\ 
+ \hline 
+10084\_MMETSP0766\_Gambierdiscus-australes\_DN23190\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+17955\_MMETSP0766\_Gambierdiscus-australes\_DN29796\_c0\_g3\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+13099\_MMETSP0766\_Gambierdiscus-australes\_DN25567\_c0\_g2\_i1.p2.faa&1&0&0&0&0&1\\ 
+ \hline 
+37003\_MMETSP0766\_Gambierdiscus-australes\_DN41205\_c1\_g4\_i2.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+42718\_MMETSP0766\_Gambierdiscus-australes\_DN41959\_c8\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+52639\_MMETSP0766\_Gambierdiscus-australes\_DN45380\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+38398\_MMETSP0766\_Gambierdiscus-australes\_DN41494\_c0\_g3\_i1.p2.faa&1&0&0&0&0&1\\ 
+ \hline 
+28109\_MMETSP0766\_Gambierdiscus-australes\_DN37278\_c0\_g6\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+24850\_MMETSP0766\_Gambierdiscus-australes\_DN35413\_c0\_g4\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+35358\_MMETSP0766\_Gambierdiscus-australes\_DN40756\_c1\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+15764\_MMETSP0766\_Gambierdiscus-australes\_DN27921\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+28108\_MMETSP0766\_Gambierdiscus-australes\_DN37278\_c0\_g5\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+18688\_MMETSP0766\_Gambierdiscus-australes\_DN30415\_c0\_g5\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+35357\_MMETSP0766\_Gambierdiscus-australes\_DN40756\_c0\_g5\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+35353\_MMETSP0766\_Gambierdiscus-australes\_DN40756\_c0\_g1\_i3.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+37009\_MMETSP0766\_Gambierdiscus-australes\_DN41205\_c1\_g9\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+15763\_MMETSP0766\_Gambierdiscus-australes\_DN27921\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+41417\_MMETSP0766\_Gambierdiscus-australes\_DN41862\_c2\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+28600\_MMETSP0766\_Gambierdiscus-australes\_DN37530\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+7400\_MMETSP0766\_Gambierdiscus-australes\_DN21004\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+35356\_MMETSP0766\_Gambierdiscus-australes\_DN40756\_c0\_g4\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+30416\_MMETSP0766\_Gambierdiscus-australes\_DN38640\_c0\_g3\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+18686\_MMETSP0766\_Gambierdiscus-australes\_DN30415\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
+ \hline 
+16842\_MMETSP0766\_Gambierdiscus-australes\_DN28731\_c0\_g3\_i1.p2.faa&1&0&0&0&0&1\\ 
+ \hline 
+\end{longtable}
+
 
 \newpage
 \bibliographystyle{acm}

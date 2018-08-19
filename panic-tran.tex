@@ -156,14 +156,12 @@ The identified contigs for an active domain was then searched for within the clu
 To do:
 \begin{itemize}
 \item need to download ACP, ET, KR, DR, AT and TE sequences and make hmmer libs -- inclusion of extra domains is heavily dependent on time
-\item find conserved KS of each KS cluster (yay for hmmer) and align clusters, run phylogeny to see if there is anything interesting there 
+\item find conserved sequences of each KS cluster (yay for hmmer) and align clusters, run phylogeny to see if there is anything interesting there 
 \end{itemize}
 
 \subsection*{Last common ancestor determination of contigs}
 Predicted proteins of each transcriptome were searched against the uniprot\_trembl database. 
-The  \cite{timbasta}
-basta\\
-dinoSL
+BASTA was used to extract the taxonomic determination from the database search for each contig and the associated last common ancestor  \cite{timbasta}.
 
 %\subsection*{\textit{G. polynesiensis} comparison}
 \newpage
@@ -173,7 +171,6 @@ dinoSL
 %- seq and annotation stats for \textit{Gambierdiscus polynesiensis} CAWD254 and Table ~\ref{tbl:SeqTable}
 \subsection*{General info}
 The progression of clustering and annotation results per transcriptome can be found in Table ~\ref{tbl:ClustTable}.\\
-- spliced leader sites really low. potentially interesting - the two highest ones are from same taxonomic cluster, while the other three are representatives from the other two main clades. Also poly and silvae are from separate seq runs, so not an artefact from that front.
 
 \begin{table}
 \caption{Progression of clusters found in each \emph{Gambierdiscus} transcriptome during processing.}
@@ -193,6 +190,8 @@ The progression of clustering and annotation results per transcriptome can be fo
 \textbf{Protein clusters (cd-hit)}&60,166&139,699&92,418&139,487&107,766\\
 \hline
 \textbf{Contigs annotated (Interpro Scan)}&131,970&334,737&225,324&225,324&254,844\\ 
+\hline
+\textbf{Contigs with Uniprot hits}&&&&&\\ 
 \hline
 %\hline
 %&&&&&\\
@@ -438,32 +437,55 @@ TE&&&&&&&\\
 \FloatBarrier
 - any multi-domain ones?\\
 \paragraph*{KS domains.}
-A total of 850 contigs were identified with KS domains which assembled into 315 clusters (table ~\ref{tbl:PKSTable}). 
+A total of 850 contigs were identified with KS domains which assembled into 314 clusters (table ~\ref{tbl:PKSTable}). 
 Nine clusters contained more than 10 contigs, with the highest number of 130 contigs from all species.
 9 clusters contained 10 contigs or more, of which only two did not contain all the taxa examined.
+57 of the 314 clusters contained contigs from multiple species, so 81.8 \% of KS clusters were species specific while 78.7 \% contained only a single contig. 
+The non-ciguatoxic \textit{G. carpenteri} was absent from 73.6 \% of the clusters. 
+Of the clusters without \textit{G. carpenteri}, none contained all four other species. 
+However one cluster contained \textit{G. lapillus}, \textit{G. polynesiensis} and \emph{G.} cf. \emph{silvae} with equally represented transcript numbers. 
+Four contigs contained \textit{G. polynesiensis} and \emph{G.} cf. \emph{silvae} only, one of which had a higher contig representation of \textit{G. polynesiensis} than \emph{G.} cf. \emph{silvae}. 
+\textit{G. polynesiensis} was the only representative species in 71 clusters, of which three clusters contained 2 contigs and one cluster contained 3 contigs. 
+\emph{G.} cf. \emph{silvae} was representative as the only species in 23 clusters, one of which contained 3 contigs while the other clusters contained single contigs.
+\textit{G. australes}, \textit{G. carpenteri} and \textit{G. lapillus} were the solo representatives of 81, 39 \& 35 KS clusters respectively. 
+
 
 - insert Venn diagram of KS domains and overlap here
 \section*{Discussion}
--overall summary of study
-- core and pan more likely to be accurate without being axenic unless same contamination
+To go here:
+\begin{itemize}
+\item overall summary of study
+\item core and pan more likely to be accurate without being axenic unless same contamination
+\item spliced leader sites really low. potentially interesting - the two highest ones are from same taxonomic cluster, while the other three are representatives from the other two main clades. Also poly and silvae are from separate seq runs, so not an artefact from that front.
+\end{itemize}
 
 \subsection*{core \textit{Gambierdiscus} transcriptome}
-- \cite{lidie2005gene} comprehensive index of genes in K. brevis to compare to 
+ \cite{lidie2005gene} comprehensive index of genes in \textit{K. brevis} to compare to as well as functional summaries 
 
-\subsubsection*{discuss common \& different gene pathways found}
+\subsubsection*{discuss common \& different functions found}
 
 
 \subsubsection*{Expression of genes involved in polyketide production}
-- discuss if different gene sets were expressed between toxic and non- toxic strains\\
-- discuss if diff genes between all 3 strains\\
-- discuss short comings with CAWD254 not having bioassays run, sequencing differences etc
+\begin{itemize}
+\item discuss if different gene sets were expressed between toxic and non- toxic strains (ie. not carp)
+\item discuss KS containing contigs per species plus distribution and number of contigs in KS clusters
+\item discuss KS conserved region phylogeny
+\end{itemize}
+
 
 \subsubsection*{discuss usefulness for future studies}
+\begin{itemize}
+\item Usefullness of core transcriptome for RNA sequencing studies
+\item Investigate poly only KS clusters or clusters with poly more contigs
+\item 
+\end{itemize}
 
 \subsubsection*{discuss potential short commings} 
-- from different seq runs and methods and seq depth may vary, especially \textit{G. australes} \\
-- intra-speces variation so one isolate per species may not be representative \\
-- unknown if processes other than PKS play a role in toxin production
+\begin{itemize}
+\item from different seq runs and methods and seq depth may vary, especially \textit{G. australes}
+\item intra-speces variation so one isolate per species may not be representative
+\item unknown if processes other than PKS play a role in toxin production
+\end{itemize}
 %\subsection*{core \textit{G. polynesiensis} transcriptome}
 %- discuss common gene pathways found \\
 %-discuss usefulness for future studies\\
@@ -474,7 +496,7 @@ Nine clusters contained more than 10 contigs, with the highest number of 130 con
 
 
 \section*{Supplementary}
-- gosum tables with GO annotations
+- need to add australes
 
 \FloatBarrier
 \begin{longtable}{ | p{2.2cm} | p{4cm} |p{2cm} | p{2cm} | p{2cm} | p{2cm} |}

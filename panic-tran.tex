@@ -100,7 +100,7 @@ Scripts used for this project are available on Github under hydrahamster/pan-tra
 \subsection*{Transcriptome acquisition}
 Species of \textit{Gambierdiscus} used in this chapter are sumarized in Table ~\ref{tbl:StrainTable}. 
 Toxicity and toxin profile reports are specific to the strains used due to the possibility of inter-species variation in toxin production as recently reported \cite{larsson2018toxicology,rhodes2017epiphytic}. 
-The \textit{G. polynesiensis} toxin profile was elucidated by Tim Harwood at the Cawthron institute with the same methodology for \textit{G. lapillus} in \textbf{Capter 1}.
+The \textit{G. polynesiensis} toxin profile was elucidated by Tim Harwood at the Cawthron institute with the same methodology as for \textit{G. lapillus} in \textbf{Capter 1}.
 
 \FloatBarrier
 \begin{table}
@@ -133,8 +133,8 @@ The \textit{G. polynesiensis} toxin profile was elucidated by Tim Harwood at the
 %\hline
 
 Transcriptomes used in this chapter were the RNA-seq libraries for \textit{G. carpenteri} (UTSMER9A3), \textit{G. lapillus} (HG4), \textit{G. polynesiensis} (CG15) and \textit{G.} cf. \textit{silvae} (HG5) generated for \textbf{chapter 4}. 
-\textit{G. australes} (CAWD149) RNA-seq library was downloaded from the MMETSP public database. 
-Seq libraries were assembled as per the transcriptome assembly subsection in the methods of \textit{chapter 4}, without diginorm. 
+\textit{G. australes} (CAWD149) RNA-seq library was downloaded from the MMETSP public database (Table ~\ref{tbl:StrainTable}). \\
+Seq libraries were assembled as per the transcriptome assembly subsection in the methods of \textbf{chapter 4}, without diginorm. 
 
 \subsection*{Spliced leader search}
 The spliced leader sequences reported by Zhang et al. (2007) were used to build a hmmer library. 
@@ -147,15 +147,15 @@ Then Transdecoder predicted the protein coding regions of the nucleotide cluster
 Protein clusters were annotated with Interproscan v5.27 with local lookup server \cite{quevillon2005interproscan}.
 Protein clusters were processed to include the species of origin instead of the TRINITY tag and concatenated for input to get\_homologues \cite{vinuesa2015robust}. 
 The -t 0 flag was used for get\_homologues to acquire all possible clusters even with only one species representative, and -G for the OMCL algorithm. 
-The resulting pan-, core- and softcore-clusters were matched with their interpro annotations and GO terms were queried with GOSUM against the basic Gene Ontology database \cite{timgosum,ashburner2000gene,gene2016expansion}. 
-GOSUM was run at both levels 1 and 2 of gene ontology counts with the go-basic gene ontology version. 
+The resulting pan-, core- and softcore-clusters were matched with their interpro annotations and GO terms were queried with GOSUM against the basic Gene Ontology (GO) database \cite{timgosum,ashburner2000gene,gene2016expansion}. 
+GOSUM was run at both levels 1 and 2 of GO counts with the go-basic GO reference. 
 
 \subsection*{PKS search}
 The transcriptome assemblies were queried for the five conserved PKS active domains using hmmer \cite{eddy2015hmmer} with libraries developed for this project. 
-The identified contigs for an active domain was then searched for within the clusters to identify how the active domains grouped together between species.\\
+The contigs which were identified to contain an active domain were then searched for within the clusters to identify how the active domains grouped together between species.\\
 To do:
 \begin{itemize}
-\item need to download ACP, ET, KR, DR, AT and TE sequences and make hmmer libs -- inclusion of extra domains is heavily dependent on time
+\item need to download ACP, ET, KR, DR, AT and TE sequences and make hmmer libs -- inclusion of these extra domains is heavily dependent on time
 \item find conserved sequences of each KS cluster (yay for hmmer) and align clusters, run phylogeny to see if there is anything interesting there 
 \end{itemize}
 
@@ -179,19 +179,19 @@ The progression of clustering and annotation results per transcriptome can be fo
 \hline
 \textbf{Species}& \textit{G. australes}& \emph{G. carpenteri}&\emph{G. lapillus}&\emph{G. polynesiensis}&\emph{G.} cf. \emph{silvae}\\
 \hline
-\textbf{Contigs}&102,863&263,829&148,972&270,315&191,224\\
+\textbf{Contigs \#}&102,863&263,829&148,972&270,315&191,224\\
 \hline
-\textbf{dinoSL}&304&683&232&1,570&1,524\\
+\textbf{dinoSL \#}&304&683&232&1,570&1,524\\
 \hline
-\textbf{Nucleotide clusters (cd-hit)}&102,861&263,743&148,966&270,265&191,205\\
+\textbf{Nucleotide clusters \# (cd-hit)}&102,861&263,743&148,966&270,265&191,205\\
 \hline
-\textbf{Predicted coding regions (Transdecoder)}&63,299&180,568&111,862&176,290&132,688\\
+\textbf{Predicted coding regions \# (Transdecoder)}&63,299&180,568&111,862&176,290&132,688\\
 \hline
-\textbf{Protein clusters (cd-hit)}&60,166&139,699&92,418&139,487&107,766\\
+\textbf{Protein clusters \# (cd-hit)}&60,166&139,699&92,418&139,487&107,766\\
 \hline
-\textbf{Contigs annotated (Interpro Scan)}&131,970&334,737&225,324&225,324&254,844\\ 
+\textbf{Contigs annotated \# (Interpro Scan)}&131,970&334,737&225,324&225,324&254,844\\ 
 \hline
-\textbf{Contigs with Uniprot hits}&&&&&\\ 
+\textbf{Contigs with Uniprot hits \#}&&&&&\\ 
 \hline
 %\hline
 %&&&&&\\
@@ -204,12 +204,12 @@ The progression of clustering and annotation results per transcriptome can be fo
 \subsubsection*{Comparison of \emph{Gambierdiscus} inter-species transcriptome annotations}
 \FloatBarrier
 \begin{itemize}
-\item \textbf{Tim} I think I'm going to need to take out anything that links to Bacterial or unknown LCA?
+\item \textbf{Tim} I think I'm going to need to take out anything that links to Bacterial or unknown LCA and then re-run GOSUM. Thought?
 \item heatmap from get\_hom is throwing up errors
 \item comment on annotation differences between transcriptomes as seen in figs 1-6
 \end{itemize}
 
-
+THe GO annotations were split up into the three functional groups defined by the consortium: 1) Molecular processes (Figs. ~\ref{fig:SpecGo1Molec} \& ~\ref{fig:SpecGo2Molec}) defined as biochemical or a macromolecule directly interacting with other molecules; 2) Cellular components (Figs. ~\ref{fig:SpecGo1Cell} \& ~\ref{fig:SpecGo2Cell}) defined by the location within the cell where a molecular process takes place; and 3) Biological process (Figs ~\ref{fig:SpecGo1Bio} \& ~\ref{fig:SpecGo2Bio}) which is defined as a molecular machinery participating in the execution of the cell's genetic programming, e.g. cell division.
 
 \begin{figure} 
 \includegraphics[scale=.7]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum1-bio-split.png} 

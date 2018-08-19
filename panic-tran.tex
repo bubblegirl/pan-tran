@@ -48,7 +48,11 @@ An understanding of the evolution of \textit{Gambierdiscus} and their toxins req
 Transcriptomic sequencing is a feasible alternative to genome sequencing. 
 In this study, we generated de novo RNA-seq libraries for \textit{Gambierdiscus polynesiensis}, \textit{Gambierdiscus carpenteri}, \textit{Gambierdiscus} cf. \textit{silvae} and \textit{Gambierdiscus lapillus}, compared these to a previously sequenced \textit{Gambierdiscus australes}, to discover a set of core genes shared by all species. 
 We present a Gambierdiscus core transcriptome, which might be used to investigate candidate genes related to toxin production.\\
-Further to investigate CTX production more specifically, we compared two CTX -producing strains of \textit{Gambierdiscus polynesiensis} to one non-CTX producing strain, verified by LC-MS/MS, to look for clues about pathways involved in ciguatoxin production.
+Further to investigate CTX production more specifically, we compared two CTX -producing strains of \textit{Gambierdiscus polynesiensis} to one non-CTX producing strain, verified by LC-MS/MS, to look for clues about pathways involved in ciguatoxin production.\\
+\textbf{To do:}
+\begin{itemize}
+\item re-structure as per Tim's comments
+\end{itemize}
 
 \newpage
 \section*{Introduction}
@@ -100,7 +104,12 @@ Scripts used for this project are available on Github under hydrahamster/pan-tra
 \subsection*{Transcriptome acquisition}
 Species of \textit{Gambierdiscus} used in this chapter are sumarized in Table ~\ref{tbl:StrainTable}. 
 Toxicity and toxin profile reports are specific to the strains used due to the possibility of inter-species variation in toxin production as recently reported \cite{larsson2018toxicology,rhodes2017epiphytic}. 
-The \textit{G. polynesiensis} toxin profile was elucidated by Tim Harwood at the Cawthron institute with the same methodology as for \textit{G. lapillus} in \textbf{Capter 1}.
+The \textit{G. polynesiensis} toxin profile was elucidated by Tim Harwood at the Cawthron institute with the same methodology as for \textit{G. lapillus} in \textbf{Capter 1}. 
+Seq libraries were assembled as per the transcriptome assembly subsection in the methods of \textbf{chapter 4}, without diginorm. 
+\textbf{To do:}
+\begin{itemize}
+\item check if Shauna submitted CAWD149 and if it was from a single RNA extraction
+\end{itemize}
 
 \FloatBarrier
 \begin{table}
@@ -132,9 +141,9 @@ The \textit{G. polynesiensis} toxin profile was elucidated by Tim Harwood at the
 %\textit{Gambierdiscus polynesiensis}&CAWD254&CTX -ve; MTX -ve&CTX N/A; MTX N/A&&This study\\
 %\hline
 
-Transcriptomes used in this chapter were the RNA-seq libraries for \textit{G. carpenteri} (UTSMER9A3), \textit{G. lapillus} (HG4), \textit{G. polynesiensis} (CG15) and \textit{G.} cf. \textit{silvae} (HG5) generated for \textbf{chapter 4}. 
-\textit{G. australes} (CAWD149) RNA-seq library was downloaded from the MMETSP public database (Table ~\ref{tbl:StrainTable}). \\
-Seq libraries were assembled as per the transcriptome assembly subsection in the methods of \textbf{chapter 4}, without diginorm. 
+%Transcriptomes used in this chapter were the RNA-seq libraries for \textit{G. carpenteri} (UTSMER9A3), \textit{G. lapillus} (HG4), \textit{G. polynesiensis} (CG15) and \textit{G.} cf. \textit{silvae} (HG5) generated for \textbf{chapter 4}. 
+%\textit{G. australes} (CAWD149) RNA-seq library was downloaded from the MMETSP public database (Table ~\ref{tbl:StrainTable}). \\
+
 
 \subsection*{Spliced leader search}
 The spliced leader sequences reported by Zhang et al. (2007) were used to build a hmmer library. 
@@ -142,13 +151,13 @@ The transcriptome assemblies were searched with the dinoSL hmmer library to inve
 All cluster iterations following were matched against the contig IDs with spliced leader presence.
 
 \subsection*{Homolog clustering}
-Cd-hit was used to cluster the contigs from assemblies with the flags T 10 -M 5000 -G 0 -c 1.00 -aS 1.00 -aL 0.005 \cite{fu2012cd}. 
-Then Transdecoder predicted the protein coding regions of the nucleotide clusters which were subsequently clustered adain with cd-hit as before with the exception of -c 0.98 \cite{haas2016transdecoder}.
+Cd-hit was used to cluster highly similar transcripts to reduce redundancy with the flags T 10 -M 5000 -G 0 -c 1.00 -aS 1.00 -aL 0.005 as shown by Cerveau and Jackson (2016) \cite{cerveau2016combining,fu2012cd}. 
+Transdecoder was use to predict coding regions on the clustered nucleotide sequences \cite{haas2016transdecoder}.
 Protein clusters were annotated with Interproscan v5.27 with local lookup server \cite{quevillon2005interproscan}.
 Protein clusters were processed to include the species of origin instead of the TRINITY tag and concatenated for input to get\_homologues \cite{vinuesa2015robust}. 
 The -t 0 flag was used for get\_homologues to acquire all possible clusters even with only one species representative, and -G for the OMCL algorithm. 
 The resulting pan-, core- and softcore-clusters were matched with their interpro annotations and GO terms were queried with GOSUM against the basic Gene Ontology (GO) database \cite{timgosum,ashburner2000gene,gene2016expansion}. 
-GOSUM was run at both levels 1 and 2 of GO counts with the go-basic GO reference. 
+GOSUM was run at levels 1 and 2 of GOs with the go-basic GO reference. 
 
 \subsection*{PKS search}
 The transcriptome assemblies were queried for the five conserved PKS active domains using hmmer \cite{eddy2015hmmer} with libraries developed for this project. 
@@ -204,12 +213,21 @@ The progression of clustering and annotation results per transcriptome can be fo
 \subsubsection*{Comparison of \emph{Gambierdiscus} inter-species transcriptome annotations}
 \FloatBarrier
 \begin{itemize}
-\item \textbf{Tim} I think I'm going to need to take out anything that links to Bacterial or unknown LCA and then re-run GOSUM. Thought?
+\item \textbf{Tim} I think I'm going to need to take out anything that links to Bacterial or unknown LCA and then re-run GOSUM. Thoughts?
 \item heatmap from get\_hom is throwing up errors
 \item comment on annotation differences between transcriptomes as seen in figs 1-6
 \end{itemize}
 
-THe GO annotations were split up into the three functional groups defined by the consortium: 1) Molecular processes (Figs. ~\ref{fig:SpecGo1Molec} \& ~\ref{fig:SpecGo2Molec}) defined as biochemical or a macromolecule directly interacting with other molecules; 2) Cellular components (Figs. ~\ref{fig:SpecGo1Cell} \& ~\ref{fig:SpecGo2Cell}) defined by the location within the cell where a molecular process takes place; and 3) Biological process (Figs ~\ref{fig:SpecGo1Bio} \& ~\ref{fig:SpecGo2Bio}) which is defined as a molecular machinery participating in the execution of the cell's genetic programming, e.g. cell division.
+The GOs were split up into the three functional groups defined by the consortium: 1) Molecular processes (Figs. ~\ref{fig:SpecGo1Molec} \& ~\ref{fig:SpecGo2Molec}) defined as biochemical or a macromolecule directly interacting with other molecules; 2) Cellular components (Figs. ~\ref{fig:SpecGo1Cell} \& ~\ref{fig:SpecGo2Cell}) defined by the location within the cell where a molecular process takes place; and 3) Biological process (Figs ~\ref{fig:SpecGo1Bio} \& ~\ref{fig:SpecGo2Bio}) which is defined as a molecular machinery participating in the execution of the cell's genetic programming, e.g. cell division.
+GO basic is structured in a hirachical manner, with parent and child terms where child terms are more specific than parent terms. 
+For a general overview of functions present in each transcriptome, level 1 GO terms were elucidated (Figs. ~\ref{fig:SpecGo1Bio}, ~\ref{fig:SpecGo1Cell} \& ~\ref{fig:SpecGo1Molec}). 
+A more in depth query of the functions present in each transcriptome was conducted with a GO search of the child terms at level 2 (Figs. ~\ref{fig:SpecGo2Bio}, ~\ref{fig:SpecGo2Cell} \& ~\ref{fig:SpecGo2Molec}). \\
+\textbf{To do:}
+\begin{itemize}
+\item describe differences in graphs once I know what needs to be taken out and re-run
+\item GOSUM lvl2 graphs are partially missing descriptions on x-axis. Fix when re-run
+\end{itemize}
+
 
 \begin{figure} 
 \includegraphics[scale=.7]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum1-bio-split.png} 
@@ -254,7 +272,14 @@ THe GO annotations were split up into the three functional groups defined by the
 \FloatBarrier
 
 \subsection*{Transcriptome similarity clustering}
-- insert Venn diagram of of cluster distribution here
+\textbf{To do:}
+\begin{itemize}
+\item insert Venn diagram of of cluster distribution here
+\item describe differences in graphs once I know what needs to be taken out and re-run
+\item GOSUM lvl2 graphs are partially missing descriptions on x-axis. Fix when re-run
+\end{itemize}
+Potentially interesting point:\\
+- 
 
 \FloatBarrier
 \begin{figure} 

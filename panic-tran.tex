@@ -29,10 +29,10 @@
 Climate Change Cluster (C3), University of Technology Sydney, Ultimo, 2007 NSW, Australia, anna.kretzschmar@uts.edu.au
 \paragraph{}Tim Kahlke\\
 Climate Change Cluster (C3), University of Technology Sydney, Ultimo, 2007 NSW, Australia
-\paragraph{}Kirsty Smith \\
-Cawthron Institute, The Wood, Nelson 7010, New Zealanda
-\paragraph{}Lesley Rhodes \\
-Cawthron Institute, The Wood, Nelson 7010, New Zealand
+%\paragraph{}Kirsty Smith \\
+%Cawthron Institute, The Wood, Nelson 7010, New Zealanda
+%\paragraph{}Lesley Rhodes \\
+%Cawthron Institute, The Wood, Nelson 7010, New Zealand
 \paragraph{}Aaron E. Darling \\
 The ithree institute, University of Technology Sydney, Ultimo, 2007 NSW, Australia
 \paragraph{}Shauna Murray\\ 
@@ -105,7 +105,7 @@ Scripts used for this project are available on Github under hydrahamster/pan-tra
 Species of \textit{Gambierdiscus} used in this chapter are sumarized in Table ~\ref{tbl:StrainTable}. 
 Toxicity and toxin profile reports are specific to the strains used due to the possibility of inter-species variation in toxin production as recently reported \cite{larsson2018toxicology,rhodes2017epiphytic}. 
 The \textit{G. polynesiensis} toxin profile was elucidated by Tim Harwood at the Cawthron institute with the same methodology as for \textit{G. lapillus} in \textbf{Capter 1}. 
-Seq libraries were assembled as per the transcriptome assembly subsection in the methods of \textbf{chapter 4}, without diginorm. 
+Seq libraries were assembled as per the transcriptome assembly subsection in the methods of \textbf{chapter 4}, without diginorm. \\
 \textbf{To do:}
 \begin{itemize}
 \item check if Shauna submitted CAWD149 and if it was from a single RNA extraction
@@ -165,11 +165,11 @@ The contigs which were identified to contain an active domain were then searched
 To do:
 \begin{itemize}
 \item need to download ACP, ET, KR, DR, AT and TE sequences and make hmmer libs -- inclusion of these extra domains is heavily dependent on time
-\item find conserved sequences of each KS cluster (yay for hmmer) and align clusters, run phylogeny to see if there is anything interesting there 
+\item find conserved sequences of each KS cluster (yay for hmmer) and align clusters, run BI phylogeny to see if there is anything interesting there 
 \end{itemize}
 
 \subsection*{Last common ancestor determination of contigs}
-Predicted proteins of each transcriptome were searched against the uniprot\_trEMBL database \cite{uniprot2010ongoing}. 
+Predicted proteins of each transcriptome were searched against the SwissProt and uniprot\_trEMBL databases \cite{uniprot2010ongoing}. 
 BASTA was used to extract the taxonomic determination from the database search for each contig and the associated last common ancestor  \cite{timbasta}.
 
 %\subsection*{\textit{G. polynesiensis} comparison}
@@ -212,11 +212,6 @@ The progression of clustering and annotation results per transcriptome can be fo
 
 \subsubsection*{Comparison of \emph{Gambierdiscus} inter-species transcriptome annotations}
 \FloatBarrier
-\begin{itemize}
-\item \textbf{Tim} I think I'm going to need to take out anything that links to Bacterial or unknown LCA and then re-run GOSUM. Thoughts?
-\item heatmap from get\_hom is throwing up errors
-\item comment on annotation differences between transcriptomes as seen in figs 1-6
-\end{itemize}
 
 The GOs were split up into the three functional groups defined by the consortium: 1) Molecular processes (Figs. ~\ref{fig:SpecGo1Molec} \& ~\ref{fig:SpecGo2Molec}) defined as biochemical or a macromolecule directly interacting with other molecules; 2) Cellular components (Figs. ~\ref{fig:SpecGo1Cell} \& ~\ref{fig:SpecGo2Cell}) defined by the location within the cell where a molecular process takes place; and 3) Biological process (Figs ~\ref{fig:SpecGo1Bio} \& ~\ref{fig:SpecGo2Bio}) which is defined as a molecular machinery participating in the execution of the cell's genetic programming, e.g. cell division.
 GO basic is structured in a hirachical manner, with parent and child terms where child terms are more specific than parent terms. 
@@ -224,6 +219,8 @@ For a general overview of functions present in each transcriptome, level 1 GO te
 A more in depth query of the functions present in each transcriptome was conducted with a GO search of the child terms at level 2 (Figs. ~\ref{fig:SpecGo2Bio}, ~\ref{fig:SpecGo2Cell} \& ~\ref{fig:SpecGo2Molec}). \\
 \textbf{To do:}
 \begin{itemize}
+\item \textbf{Tim} I think I'm going to need to take out anything that links to Bacterial or unknown LCA and then re-run GOSUM. Thoughts?
+\item heatmap (evol relationship inferred from clustering, compare to phylogeny in \textbf{chapter 4}) from get\_hom is throwing up errors
 \item describe differences in graphs once I know what needs to be taken out and re-run
 \item GOSUM lvl2 graphs are partially missing descriptions on x-axis. Fix when re-run
 \end{itemize}
@@ -274,12 +271,14 @@ A more in depth query of the functions present in each transcriptome was conduct
 \subsection*{Transcriptome similarity clustering}
 \textbf{To do:}
 \begin{itemize}
-\item insert Venn diagram of of cluster distribution here
+\item insert Venn diagram of of cluster overlap between the five species
 \item describe differences in graphs once I know what needs to be taken out and re-run
 \item GOSUM lvl2 graphs are partially missing descriptions on x-axis. Fix when re-run
 \end{itemize}
-Potentially interesting point:\\
-- 
+Potentially interesting points, if still there after bact and unknown outtakes:\\
+- intracellular parts in pan (gosum2 cell)\\
+- organelle memb in core and softcore, seem essential and not in unique (gosum2 cell)\\
+- core and unique pretty evenly matched in most entries for gosum2 molec, except catalytic activity binding on DNA is  muchhigher in unique and a little higher for binding RNA
 
 \FloatBarrier
 \begin{figure} 
@@ -352,7 +351,6 @@ Single species clusters from \emph{G. australes}, \textit{G. carpenteri} \textit
 The highest number of contigs in a unique cluster were 37, found in two clusters from \textit{G. carpenteri}. 
 One of these was annotated for RNA and metal ion binding activity. 
 Of the unique clusters, 83.1 \% contained only one contig and 97.8 \% of clusters have 5 contigs or less. 
-- pathways present\\
 
 \subsection*{Last common ancestor identification of contigs}
 
@@ -389,9 +387,14 @@ Of the unique clusters, 83.1 \% contained only one contig and 97.8 \% of cluster
 \subsubsection*{Bacterial origin}
 \textbf{To do:}
 \begin{itemize}
+\item re-running with uniprot\_trembl.fasta to see how percentage identity values differ to swissprot database
+\item merge trEMBL and swissprot databases and see how BASTA goes in comparison
+\item check if LCA is specific enough for Proteobacteria or gamma-Proteobacteria regarding Quorum sensing taxa
+\item make new directory with bacterial origin 
 \item dinoSL search to see if any of bact origin are from dinos
-\item look if in unique or core clusters
-\item look for geographic link in clustering (ie. poly and australes from Rarotonga, silvae and lapillus from Heron Island, carp from Merimbula)
+\item look if bact contigs found in unique or core clusters
+\item check if core bacteriome (how wanky is that word) or any species specific
+\item check for regional link of host association. Lapillus and silvae are from Heron Island from same collection trip, poly and australes are from Rarotonga collected 9 years apart, carp is from temperate Merimbula Merimbula)
 \end{itemize}
 
 BASTA results, default -l and -m flags ie. likely going to change as swissprot percentage match super low:\\
@@ -407,15 +410,6 @@ BASTA results, default -l and -m flags ie. likely going to change as swissprot p
 - pol: 0 bact, 95 Unknown \\
 - sil: 0 bact, 56 Unknown \\
 - -m 1 \& -l 80 for carp with swissprot db had much higher bact contamn: 2,784 seqs bact, 22,429 seqs unknown, 35,263 seqs eukar .. contamination potentially a problem here \\
-\textbf{To do:}
-\begin{itemize}
-\item re-running with uniprot\_trembl.fasta to see how percentage identity values differ to swissprot database
-\item make new directory with bacterial origin 
-\item check if core bacteriome (how wanky is that word) or any species specific
-\item check for regional link of host association. Lapillus and silvae are from Heron Island from same collection trip, poly and australes are from Rarotonga collected 9 years apart, carp is from temperate Merimbula
-\item hmmsearch for dinoSL to see if any of the bact origin clusters have been incorporated into genome
-\item check if LCA is specific enough for Proteobacteria or gamma-Proteobacteria regarding Quorum sensing taxa
-\end{itemize}
 
 %\subsection*{\emph{Gambierdiscus polynesiensis} intra-species core \& pan transcriptome}
 \subsection*{Looking into toxin producers}
@@ -433,7 +427,6 @@ To do:
 \item number of clusters
 \item percentage annotated
 \item pathways present (another GOSUM adventure?)
-
 \end{itemize}
 
 
@@ -463,7 +456,7 @@ TE&&&&&&&\\
 \end{tabular}
 \end{table}
 \FloatBarrier
-- any multi-domain ones?\\
+
 \paragraph*{KS domains.}
 A total of 850 contigs were identified with KS domains which assembled into 314 clusters (table ~\ref{tbl:PKSTable}). 
 Nine clusters contained more than 10 contigs, with the highest number of 130 contigs from all species.
@@ -476,13 +469,18 @@ Four contigs contained \textit{G. polynesiensis} and \emph{G.} cf. \emph{silvae}
 \textit{G. polynesiensis} was the only representative species in 71 clusters, of which three clusters contained 2 contigs and one cluster contained 3 contigs. 
 \emph{G.} cf. \emph{silvae} was representative as the only species in 23 clusters, one of which contained 3 contigs while the other clusters contained single contigs.
 \textit{G. australes}, \textit{G. carpenteri} and \textit{G. lapillus} were the solo representatives of 81, 39 \& 35 KS clusters respectively. \\
-- insert Venn diagram of KS domains and overlap here
+\textbf{To do:}
+\begin{itemize}
+\item insert Venn diagram of KS domains
+\item are there any multi-domain  transcripts?
+\end{itemize}
+
 \section*{Discussion}
 To go here:
 \begin{itemize}
 \item overall summary of study
 \item core and pan more likely to be accurate without being axenic unless same contamination
-\item spliced leader sites really low. potentially interesting - the two highest ones are from same taxonomic cluster, while the other three are representatives from the other two main clades. Also poly and silvae are from separate seq runs, so not an artefact from that front.
+\item spliced leader sites really low. potentially interesting - the two highest ones are from same phylogenetic clade, while the other three are representatives from the other two main clades. Also poly and silvae are from separate seq runs, so not an artefact from that front.
 \end{itemize}
 
 \subsection*{core \textit{Gambierdiscus} transcriptome}

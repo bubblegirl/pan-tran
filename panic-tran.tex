@@ -147,7 +147,7 @@ Then Transdecoder predicted the protein coding regions of the nucleotide cluster
 Protein clusters were annotated with Interproscan v5.27 with local lookup server \cite{quevillon2005interproscan}.
 Protein clusters were processed to include the species of origin instead of the TRINITY tag and concatenated for input to get\_homologues \cite{vinuesa2015robust}. 
 The -t 0 flag was used for get\_homologues to acquire all possible clusters even with only one species representative, and -G for the OMCL algorithm. 
-The resulting pan-, core- and softcore-clusters were matched with their interpro annotations and GO terms were queried with GOSUM \textbf{-- Tim how do I cit this?}. 
+The resulting pan-, core- and softcore-clusters were matched with their interpro annotations and GO terms were queried with GOSUM against the basic Gene Ontology database \cite{timgosum,ashburner2000gene,gene2016expansion}. 
 GOSUM was run at both levels 1 and 2 of gene ontology counts with the go-basic gene ontology version. 
 
 \subsection*{PKS search}
@@ -160,7 +160,7 @@ To do:
 \end{itemize}
 
 \subsection*{Last common ancestor determination of contigs}
-Predicted proteins of each transcriptome were searched against the uniprot\_trembl database. 
+Predicted proteins of each transcriptome were searched against the uniprot\_trEMBL database \cite{uniprot2010ongoing}. 
 BASTA was used to extract the taxonomic determination from the database search for each contig and the associated last common ancestor  \cite{timbasta}.
 
 %\subsection*{\textit{G. polynesiensis} comparison}
@@ -202,11 +202,14 @@ The progression of clustering and annotation results per transcriptome can be fo
 
 
 \subsubsection*{Comparison of \emph{Gambierdiscus} inter-species transcriptome annotations}
+\FloatBarrier
 \begin{itemize}
 \item \textbf{Tim} I think I'm going to need to take out anything that links to Bacterial or unknown LCA?
 \item heatmap from get\_hom is throwing up errors
 \item comment on annotation differences between transcriptomes as seen in figs 1-6
 \end{itemize}
+
+
 
 \begin{figure} 
 \includegraphics[scale=.7]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum1-bio-split.png} 
@@ -447,9 +450,7 @@ However one cluster contained \textit{G. lapillus}, \textit{G. polynesiensis} an
 Four contigs contained \textit{G. polynesiensis} and \emph{G.} cf. \emph{silvae} only, one of which had a higher contig representation of \textit{G. polynesiensis} than \emph{G.} cf. \emph{silvae}. 
 \textit{G. polynesiensis} was the only representative species in 71 clusters, of which three clusters contained 2 contigs and one cluster contained 3 contigs. 
 \emph{G.} cf. \emph{silvae} was representative as the only species in 23 clusters, one of which contained 3 contigs while the other clusters contained single contigs.
-\textit{G. australes}, \textit{G. carpenteri} and \textit{G. lapillus} were the solo representatives of 81, 39 \& 35 KS clusters respectively. 
-
-
+\textit{G. australes}, \textit{G. carpenteri} and \textit{G. lapillus} were the solo representatives of 81, 39 \& 35 KS clusters respectively. \\
 - insert Venn diagram of KS domains and overlap here
 \section*{Discussion}
 To go here:

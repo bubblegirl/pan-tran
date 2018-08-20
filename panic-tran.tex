@@ -164,7 +164,8 @@ The transcriptome assemblies were queried for the five conserved PKS active doma
 The contigs which were identified to contain an active domain were then searched for within the clusters to identify how the active domains grouped together between species.\\
 To do:
 \begin{itemize}
-\item need to download ACP, ET, KR, DR, AT and TE sequences and make hmmer libs -- inclusion of these extra domains is heavily dependent on time
+\item need to download ACP, ET, KR, DR, AT and TE sequences and make hmmer libs -- inclusion of these extra domains is heavily dependent on time. 
+Pretty much all studies so far just looked for the KS domain, though not sure why - all 7 are necessary to synthesize a polyketide structure.
 \item find conserved sequences of each KS cluster (yay for hmmer) and align clusters, run BI phylogeny to see if there is anything interesting there 
 \end{itemize}
 
@@ -196,19 +197,24 @@ The progression of clustering and annotation results per transcriptome can be fo
 \hline
 \textbf{Predicted coding regions \# (Transdecoder)}&63,299&180,568&111,862&176,290&132,688\\
 \hline
-\textbf{Protein clusters \# (cd-hit)}&60,166&139,699&92,418&139,487&107,766\\
-\hline
+%\textbf{Protein clusters \# (cd-hit)}&60,166&139,699&92,418&139,487&107,766\\
+%\hline
 \textbf{Contigs annotated \# (Interpro Scan)}&131,970&334,737&225,324&225,324&254,844\\ 
 \hline
 \textbf{Contigs with Uniprot hits \#}&&&&&\\ 
 \hline
-%\hline
+\textbf{Part of core transcriptome clusters}&13,750&13,750&13,750&13,750&13,750\\
+\hline
+\textbf{Part of softcore transcriptome clusters}&2,372&16,058&16,297&16,557&16,636\\
+\hline
+\textbf{Pan-transcriptome clusters}&35,356&61,494&32,341&60,769&41,350\\
+\hline
 %&&&&&\\
 \end{tabular}
 \end{table}
 \FloatBarrier
 \newpage
-
+\textbf{Tim:} It seems kinda conspicuous that the unique clusters of \textit{G. carpenteri} \& \textit{G. poly} are almost twice the number of \textit{G. lapillus} and \textit{G. silvae}, the first two were sequenced together with 150bp read length while the other two had 75bp read length during sequencing. Does this seem odd to you too?
 
 \subsubsection*{Comparison of \emph{Gambierdiscus} inter-species transcriptome annotations}
 \FloatBarrier
@@ -280,6 +286,8 @@ Potentially interesting points, if still there after bact and unknown outtakes:\
 - organelle memb in core and softcore, seem essential and not in unique (gosum2 cell)\\
 - core and unique pretty evenly matched in most entries for gosum2 molec, except catalytic activity binding on DNA is  muchhigher in unique and a little higher for binding RNA
 
+
+
 \FloatBarrier
 \begin{figure} 
 \includegraphics[scale=.58]{3Aug18_cluster-investigation/figures/gosum-pan/Pan-gosum1-bio-graph.png} 
@@ -325,7 +333,7 @@ Potentially interesting points, if still there after bact and unknown outtakes:\
 
 \subsubsection*{Core transcritome}
 A set of core genes common to all five species of \textit{Gambierdiscus} were found. 
-This set consisted of 13,750 amino acid clusters of which 45 \% were annotated with GO terms (Suppl. table ~\ref{tbl:PanGO1} \& ~\ref{tbl:PanGO2}). 
+This set consisted of 13,750 amino acid clusters (Table ~\ref{tbl:ClustTable}) of which 45 \% were annotated with GO terms (Suppl. table ~\ref{tbl:PanGO1} \& ~\ref{tbl:PanGO2}). 
 The highest number of contigs in any core cluster was 180 cluster of unknown function with 23, 45, 32, 31 and 49 from \textit{G. australes}, \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G.} cf. \textit{silvae} respectively. 
 Twelve of the core clusters contained 100 or more contigs, of which 3 were unannotated. 
 The predicted protein coding regions for the other nine clusters, in descending order of contig numbers: an enzyme with catalytic activity involved in metabolic process; a calcium binding transmembrane transport channel; a protein involved in calcium binding; a protein binding enzyme; a domain for unspecified protein binding; an enzyme with O-glucosyl hydrolase activity involved in carbohydrate metabolic process; membrane bound ion transporter with cation channel activity \& ionotropic glutamate receptor activity; a transmembrane transporter with voltage-gated calcium channel activity; and calcium ion binding transmembrane ion transporter. 
@@ -334,7 +342,7 @@ The majority of  clusters fell within metabolic processes, cellular processes an
 
 \subsubsection*{Softcore transcriptome}
 A softcore with 4 out of the five \textit{Gambierdiscus} species examined was identified. 
-The softcore consisted of an additional 16,980 clusters of which 48 \% were annotated  (Suppl. table ~\ref{tbl:PanGO1} \& ~\ref{tbl:PanGO2}). 
+The softcore consisted of an additional 16,980 clusters (Table ~\ref{tbl:ClustTable}) of which 48 \% were annotated  (Suppl. table ~\ref{tbl:PanGO1} \& ~\ref{tbl:PanGO2}). 
 The most prolific cluster in the softcore contained 163 contigs with unknown function, where \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G.} cf. \textit{silvae} contained 50, 42, 41 \& 30 contigs respectively. 
 A further 5 clusters contained more than 100 contigs, four of which had GO annotations. 
 Of the six clusters with over 100 contigs, none had representatives contigs from \textit{G. australes}. 
@@ -346,7 +354,7 @@ Of the softcore, 14,035 clusters contained 10 or more contigs.
 \subsubsection*{Pan-transcriptome}
 Clusters with single species representatives, or the pan-transcriptome to the five \textit{Gambierdiscus} species examined, numbered 231,310 clusters. 
 Of the unique clusters, only 15.23 \% of clusters were annotated. 
-Single species clusters from \emph{G. australes}, \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G.} cf. \textit{silvae} numbered 35,356, 62,494, 32,341, 60,796 \& 41,350 clusters respectively. 
+Single species clusters from \emph{G. australes}, \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G.} cf. \textit{silvae} numbered 35,356, 62,494, 32,341, 60,796 \& 41,350 clusters respectively (Table ~\ref{tbl:ClustTable}). 
 %discussion: numbers mirror depth of sequencing ie. shittiest trans has least unique
 The highest number of contigs in a unique cluster were 37, found in two clusters from \textit{G. carpenteri}. 
 One of these was annotated for RNA and metal ion binding activity. 
@@ -354,6 +362,8 @@ Of the unique clusters, 83.1 \% contained only one contig and 97.8 \% of cluster
 
 \subsection*{Last common ancestor identification of contigs}
 
+THIS IS WITH SWISSPROT ONLY, 20\% similarity and only 100bp overlap. trEMBL still running
+\FloatBarrier
 \begin{table}
 \caption{basta stuff found in each \emph{Gambierdiscus} transcriptome during processing.}
 \label{tbl:bastaTable}
@@ -363,13 +373,13 @@ Of the unique clusters, 83.1 \% contained only one contig and 97.8 \% of cluster
 \hline
 \textbf{Swissprot hits on contigs}&176,000&&&&\\ %cut -f 1 carpenteri_BASTA/blast_output/UTSMER9A3_Gambierdiscus-carpenteri_blast.out |uniq| wc -l
 \hline
-\textbf{BASTA positive ID}&60,811&&&&\\ % -m 1
+\textbf{BASTA positive ID}&60,811&35263&&&\\ % -m 1
 \hline
-\textbf{Eukaryotic origin} &&&&&\\
+\textbf{Eukaryotic origin}&10,720&35,263&22,643&32,098&24,096\\
 \hline
-\textbf{Bacterial origin}&&&&&\\
+\textbf{Bacterial origin}&826&2,784&1,799&2,438&1,943\\
 \hline
-\textbf{Unknown origin}&&&&&\\
+\textbf{Unknown origin}&7,709&22,429&15,471&22,571&17,072\\
 \hline
 %\hline
 %&&&&&\\
@@ -397,19 +407,19 @@ Of the unique clusters, 83.1 \% contained only one contig and 97.8 \% of cluster
 \item check for regional link of host association. Lapillus and silvae are from Heron Island from same collection trip, poly and australes are from Rarotonga collected 9 years apart, carp is from temperate Merimbula Merimbula)
 \end{itemize}
 
-BASTA results, default -l and -m flags ie. likely going to change as swissprot percentage match super low:\\
-- australes: 0 bact, 53 Unknown \\
-- carp: 3 bact (all unique clusters, one annotated as ATP binding), 72 Unknown \\
+%BASTA results, default -l and -m flags ie. likely going to change as swissprot percentage match super low:\\
+%- australes: 0 bact, 53 Unknown \\
+%- carp: 3 bact (all unique clusters, one annotated as ATP binding), 72 Unknown \\
 %UTSMER9A3_Gambierdiscus-carpenteri_DN31153_c0_g1_i1.p2	Bacteria;Proteobacteria;Gammaproteobacteria; -- in unique 236528_UTSMER9A3_Gambierdiscus-carpenteri_DN31153_c0_g1_i1.p2.faa	not annotated
 %UTSMER9A3_Gambierdiscus-carpenteri_DN20628_c0_g1_i1.p1	Bacteria;Proteobacteria; -- in unique 233838_UTSMER9A3_Gambierdiscus-carpenteri_DN20628_c0_g1_i1.p1.faa	not annotated
 %UTSMER9A3_Gambierdiscus-carpenteri_DN27575_c0_g1_i1.p2	Bacteria;Proteobacteria; -- in unique 235579_UTSMER9A3_Gambierdiscus-carpenteri_DN27575_c0_g1_i1.p2.faa	involved in ATP binding
-- lap: 3 bact (all in unique clusters all annotated with mRNA processing roles) 72 Unknown \\
+%- lap: 3 bact (all in unique clusters all annotated with mRNA processing roles) 72 Unknown \\
 %HG4_Gambierdiscus-lapillus_DN47596_c0_g1_i1.p1	Bacteria;Proteobacteria;Gammaproteobacteria; -- in unique 351586_HG4_Gambierdiscus-lapillus_DN47596_c0_g1_i1.p1.faa	a structural constituent of ribosome involved n mRNA translation
 %HG4_Gambierdiscus-lapillus_DN13474_c0_g2_i1.p2	Bacteria;Proteobacteria; -- in unique 247208_HG4_Gambierdiscus-lapillus_DN13474_c0_g2_i1.p2.faa	binds guanosine triphosphate
 %HG4_Gambierdiscus-lapillus_DN47695_c0_g1_i1.p2	Bacteria;Proteobacteria;Gammaproteobacteria; -- in unique 351653_HG4_Gambierdiscus-lapillus_DN47695_c0_g1_i1.p2.faa	involved in mRNA translation
-- pol: 0 bact, 95 Unknown \\
-- sil: 0 bact, 56 Unknown \\
-- -m 1 \& -l 80 for carp with swissprot db had much higher bact contamn: 2,784 seqs bact, 22,429 seqs unknown, 35,263 seqs eukar .. contamination potentially a problem here \\
+%- pol: 0 bact, 95 Unknown \\
+%- sil: 0 bact, 56 Unknown \\
+%- -m 1 \& -l 80 for carp with swissprot db had much higher bact contamn: 2,784 seqs bact, 22,429 seqs unknown, 35,263 seqs eukar .. contamination potentially a problem here \\
 
 %\subsection*{\emph{Gambierdiscus polynesiensis} intra-species core \& pan transcriptome}
 \subsection*{Looking into toxin producers}
@@ -427,6 +437,7 @@ To do:
 \item number of clusters
 \item percentage annotated
 \item pathways present (another GOSUM adventure?)
+\item as \textit{G. silvae} and to a much reduced extend, \textit{G. lapillus}, also produce CTX, is the solo polynesiensis section relevant?
 \end{itemize}
 
 
@@ -481,27 +492,40 @@ To go here:
 \item overall summary of study
 \item core and pan more likely to be accurate without being axenic unless same contamination
 \item spliced leader sites really low. potentially interesting - the two highest ones are from same phylogenetic clade, while the other three are representatives from the other two main clades. Also poly and silvae are from separate seq runs, so not an artefact from that front.
+\item \textit{G. australes} seq is quite bad in comparison as can be seen in the GOSUM figs and the comparative number of contigs, predicted proteins and softcore clusters
+\item \textbf{Tim} not sure if I can do something like Fig 2 - only 5 isolates to put in, and I think I need to look at that again with more sleep to work out what's going on and if I could transfer the concept., there are over 200,000 pan-tran clusters, I don't think I can work out whether they are genophyletic or monophyletic for that many
 \end{itemize}
 
 \subsection*{core \textit{Gambierdiscus} transcriptome}
  \cite{lidie2005gene} comprehensive index of genes in \textit{K. brevis} to compare to as well as functional summaries 
 
 \subsubsection*{discuss common \& different functions found}
+\textbf{Koid 14} pan-transcriptome of 4 prymnesiophyte algae. 
+Compare functional findings (KOG vs. this) and contigs as well as predicted protein coding regions are just a fraction of the ones here. 
+eg.30,000-56,000 contigs vs. lowest for in this study is 148,972. 
+Other study transcriptomes are part of MMETSP, but even australes here is over 100,000 contigs which is from the same study so more likely it's a Gambi thing rather than a seq thing.
+same with australes and Koid for peptides predicted, almost double. 
+Way higher for other gambis.\\
 
 
 \subsubsection*{Expression of genes involved in polyketide production}
 \begin{itemize}
 \item discuss if different gene sets were expressed between toxic and non- toxic strains (ie. not carp)
 \item discuss KS containing contigs per species plus distribution and number of contigs in KS clusters
+\item point at Venn diagram intersections that could be of interest for further investigation for both MTX and CTX
 \item discuss KS conserved region phylogeny
+\item \textbf{Tim} I'm not sure we know enough about these pathways to do something like fig 5 
 \end{itemize}
 
+\subsubsection*{Bacterial association with host}
+\begin{itemize}
+\item really depends what the basta results are and if anything interesting is found
+\end{itemize}
 
 \subsubsection*{discuss usefulness for future studies}
 \begin{itemize}
 \item Usefullness of core transcriptome for RNA sequencing studies
 \item Investigate poly only KS clusters or clusters with poly more contigs
-\item 
 \end{itemize}
 
 \subsubsection*{discuss potential short commings} 

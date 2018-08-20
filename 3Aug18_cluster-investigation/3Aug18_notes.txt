@@ -25,7 +25,7 @@ cat KS-sil.txt >> KS-hit-list.txt
 cat KS-carp.txt >> KS-hit-list.txt
 cat KS-aust.txt >> KS-hit-list.txt
 KS-search-clusters_mark2.py
-KS-cluster-registry.py *working on
+KS-cluster-registry.py 
 
 BASTA:
 module load bio/scripts

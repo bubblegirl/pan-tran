@@ -180,7 +180,8 @@ BASTA was used to extract the taxonomic determination from the database search f
 %\subsection*{Transcriptome overview}
 %- seq and annotation stats for \textit{Gambierdiscus polynesiensis} CAWD254 and Table ~\ref{tbl:SeqTable}
 \subsection*{General info}
-The progression of clustering and annotation results per transcriptome can be found in Table ~\ref{tbl:ClustTable}.\\
+The progression of clustering and annotation results per transcriptome can be found in Table ~\ref{tbl:ClustTable}. 
+A total of 287,546 clusters were found across all five species. \\
 
 \begin{table}
 \caption{Progression of clusters found in each \emph{Gambierdiscus} transcriptome during processing.}
@@ -231,6 +232,12 @@ A more in depth query of the functions present in each transcriptome was conduct
 \item GOSUM lvl2 graphs are partially missing descriptions on x-axis. Fix when re-run
 \end{itemize}
 
+\begin{figure} 
+\includegraphics[scale=.9]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum1-cell-split.png} 
+\caption{Summary of cellular GO annotations between \textit{Gambierdiscus} species at GOSUM level 1 from Suppl. table ~\ref{tbl:SpGO1}.} 
+\label{fig:SpecGo1Cell}
+\end{figure} 
+\FloatBarrier
 
 \begin{figure} 
 \includegraphics[scale=.7]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum1-bio-split.png} 
@@ -239,12 +246,7 @@ A more in depth query of the functions present in each transcriptome was conduct
 \end{figure} 
 \FloatBarrier
 
-\begin{figure} 
-\includegraphics[scale=.9]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum1-cell-split.png} 
-\caption{Summary of cellular GO annotations between \textit{Gambierdiscus} species at GOSUM level 1 from Suppl. table ~\ref{tbl:SpGO1}.} 
-\label{fig:SpecGo1Cell}
-\end{figure} 
-\FloatBarrier
+
 
 \begin{figure} 
 \includegraphics[scale=1]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum1-molec-split.png} 
@@ -275,9 +277,9 @@ A more in depth query of the functions present in each transcriptome was conduct
 \FloatBarrier
 
 \subsection*{Transcriptome similarity clustering}
+\FloatBarrier
 \textbf{To do:}
 \begin{itemize}
-\item insert Venn diagram of of cluster overlap between the five species
 \item describe differences in graphs once I know what needs to be taken out and re-run
 \item GOSUM lvl2 graphs are partially missing descriptions on x-axis. Fix when re-run
 \end{itemize}
@@ -286,6 +288,12 @@ Potentially interesting points, if still there after bact and unknown outtakes:\
 - organelle memb in core and softcore, seem essential and not in unique (gosum2 cell)\\
 - core and unique pretty evenly matched in most entries for gosum2 molec, except catalytic activity binding on DNA is  muchhigher in unique and a little higher for binding RNA
 
+\begin{figure} 
+\includegraphics[scale=.4]{3Aug18_cluster-investigation/Species-venn.png} 
+\caption{Venn diagram of species distribution across clusters.} 
+\label{fig:SpeciesVenn}
+\end{figure} 
+\FloatBarrier
 
 
 \FloatBarrier
@@ -469,6 +477,7 @@ TE&&&&&&&\\
 \FloatBarrier
 
 \paragraph*{KS domains.}
+\FloatBarrier
 A total of 850 contigs were identified with KS domains which assembled into 314 clusters (table ~\ref{tbl:PKSTable}). 
 Nine clusters contained more than 10 contigs, with the highest number of 130 contigs from all species.
 9 clusters contained 10 contigs or more, of which only two did not contain all the taxa examined.

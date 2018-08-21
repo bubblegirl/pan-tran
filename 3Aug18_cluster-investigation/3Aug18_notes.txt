@@ -8,6 +8,8 @@ cluster_list: /shared/homes/125155/pant-transcriptomes/re-run-wo-digi/Feb18_all-
 
 cluster_directory: /shared/homes/125155/pant-transcriptomes/re-run-wo-digi/Feb18_all-AA-clust/OMCL/no-secondary-clust/allAA_no-clust_homologues/Gambierdiscusaustrales1_f0_0taxa_algOMCL_e0_
 
+registry of all clusters: cluster-registry-for-venn.py
+
 KS domains:
 G. lapillus 150
 G. silvae 154

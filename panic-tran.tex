@@ -104,7 +104,7 @@ Scripts used for this project are available on Github under hydrahamster/pan-tra
 Venn diagrams were created with InteractiVenn \cite{heberle2015venn}. 
 \subsection*{Transcriptome acquisition}
 Species of \textit{Gambierdiscus} used in this chapter are sumarized in Table ~\ref{tbl:StrainTable}. 
-Toxicity and toxin profile reports are specific to the strains used due to the possibility of inter-species variation in toxin production as recently reported \cite{larsson2018toxicology,rhodes2017epiphytic}. 
+Toxicity and toxin profile reports are specific to the strains used due to the possibility of inter-species variation in toxin production as recently reported, unless noted otherwise \cite{larsson2018toxicology,rhodes2017epiphytic}. 
 The \textit{G. polynesiensis} toxin profile was elucidated by Tim Harwood at the Cawthron institute with the same methodology as for \textit{G. lapillus} in \textbf{Capter 1}. 
 Seq libraries were assembled as per the transcriptome assembly subsection in the methods of \textbf{chapter 4}, without diginorm. \\
 \textbf{To do:}
@@ -114,11 +114,11 @@ Seq libraries were assembled as per the transcriptome assembly subsection in the
 
 \FloatBarrier
 \begin{table}
-\caption{\emph{Gambierdiscus} species transcriptomes used in this study along with their toxicity, toxin profile, accession numbers and source.}
+\caption{\emph{Gambierdiscus} species transcriptomes used in this study along with their toxicity, toxin profile, accession numbers and source. Where possible, information is strain specific \& otherwise denoted with *}
 \label{tbl:StrainTable}
 \begin{tabular}{ | p{2.5cm} | p{2.3cm} | p{2.3cm} | p{2.3cm} | p{2.3cm} | p{2.3cm}|}
 \hline
-\textbf{Species}&\textit{G. australes}&\textit{G. carpenteri}&\textit{G.s lapillus}&\textit{G. polynesiensis}&\textit{G.} cf. \textit{silvae}\\
+\textbf{Species}&\textit{G. australes}&\textit{G. carpenteri}&\textit{G. lapillus}&\textit{G. polynesiensis}&\textit{G.} cf. \textit{silvae}\\
 \hline
 \textbf{Strain}&CAWD149&UTSMER9A&HG4&CG15&HG5\\
 \hline
@@ -128,9 +128,9 @@ Seq libraries were assembled as per the transcriptome assembly subsection in the
 \hline
 \textbf{Isolation location}&Rarotonga, Cook Islands (2007)&Merimbula, Australia (2014)&Heron Island, Australia (2014)&Rarotonga, Cook Islands (2014)&Heron Island, Australia (2014)\\
 \hline
-\textbf{Toxin profile (LC-MS/MS)}&CTX -ve; MTX +ve&CTX -ve; MTX -ve&CTX -ve; MTX +ve&CTX +ve; MTX +ve&CTX -ve; MTX +ve\\
+\textbf{Toxin profile (LC-MS/MS)}&CTX -ve; MTX +ve&CTX -ve; MTX -ve&CTX -ve*; MTX +ve*&CTX +ve; MTX +ve&CTX -ve; MTX +ve\\
 \hline
-\textbf{Toxicity via bioassay}&CTX +ve; MTX N/A&CTX -ve; MTX +ve&CTX +ve; MTX +ve&CTX N/A; MTX N/A&CTX +ve; MTX +ve\\
+\textbf{Toxicity via bioassay}&CTX +ve; MTX N/A&CTX -ve; MTX +ve&CTX +ve*; MTX +ve*&CTX N/A; MTX N/A&CTX +ve; MTX +ve\\
 \hline
 \textbf{References}&\cite{keeling2014marine,rhodes2010toxic,munday2017ciguatoxins}&\cite{larsson2018toxicology}&\cite{larsson2018toxicology,kretzschmar2017characterization}&&\cite{larsson2018toxicology,kretzschmar2017characterization}\\
 \hline
@@ -171,7 +171,7 @@ Pretty much all studies so far just looked for the KS domain, though not sure wh
 \end{itemize}
 
 \subsection*{Last common ancestor determination of contigs}
-Predicted proteins of each transcriptome were searched against the SwissProt and uniprot\_trEMBL databases \cite{uniprot2010ongoing}. 
+Predicted proteins of each transcriptome were searched against the Uniprot databases SwissProt and trEMBL \cite{uniprot2010ongoing}. 
 BASTA was used to extract the taxonomic determination from the database search for each contig and the associated last common ancestor  \cite{timbasta}.
 
 %\subsection*{\textit{G. polynesiensis} comparison}
@@ -499,7 +499,6 @@ Four contigs contained \textit{G. polynesiensis} and \emph{G.} cf. \emph{silvae}
 
 \textbf{To do:}
 \begin{itemize}
-\item insert Venn diagram of KS domains
 \item are there any multi-domain  transcripts?
 \end{itemize}
 
@@ -542,7 +541,7 @@ Way higher for other gambis.\\
 \subsubsection*{discuss usefulness for future studies}
 \begin{itemize}
 \item Usefullness of core transcriptome for RNA sequencing studies
-\item Investigate poly only KS clusters or clusters with poly more contigs
+\item Investigate poly only KS clusters or clusters with high number of poly reps
 \end{itemize}
 
 \subsubsection*{discuss potential short commings} 

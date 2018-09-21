@@ -104,13 +104,10 @@ Scripts used for this project are available on Github under hydrahamster/pan-tra
 Venn diagrams were created with InteractiVenn \cite{heberle2015venn}. 
 \subsection*{Transcriptome acquisition}
 Species of \textit{Gambierdiscus} used in this chapter are sumarized in Table ~\ref{tbl:StrainTable}. 
-Toxicity and toxin profile reports are specific to the strains used due to the possibility of inter-species variation in toxin production as recently reported, unless noted otherwise \cite{larsson2018toxicology,rhodes2017epiphytic}. 
-The \textit{G. polynesiensis} toxin profile was elucidated by Tim Harwood at the Cawthron institute with the same methodology as for \textit{G. lapillus} in \textbf{Capter 1}. 
+Toxicity and toxin profile reports are specific to the strains used as inter-species variation in toxin production was recently reported \cite{larsson2018toxicology,rhodes2017epiphytic}, unless noted otherwise. 
+The \textit{G. polynesiensis} toxin profile was elucidated by Tim Harwood at the Cawthron institute with the same methodology as for \textit{G. lapillus} in \textbf{Capter 2}. 
 Seq libraries were assembled as per the transcriptome assembly subsection in the methods of \textbf{chapter 4}, without diginorm. \\
-\textbf{To do:}
-\begin{itemize}
-\item check if Shauna submitted CAWD149 and if it was from a single RNA extraction
-\end{itemize}
+\textbf{Tim} the \textit{G. australes} CAWD149 transcriptome on MMETSP was from a single RNA extraction
 
 \FloatBarrier
 \begin{table}
@@ -161,18 +158,20 @@ The resulting pan-, core- and softcore-clusters were matched with their interpro
 GOSUM was run at levels 1 and 2 of GOs with the go-basic GO reference. 
 
 \subsection*{PKS search}
-The transcriptome assemblies were queried for the five conserved PKS active domains using hmmer \cite{eddy2015hmmer} with libraries developed for this project. 
-The contigs which were identified to contain an active domain were then searched for within the clusters to identify how the active domains grouped together between species.\\
+The transcriptome assemblies were queried for the active ketosynthase (KS) domain of the polyketide synthase (PKS) enzyme using hmmer \cite{eddy2015hmmer} with libraries developed for this project. 
+The contigs which were identified to contain an active domain were then searched for within the clusters to identify how the active domains clustered; and the assemblies were searched to compare KS abundance between species. 
+The KS domains found were aligned with MUSCLE with a maximum of 8 iterations \cite{edgar2004muscle}. 
+Maximum likelihood (ML) inference was run with the KS alignments using RaxML \cite{stamatakis2014raxml} with the -PROTGAMMAILGF flags on the University of Technology Sydney’s High-performance computing cluster (HPCC)\\
 To do:
 \begin{itemize}
-\item need to download ACP, ET, KR, DR, AT and TE sequences and make hmmer libs -- inclusion of these extra domains is heavily dependent on time. 
+\item if time, need to download ACP, ET, KR, DR, AT and TE sequences and make hmmer libs -- inclusion of these extra domains is heavily dependent on time. 
 Pretty much all studies so far just looked for the KS domain, though not sure why - all 7 are necessary to synthesize a polyketide structure.
-\item find conserved sequences of each KS cluster (yay for hmmer) and align clusters, run BI phylogeny to see if there is anything interesting there 
+\item find conserved sequences of each KS cluster (yay for hmmer) and align clusters, phylogeny to see if there is anything interesting there 
 \end{itemize}
 
 \subsection*{Last common ancestor determination of contigs}
 Predicted proteins of each transcriptome were searched against the Uniprot databases SwissProt and trEMBL \cite{uniprot2010ongoing}. 
-BASTA was used to extract the taxonomic determination from the database search for each contig and the associated last common ancestor  \cite{timbasta}.
+BASTA was used to extract the taxonomic determination from the database search for each contig and the associated last common ancestor  \cite{kahlke2018basta}.
 
 %\subsection*{\textit{G. polynesiensis} comparison}
 \newpage
@@ -287,7 +286,7 @@ A more in depth query of the functions present in each transcriptome was conduct
 Potentially interesting points, if still there after bact and unknown outtakes:\\
 - intracellular parts in pan (gosum2 cell)\\
 - organelle memb in core and softcore, seem essential and not in unique (gosum2 cell)\\
-- core and unique pretty evenly matched in most entries for gosum2 molec, except catalytic activity binding on DNA is  muchhigher in unique and a little higher for binding RNA
+- core and unique pretty evenly matched in most entries for gosum2 molec, except catalytic activity binding on DNA is  much higher in unique and a little higher for binding RNA
 
 \begin{figure} 
 \includegraphics[scale=.4]{3Aug18_cluster-investigation/Species-venn.png} 
@@ -544,7 +543,7 @@ Way higher for other gambis.\\
 \item Investigate poly only KS clusters or clusters with high number of poly reps
 \end{itemize}
 
-\subsubsection*{discuss potential short commings} 
+\subsubsection*{discuss potential short comings} 
 \begin{itemize}
 \item from different seq runs and methods and seq depth may vary, especially \textit{G. australes}
 \item intra-speces variation so one isolate per species may not be representative

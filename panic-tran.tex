@@ -359,24 +359,49 @@ Of the unique clusters, 83.1 \% contained only one contig and 97.8 \% of cluster
 
 \subsection*{Last common ancestor identification of contigs}
 
-THIS IS WITH SWISSPROT ONLY, 20\% similarity and only 100bp overlap. trEMBL still running
 \FloatBarrier
 \begin{table}
-\caption{basta stuff found in each \emph{Gambierdiscus} transcriptome during processing.}
+\caption{basta trEMBL found in each \emph{Gambierdiscus} transcriptome during processing.}
 \label{tbl:bastaTable}
 \begin{tabular}{ | p{3cm} | p{2cm} | p{2.5cm} | p{2.5cm} | p{2cm} | p{2cm}|}
 \hline
 \textbf{Species}& \textit{G. australes}& \emph{G. carpenteri}&\emph{G. lapillus}&\emph{G. polynesiensis}&\emph{G.} cf. \emph{silvae}\\
 \hline
-\textbf{Swissprot hits on contigs}&176,000&&&&\\ %cut -f 1 carpenteri_BASTA/blast_output/UTSMER9A3_Gambierdiscus-carpenteri_blast.out |uniq| wc -l
+\textbf{Contigs}&102,863&263,829&148,972&270,315&191,224 \\
 \hline
-\textbf{BASTA positive ID}&60,811&35263&&&\\ % -m 1
+ \multicolumn{6}{| c |}{SwillProt}\\ %using the lax one
+ \hline
+ \textbf{SwissProt hits}&62,240&176,000&109,662&171,741&129,913\\ %cut -f 1 carpenteri_BASTA/blast_output/*_blast.out |uniq| wc -l
+\hline
+\textbf{BASTA positive ID}&19,335&60,811&40,151&57,448&43,372\\ % -m 1
 \hline
 \textbf{Eukaryotic origin}&10,720&35,263&22,643&32,098&24,096\\
 \hline
-\textbf{Bacterial origin}&826&2,784&1,799&2,438&1,943\\
+\textbf{Bacterial origin}&826&2,784&1,799&2,438&32,098\\
 \hline
 \textbf{Unknown origin}&7,709&22,429&15,471&22,571&17,072\\
+\hline
+ \multicolumn{6}{| c |}{trEMBL}\\
+ \hline
+\textbf{trEMBL hits}&61,161&169,810&106,554&165,793&126,208\\  %cut -f 1 carp_BASTA_trembl/blast_output/*_trEMBL.out |uniq| wc -l
+\hline
+\textbf{BASTA positive ID}&37,067&106,960&71,100&103,053&106,960\\
+\hline
+\textbf{Eukaryotic origin}&25,015&65,986&44,320&62,274&49,516\\ %cat CAWD149_Gambierdiscus-australes_trEMBL | grep Eukaryota | wc -l
+\hline
+\textbf{Bacterial origin}&654&2,213&1,404&2,101&1,688\\
+\hline
+\textbf{Unknown origin}&11,358&38,622&25,267&38,528&27,623\\
+\hline
+ \multicolumn{6}{| c |}{db differences}\\
+\hline
+\textbf{contigs with LCA}&37,294&108,160&71,768&104,252&79,692\\
+\hline
+\textbf{db consensus}&13,136&37,622&25,688&36,446&28,046\\
+\hline
+\textbf{unknown plus LCA}&5,821&21,399&13,434&19,247&14,158\\
+\hline
+\textbf{LCA conflict, euk \& bact}&116&440&253&394&289\\
 \hline
 %\hline
 %&&&&&\\

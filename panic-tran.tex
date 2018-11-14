@@ -306,6 +306,9 @@ A more in depth query of the functions present in each transcriptome was conduct
 \FloatBarrier
 
 \subsection*{Transcriptome similarity clustering}
+%TODO re-run GOSUM based on 
+
+
 \FloatBarrier
 \textbf{To do:}
 \begin{itemize}
@@ -391,6 +394,29 @@ One of these was annotated for RNA and metal ion binding activity.
 Of the unique clusters, 83.1 \% contained only one contig and 97.8 \% of clusters have 5 contigs or less. 
 
 \subsection*{Last common ancestor identification of contigs}
+Combined Swissprot and trEMBL
+\begin{table} %update if delving deeper into BASTA % cut offs & where the fuck are the virals?
+\caption{LCA determination of clusters.}
+\label{tbl:LCAClust}
+\begin{tabular}{ | p{1.5cm} | p{1.5cm} | p{1.5cm} | p{1.5cm} |p{1.5cm} |p{1.5cm} |p{1.5cm} |p{1.5cm} |}
+\hline
+&Eukaryotic consensus&Eukaryotic unsure&Bacteria consensus&Bacteria unsure&Unknown between dbs&Unknown within db&Undetermined\\
+\hline
+Number of clusters&81,702&23,158&3,001&3,214&29,112&1,059&146,300\\
+\hline
+%\textbf{Number of clusters with all species}&&&&&&&\\
+%\hline
+%\textbf{Number of solo clusters}&&&&&&&\\
+%\hline
+With dinoSL&341&76&11&12&81&6&759\\
+\hline
+with KS&0&8&0&5&255&0&7\\
+\hline
+with KS and dinoSL&0&0&0&0&0&0&0\\
+\hline
+%&&&&&&\\
+\end{tabular}
+\end{table}
 
 \FloatBarrier
 \begin{table}

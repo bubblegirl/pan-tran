@@ -72,7 +72,8 @@ We present a Gambierdiscus core transcriptome, which might be used to investigat
 The analysis of any genetic data relies on the reference to a known, closely related entity. 
 Without a functional protein or genome reference database, the generation of sequencing data would be like pissing in the wind. 
 A reference is essential in determining both the adequacy of the sequencing methodology as well as interpretation of results. 
-           
+
+%review of phytoplankton pop gen studies, there really isn;t much hey \cite{rengefors2017genetic}
 
 %due to no ref gen, importance of transciptome and features that allow for approximation
 %Proteins associated with chromatin and with RNA binding domains is 10 fold to normal, and may be part or post-translational regulation \cite{beauchemin2018proteomic}
@@ -91,17 +92,18 @@ Searching for gonyalacales, an order of the dinoflagellates that includes \texti
 Searching for members of the phylum dinoflagellates calls a further 84 projects. 
 Despite their ecological relevance for nutrient cycling, DMSP production , coral symbiosis and neurotoxin production (for a review see \cite{murray2016unravelling}), the paucity of sequencing data is evident. 
 Further the number of unannotated genes in dinoflagellate transcriptomes is high %TODO insert other studies
-Hence a reference, or baseline, for future sequencing projects is desireable.
+Hence a reference, or baseline, for future sequencing projects is desirable.
 This study aims to provide this baseline for \textit{Gambierdiscus} by presenting the pan- and core- transcriptome of five species, which can be expanded and refined in other studies.
 %search gonyaulacales : 11 Alexandrium transcriptomes, 1 Lingulodinium, 3 Pyrodinium, 2 crypthecodinium (ch4: not gonya), 1 azadinium (ch4: not gonya), 1 further bacterial association study
 
 %other pan-tran work ie koid and bacterial.. yeast?
 The concept of a reference genome, or transcriptome, allows for direct comparison of genome/transcriptome sequencing to a standard. 
-However sequencing further genomes in bacteria reveled a large transitory subset of genetic content, with the conclusion that a single strain based reference would be inadequate for capturing a large proportion of the species' genetic diversity \cite{tettelin2005genome}. 
+However sequencing further genomes in bacteria reveled a large transitory subset of genetic content, with the conclusion that a single strain based reference would be inadequate for capturing a large proportion of the species' genetic diversity \cite{tettelin2005genome,vernikos2015ten}. 
 An alternative approach to a reference genome was proposed - that of a core-genome common to all strains, and a pan-genome which is transitory. 
 An extrapolation of this study by Tettelin et al. (2005), which showed that 1.5 \% of the genome was novel between 8 strains of \textit{Streptococcus}, predicted based on mathematical models that for every new strain sequenced 22 novel genes will be discovered \cite{medini2005microbial}. 
-Since then the core- and pan-genome, or transcriptome, concept has been adopted for eukaryotes also, with the realisation that the transient genomic phenomena holds true when multiple strains of a species are sequenced \cite{jin2016maize,plissonneau2018pangenome,read2013pan,li2014novo,song2015agape}.  
-Inter-strain generation of pan- or core-genomic reference datasets for bacteria or eukaryotes with 
+Since then the core- and pan-genome, or transcriptome, concept has been adopted for eukaryotes also, with the realisation that the transient genomic content holds true when multiple strains of a species are sequenced (e.g.  \cite{jin2016maize,plissonneau2018pangenome,read2013pan,li2014novo,song2015agape,posnien2014comprehensive}).  
+Further to exploring the shared and transient genetic components within a genus, pan and core analyses have been conducted for higher taxonomic levels, commonly within genus though also at much higher levels, such as the gene frequency of \textit{Eubacteria} within the super kingdom inter-species pan and core analysis have also been conducted \cite{lapierre2009estimating,he2016pan,koid2014comparative,jin2016maize,vernikos2015ten}. 
+
 
 %initial description of bacterial pan-genome concept \cite{medini2005microbial}
 %algae pan tran with KS work \cite{koid2014comparative}
@@ -476,6 +478,7 @@ with KS and dinoSL&0&0&0&0&0&0&0\\
 \item may be bacterial origin - IF they have dinoSL, keep. If not, remove from core/pan analysis 
 \end{itemize}
 \subsubsection*{Bacterial origin}
+%Quorum sensing controls growth and toxin production of Gambi \cite{wang2018growth}
 \textbf{To do:}
 \begin{itemize}
 \item re-running with uniprot\_trembl.fasta to see how percentage identity values differ to swissprot database

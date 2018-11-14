@@ -12,7 +12,7 @@ cluster_directory: /shared/homes/125155/pant-transcriptomes/re-run-wo-digi/Feb18
 
 registry of all clusters: cluster-registry-for-venn.py
 
-masterfile under construction: dinoSL-dict.py
+masterfile under construction: masterfile-dict-HPC.py then masterfile-rumaging.py
 
 KS domains:
 G. lapillus 150
@@ -57,6 +57,9 @@ db annot, then BASTA..  `cut -f 1 *_trembl/blast_output/*_trEMBL.out |uniq| wc -
 
 db-comp-dict_mark2.py for seeing what similarities and differences are between trEMBL and sp
 
+BASTA unknown:
+combination of Euk and Bact from from 30% similarity cut off. re-run for 50 and 80%
+for all species, trembl and swissprot (lax): cat UTSMER9A3_Gambierdiscus-carpenteri_trEMBL | grep Unknown >> UTSMER9A3_Gambierdiscus-carpenteri_trEMBL-unknown
 
 module load bio/scripts
 #need -o dir first

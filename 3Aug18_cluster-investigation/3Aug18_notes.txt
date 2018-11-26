@@ -61,6 +61,157 @@ BASTA unknown:
 combination of Euk and Bact from from 30% similarity cut off. re-run for 50 and 80%
 for all species, trembl and swissprot (lax): cat UTSMER9A3_Gambierdiscus-carpenteri_trEMBL | grep Unknown >> UTSMER9A3_Gambierdiscus-carpenteri_trEMBL-unknown
 
+#all dinoSL transfered to Euk origin
+cat LCA-eukaryote-consensus.tsv >> LCA-eukaryote-consensus-withSL.tsv
+cat LCA-bacteria-uncertain.tsv | grep  dinoSL >> LCA-eukaryote-consensus-withSL.tsv
+cat LCA-bacteria-uncertain.tsv | grep -v dinoSL >> LCA-bacteria-uncertain-sansSL.tsv
+cat LCA-bacteria-consensus.tsv | grep  dinoSL >> LCA-eukaryote-consensus-withSL.tsv
+cat LCA-bacteria-consensus.tsv | grep  -v dinoSL >> LCA-bacteria-consensus-sansSL.tsv
+cat LCA-eukaryote-uncertain.tsv | grep  dinoSL >> LCA-eukaryote-consensus-withSL.tsv
+cat LCA-eukaryote-uncertain.tsv | grep -v dinoSL >> LCA-eukaryote-uncertain-sansSL.tsv
+cat LCA-none.tsv | grep dinoSL >> LCA-eukaryote-consensus-withSL.tsv
+cat LCA-none.tsv | grep -v dinoSL >> LCA-none-sansSL.tsv
+cat LCA-unknown-inter-analysis.tsv | grep dinoSL >> LCA-eukaryote-consensus-withSL.tsv
+cat LCA-unknown-inter-analysis.tsv | grep -v dinoSL >> LCA-unknown-inter-analysis-sansSL.tsv
+cat LCA-unknown-intra-analysis.tsv | grep dinoSL >> LCA-eukaryote-consensus-withSL.tsv
+cat LCA-unknown-intra-analysis.tsv | grep -v dinoSL >> LCA-unknown-intra-analysis-sansSL.tsv
+
+#list of clusters that aren't certain euk with SLs
+#as sp-otherSL-separation.sh
+cat ../../LCA-bacteria-uncertain.tsv | grep  dinoSL | cut -f 1 >> other-SL-clusters.txt
+cat ../../LCA-bacteria-consensus.tsv | grep  dinoSL | cut -f 1 >> other-SL-clusters.txt
+cat ../../LCA-eukaryote-uncertain.tsv | grep  dinoSL | cut -f 1 >> other-SL-clusters.txt
+cat ../../LCA-none.tsv | grep dinoSL | cut -f 1 >> noLCA-SL-clusters.txt
+cat ../../LCA-unknown-inter-analysis.tsv | grep dinoSL | cut -f 1 >> other-SL-clusters.txt
+cat ../../LCA-unknown-intra-analysis.tsv | grep dinoSL | cut -f 1 >> other-SL-clusters.txt
+ #then species-LCA-separation.sh
+
+
+#working out species designations -- using contigs in clusters with dinoSL as all euk positive
+species-LCA-separation.sh
+#poly
+cat CG15_euk.tsv | grep solo >> CG15_euk-certain.tsv
+
+cat CG15_euk.tsv | grep consensus >> CG15_euk-certain.tsv
+
+cat CG15_euk.tsv | grep unkplus >> CG15_euk-uncertain.tsv
+
+cat CG15_bact.tsv | grep solo >> CG15_bact-certain.tsv
+
+cat CG15_bact.tsv | grep consensus >> CG15_bact-certain.tsv
+
+cat CG15_bact.tsv | grep unkplus >> CG15_bact-uncertain.tsv
+
+cat CG15_viral.tsv >> CG15_viral-certain.tsv
+
+cat CG15_archaea.tsv >> CG15_archaea-certain.tsv
+
+#lap
+cat HG4_euk.tsv | grep solo >> HG4_euk-certain.tsv
+
+cat HG4_euk.tsv | grep consensus >> HG4_euk-certain.tsv
+
+cat HG4_euk.tsv | grep unkplus >> HG4_euk-uncertain.tsv
+
+cat HG4_bact.tsv | grep solo >> HG4_bact-certain.tsv
+
+cat HG4_bact.tsv | grep consensus >> HG4_bact-certain.tsv
+
+cat HG4_bact.tsv | grep unkplus >> HG4_bact-uncertain.tsv
+
+cat HG4_viral.tsv >> HG4_viral-certain.tsv
+
+cat HG4_archaea.tsv >> HG4_archaea-certain.tsv
+
+
+#holm
+cat HG5_euk.tsv | grep solo >> HG5_euk-certain.tsv
+
+cat HG5_euk.tsv | grep consensus >> HG5_euk-certain.tsv
+
+cat HG5_euk.tsv | grep unkplus >> HG5_euk-uncertain.tsv
+
+cat HG5_bact.tsv | grep solo >> HG5_bact-certain.tsv
+
+cat HG5_bact.tsv | grep consensus >> HG5_bact-certain.tsv
+
+cat HG5_bact.tsv | grep unkplus >> HG5_bact-uncertain.tsv
+
+cat HG5_viral.tsv >> HG5_viral-certain.tsv
+
+cat HG5_archaea.tsv >> HG5_archaea-certain.tsv
+
+
+#aus
+cat MMETSP0766_euk.tsv | grep solo >> MMETSP0766_euk-certain.tsv
+
+cat MMETSP0766_euk.tsv | grep consensus >> MMETSP0766_euk-certain.tsv
+
+cat MMETSP0766_euk.tsv | grep unkplus >> MMETSP0766_euk-uncertain.tsv
+
+cat MMETSP0766_bact.tsv | grep solo >> MMETSP0766_bact-certain.tsv
+
+cat MMETSP0766_bact.tsv | grep consensus >> MMETSP0766_bact-certain.tsv
+
+cat MMETSP0766_bact.tsv | grep unkplus >> MMETSP0766_bact-uncertain.tsv
+
+cat MMETSP0766_viral.tsv >> MMETSP0766_viral-certain.tsv
+
+cat MMETSP0766_archaea.tsv >> MMETSP0766_archaea-certain.tsv
+
+#carp
+cat UTSMER9A3_euk.tsv | grep solo >> UTSMER9A3_euk-certain.tsv
+
+cat UTSMER9A3_euk.tsv | grep consensus >> UTSMER9A3_euk-certain.tsv
+
+cat UTSMER9A3_euk.tsv | grep unkplus >> UTSMER9A3_euk-uncertain.tsv
+
+cat UTSMER9A3_bact.tsv | grep solo >> UTSMER9A3_bact-certain.tsv
+
+cat UTSMER9A3_bact.tsv | grep consensus >> UTSMER9A3_bact-certain.tsv
+
+cat UTSMER9A3_bact.tsv | grep unkplus >> UTSMER9A3_bact-uncertain.tsv
+
+cat UTSMER9A3_viral.tsv >> UTSMER9A3_viral-certain.tsv
+
+cat UTSMER9A3_archaea.tsv >> UTSMER9A3_archaea-certain.tsv
+
+#issues -- dinoSL seqs missing:
+-bash-4.1$ cat UTSMER9A3_euk-certain-withSL.tsv | wc -l
+137
+-bash-4.1$ cat  other-SL-contigs.txt | grep UTS | wc -l
+139
+#and contigs which are missing aren't in the UTSMER9A3_lca-combined.tsv file.. same for other taxa
+-bash-4.1$ cat CG15_euk-certain-withSL.tsv | wc -l
+230
+-bash-4.1$ cat  other-SL-contigs.txt | grep CG15 | wc -l
+231
+-bash-4.1$ cat HG4_euk-certain-withSL.tsv | wc -l
+110
+-bash-4.1$ cat  other-SL-contigs.txt | grep HG4 | wc -l
+110
+-bash-4.1$ cat HG5_euk-certain-withSL.tsv | wc -l
+166
+-bash-4.1$ cat  other-SL-contigs.txt | grep HG5 | wc -l
+168
+-bash-4.1$ cat MMETSP0766_euk-certain-withSL.tsv | wc -l
+41
+-bash-4.1$ cat  other-SL-contigs.txt | grep MMETSP0766 | wc -l
+42
+
+cat MMETSP0766_euk-certain-withSL.tsv | wc -l
+cat  other-SL-contigs.txt | grep MMETSP0766 | wc -l
+
+### 24Nov - something fucked up with the BASTA files Unknown .. re-writing and re-running in /shared/homes/125155/pant-transcriptomes/re-run-wo-digi/Feb18_all-AA-clust/OMCL/no-secondary-clust/cluster-analysis/BASTAsearch/Nov18_Species-LCA-sep/24Nov_error-investigation
+- db-comp-dict_mark3.py
+- cat *_lca-combined.tsv >> all_lca-combined_mark3.tsv
+- masterfile-dict-HPC_mark3.py
+- species-LCA-separation_mark3.py (functions spicey(),specsep())
+- dinoSL-extract_mark3.py
+- species-LCA-separation_mark3.py (function contSLextr())
+- cluster-LCA-separation_mark3.py
+###
+
 module load bio/scripts
 #need -o dir first
 #swissprot

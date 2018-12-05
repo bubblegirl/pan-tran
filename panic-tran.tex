@@ -38,7 +38,7 @@
 %\paragraph{}Shauna Murray\\ 
 %Climate Change Cluster (C3), University of Technology Sydney, Ultimo, 2007 NSW, Australia
 \newpage
-\section*{Abstract}
+\section{Abstract}
 Species of the genus \textit{Gambierdiscus} produce Ciguatoxins (CTXs), the causative agent of ciguatera fish poisoning, a potentially debilitating seafood borne illness. 
 Species of \textit{Gambierdiscus} possess very large genomes, 32 - 35 Gbp, and, as with other dinoflagellates, possess unique genomic characteristics, such as highly repetitive and complex genome architecture. 
 The exact toxins produced by species of \textit{Gambierdiscus} remain largely unclear. 
@@ -52,10 +52,11 @@ We present a Gambierdiscus core transcriptome, which might be used to investigat
 \textbf{To do:}
 \begin{itemize}
 \item re-structure as per Tim's comments
+\item incl Sammy's comments
 \end{itemize}
 
 \newpage
-\section*{Introduction}
+\section{Introduction}
 %Later for manuscript:
 %- Gambierdiscus intro, clinical relevance of CFP, interest in monitoring\\
 %-protist genome sizes, obstacles with sequencing, lack of reference genomes available \\
@@ -72,19 +73,19 @@ We present a Gambierdiscus core transcriptome, which might be used to investigat
 %The analysis of any genetic data relies on the reference to a known, closely related entity. 
 %Without a functional protein or genome reference database, the generation of sequencing data would be like pissing in the wind. 
 %A reference is essential in determining both the adequacy of the sequencing methodology as well as interpretation of results. 
-The challenge of protist \textit{de novo} sequencing projects lies in assessing completeness and adequacy without a well annotated reference. 
+The challenge of protist \textit{de novo} sequencing projects lies in assessing the adequacy and completeness of sequencing as well as library processing and assembly methods employed,  without a well annotated reference. 
 This issue is particularly prevalent in dinoflagellates, whose expansive and complex genetics tend to be a barrier to genomic sequencing. 
 As an alternative to wrangling with dinoflagellate genomes, transcriptomes are used as to explore their genetics. %(See section ~\ref{sec:DinoGen} and ~\ref{sec:dinobox} for overview). 
-This is due to the apparent presence of hitherto uncharacterized genetic mechanism(s) which seem to leave protein synthesis regulation to the post-transcriptional stage, with the effect that mRNA gives an approximation of genomic content. 
-Indication of these regulatiory mechanisms comes from a number of direct observations. 
-\textit{Prorocentrum minimum} and \textit{Alexandrium monilatum} were cultured under stress conditions by severely limiting nitrogen as well as phosphorous availability. 
-The cultures showed significant biochemical changes between the control and stressed conditions at time of harvest, yet change in transcriptome expression was minimal, between 0.1 to 1 \% depending on stressor and species \cite{harke2017conserved}. 
-As proteomics associated with the different culture conditions was not part of the study, a direct link between the transcript pool present and the expressed proteins could not be observed.
-However a change in biochemical characteristics (e.g. growth rate, particulate organic carbon and particulate carbohydrates content) indicates that a difference in expression is likely \cite{harke2017conserved}.
-As these organisms are relatively difficult to culture and extract RNA from, until the MMEPTSP the number of marine eukaryotic transcriptomes was sparse. 
-Searching for \textit{Gambierdiscus} on NCBI's SRA database found 5 relevant projects other than the MMETSP (searched on November 10, 2018). 
-Two sequenced \textit{G. polynesiensis}, one each \textit{for G. australes} and \textit{G. excentricus} and one focuses on the bacterial associates of \textit{G. caribaeus} and \textit{G. carolinianus}.
-Searching for gonyalacales, an order of the dinoflagellates that includes \textit{Gambierdiscus}, a further 19 projects including one on bacteria association and 3 of \textit{Azadinium} and \textit{Crypthecodinium}, which are arguably not part of the gonyaulacales (see \textbf{chapter 4}). 
+This is due to the apparent presence of uncharacterized genetic mechanism(s) which seem to leave protein synthesis regulation to the post-transcriptional stage, thus with the effect that mRNA gives an approximation of genomic content. 
+An indication of these regulatory mechanisms comes from a number of direct previous observations. 
+Harke et al. (2017) cultured \textit{Prorocentrum minimum} and \textit{Alexandrium monilatum} under stress conditions by severely limiting nitrogen as well as phosphorous availability. 
+The cultures showed significant biochemical changes (e.g. growth rate, particulate organic carbon and particulate carbohydrates content) between the control and stress conditions at time of harvest, yet change in transcriptome expression was minimal, between 0.1 to 1 \% depending on stressor and species used \cite{harke2017conserved}. 
+While the difference in biochemical changes was not captured by mRNA profiling of the cultures, the study did not include a protein expression observation to verify a difference in expression despite a static pool of mRNA availability \cite{harke2017conserved}.
+As these organisms are relatively difficult to culture and extract RNA, until the MMEPTSP the number of marine eukaryotic transcriptomes was sparse. 
+When searching for \textit{Gambierdiscus} on NCBI's SRA database 5 relevant projects were found in addition to the MMETSP results (searched on November 10, 2018). 
+These sequencing projects covered two strains of \textit{G. polynesiensis}, as well as \textit{for G. australes} and \textit{G. excentricus}. 
+The fifth project focused on the bacterial associations of \textit{G. caribaeus} and \textit{G. carolinianus}.
+Broadening the search to the order gonyalacales yielded a further 19 projects, including another on bacterial associates as well as 3 projects on \textit{Azadinium} and \textit{Crypthecodinium}, which are arguably not part of the gonyaulacales (see \textbf{chapter 4}). 
 Searching for members of the phylum dinoflagellates calls a further 84 projects. 
 Despite their ecological relevance for nutrient cycling, DMSP production , coral symbiosis and neurotoxin production (for a review see \cite{murray2016unravelling}), the paucity of sequencing data, even with the MMETSP dataset, is evident. 
 This is further confounded to a large proportion of dinoflagellate transcriptomes sharing no known similarity to other described proteins or domains compared to known databases. 
@@ -134,7 +135,7 @@ When compared to NCBI's nr database, the proportion of contigs with no known mat
 The concept of a reference genome, or transcriptome, allows for direct comparison of genome/transcriptome sequencing to a standard. 
 However sequencing further genomes in bacteria reveled a large transitory subset of genetic content, with the conclusion that a single strain based reference would be inadequate for capturing a large proportion of the species' genetic diversity \cite{tettelin2005genome,vernikos2015ten}. 
 An alternative approach to a reference genome was proposed - that of a core-genome common to all strains, and a pan-genome which is transitory. 
-An extrapolation of this study by Tettelin et al. (2005), which showed that 1.5 \% of the genome was novel between 8 strains of \textit{Streptococcus}, predicted based on mathematical models that for every new strain sequenced 22 novel genes will be discovered \cite{medini2005microbial}. 
+An extrapolation of this study by Tettelin et al. (2005), which showed that 1.5 \% of the genome was novel between 8 strains of \textit{Streptococcus} predicted based on mathematical models that for every new strain sequenced 22 novel genes are predicted to be discovered \cite{medini2005microbial}. 
 Since then the core- and pan-genome, or transcriptome, concept has been adopted for eukaryotes also, with the realisation that the transient genomic content holds true when multiple strains of a species are sequenced (e.g.  \cite{jin2016maize,plissonneau2018pangenome,read2013pan,li2014novo,song2015agape,posnien2014comprehensive}).  
 Further to exploring the shared and transient genetic components within a genus, pan and core analyses have been conducted for higher taxonomic levels, commonly within genus though also at much higher levels, such as the gene frequency of \textit{Eubacteria} within the super kingdom inter-species pan and core analysis have also been conducted \cite{lapierre2009estimating,he2016pan,koid2014comparative,jin2016maize,vernikos2015ten}. 
 %\FloatBarrier
@@ -147,9 +148,12 @@ Further to exploring the shared and transient genetic components within a genus,
 % wheat pathogen \textit{Zymoseptoria tritici} genome not representative of species, need pan and core for accurate assessment \cite{plissonneau2018pangenome}
 
 %In this study.. go through LC-MS and toxicology info
-This study aims to provide this baseline for \textit{Gambierdiscus de novo} transcriptome sequencing by presenting the pan-transcriptome of five species, which can be expanded and refined in other studies. The taxa span toxic and non-toxic members of the genus from both the Cook Islands and Australia.
+This study aims to provide a baseline for \textit{Gambierdiscus de novo} transcriptome sequencing by presenting the pan-transcriptome of five species, which can be expanded and refined in other studies. 
+The taxa used span toxic and non-toxic members of the genus from both the Cook Islands and Australia.
+%TODO add 2 sentences on findings and one on relevance
+
 \newpage
-\section*{Methods}
+\section{Methods}
 %more shit for manuscript:
 %\subsection*{Culture conditions}
 % Kirsty to insert method but not in chapter
@@ -159,7 +163,7 @@ This study aims to provide this baseline for \textit{Gambierdiscus de novo} tran
 % Kirsty to insert method but not in chapter
 Scripts used for this project are available on Github under hydrahamster/pan-tran. 
 Venn diagrams were created with InteractiVenn \cite{heberle2015venn}. 
-\subsection*{Transcriptome acquisition}
+\subsection{Transcriptome acquisition}
 Species of \textit{Gambierdiscus} used in this chapter are sumarized in Table ~\ref{tbl:StrainTable}. 
 Toxicity and toxin profile reports are specific to the strains used as inter-species variation in toxin production was recently reported \cite{larsson2018toxicology,rhodes2017epiphytic}, unless noted otherwise. 
 The \textit{G. polynesiensis} toxin profile was elucidated by Tim Harwood at the Cawthron institute with the same methodology as for \textit{G. lapillus} in \textbf{Capter 2}. 
@@ -200,12 +204,12 @@ Seq libraries were assembled as per the transcriptome assembly subsection in the
 %\textit{G. australes} (CAWD149) RNA-seq library was downloaded from the MMETSP public database (Table ~\ref{tbl:StrainTable}). \\
 
 
-\subsection*{Spliced leader search}
+\subsection{Spliced leader search}
 The spliced leader sequences reported by Zhang et al. (2007) were used to build a hmmer library. 
 The transcriptome assemblies were searched with the dinoSL hmmer library to investigate for spliced leader presence. 
 All clusters were searched for membership of one or more contigs with a dinoSL.
 
-\subsection*{Homolog clustering}
+\subsection{Homolog clustering}
 Cd-hit was used to cluster highly similar transcripts to reduce redundancy with the flags -T 10 -M 5000 -G 0 -c 1.00 -aS 1.00 -aL 0.005 as shown by Cerveau and Jackson (2016) \cite{cerveau2016combining,fu2012cd}. 
 Transdecoder was use to predict coding regions on the clustered nucleotide sequences \cite{haas2016transdecoder}.
 Protein clusters were annotated with Interproscan v5.27 with local lookup server \cite{quevillon2005interproscan}.
@@ -214,7 +218,7 @@ The -t 0 flag was used for get\_homologues to acquire all possible clusters even
 The resulting pan-, core- and softcore-clusters were matched with their interpro annotations and GO terms were queried with GOSUM against the basic Gene Ontology (GO) database \cite{timgosum,ashburner2000gene,gene2016expansion}. 
 GOSUM was run at levels 1 and 2 of GOs with the go-basic GO reference. 
 
-\subsection*{PKS search}
+\subsection{Ketosynthase domain search}
 The transcriptome assemblies were queried for the ketosynthase (KS) active domain of the polyketide synthase (PKS) enzyme using hmmer \cite{eddy2015hmmer} with libraries developed for this project. 
 The contigs which were identified to contain an active domain were then searched for within the clusters to identify how the active domains clustered; and the assemblies were searched to compare KS abundance between species. 
 The KS domains found were aligned with MUSCLE with a maximum of 8 iterations \cite{edgar2004muscle}. 
@@ -226,17 +230,17 @@ Pretty much all studies so far just looked for the KS domain, though not sure wh
 \item find conserved sequences of each KS cluster (yay for hmmer) and align clusters, phylogeny to see if there is anything interesting there 
 \end{itemize}
 
-\subsection*{Last common ancestor determination of contigs}
+\subsection{Last common ancestor determination of contigs}
 Predicted proteins of each transcriptome were searched against the Uniprot databases SwissProt and trEMBL \cite{uniprot2010ongoing}. 
 BASTA was used to extract the taxonomic determination from the database search for each contig and the associated last common ancestor  \cite{kahlke2018basta}.
 
 %\subsection*{\textit{G. polynesiensis} comparison}
 \newpage
-\section*{Results}
+\section{Results}
 \FloatBarrier
 %\subsection*{Transcriptome overview}
 %- seq and annotation stats for \textit{Gambierdiscus polynesiensis} CAWD254 and Table ~\ref{tbl:SeqTable}
-\subsection*{General info}
+\subsection{Overview of the transcriptomes}
 The progression of clustering and annotation results per transcriptome can be found in Table ~\ref{tbl:ClustTable}. 
 A total of 287,546 clusters were found across all five species. \\
 
@@ -274,7 +278,7 @@ A total of 287,546 clusters were found across all five species. \\
 \newpage
 \textbf{Tim:} It seems kinda conspicuous that the unique clusters of \textit{G. carpenteri} \& \textit{G. poly} are almost twice the number of \textit{G. lapillus} and \textit{G. silvae}, the first two were sequenced together with 150bp read length while the other two had 75bp read length during sequencing. Does this seem odd to you too?
 
-\subsubsection*{Comparison of \emph{Gambierdiscus} inter-species transcriptome annotations}
+\subsubsection{Comparison of \emph{Gambierdiscus} inter-species transcriptome annotations}
 \FloatBarrier
 
 The GOs were split up into the three functional groups defined by the consortium: 1) Molecular processes (Figs. ~\ref{fig:SpecGo1Molec} \& ~\ref{fig:SpecGo2Molec}) defined as biochemical or a macromolecule directly interacting with other molecules; 2) Cellular components (Figs. ~\ref{fig:SpecGo1Cell} \& ~\ref{fig:SpecGo2Cell}) defined by the location within the cell where a molecular process takes place; and 3) Biological process (Figs ~\ref{fig:SpecGo1Bio} \& ~\ref{fig:SpecGo2Bio}) which is defined as a molecular machinery participating in the execution of the cell's genetic programming, e.g. cell division.
@@ -341,7 +345,7 @@ A more in depth query of the functions present in each transcriptome was conduct
 \end{figure} 
 \FloatBarrier
 
-\subsection*{Transcriptome similarity clustering}
+\subsection{Transcriptome similarity clustering}
 %TODO re-run GOSUM based on 
 
 
@@ -400,7 +404,7 @@ Potentially interesting points, if still there after bact and unknown outtakes:\
 \end{figure} 
 \FloatBarrier
 
-\subsubsection*{Core transcritome}
+\subsubsection{Core transcritome}
 A set of core genes common to all five species of \textit{Gambierdiscus} were found. 
 This set consisted of 13,750 amino acid clusters (Table ~\ref{tbl:ClustTable}) of which 45 \% were annotated with GO terms (Suppl. table ~\ref{tbl:PanGO1} \& ~\ref{tbl:PanGO2}). 
 The highest number of contigs in any core cluster was 180 cluster of unknown function with 23, 45, 32, 31 and 49 from \textit{G. australes}, \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G.} cf. \textit{silvae} respectively. 
@@ -409,7 +413,7 @@ The predicted protein coding regions for the other nine clusters, in descending 
 A total of 3,943 core clusters contained 10 or more contigs, so 71.32 \% of the total core clusters consisted of less than 10 contigs. 
 The majority of  clusters fell within metabolic processes, cellular processes and catalytic activity with \%, \% and \% of annotated clusters respectively. \textbf{Tim} - so adding up the lvl1 gosum counts for bio, cell and molec doesn't add up to the total annotated clusters.. am I correct in thinking that this is because annotations can go to other functions too?
 
-\subsubsection*{Softcore transcriptome}
+\subsubsection{Softcore transcriptome}
 A softcore with 4 out of the five \textit{Gambierdiscus} species examined was identified. 
 The softcore consisted of an additional 16,980 clusters (Table ~\ref{tbl:ClustTable}) of which 48 \% were annotated  (Suppl. table ~\ref{tbl:PanGO1} \& ~\ref{tbl:PanGO2}). 
 The most prolific cluster in the softcore contained 163 contigs with unknown function, where \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G.} cf. \textit{silvae} contained 50, 42, 41 \& 30 contigs respectively. 
@@ -420,7 +424,7 @@ Of the six clusters with over 100 contigs, none had representatives contigs from
 In descending order of contigs, they matched to: a protein involved in selective protein binding; a protein involved in actin binding; a protein involved in calcium binding; and a protein with cysteine-type peptidase activity. 
 Of the softcore, 14,035 clusters contained 10 or more contigs. 
 
-\subsubsection*{Pan-transcriptome}
+\subsubsection{Unique part of the transcriptome}
 Clusters with single species representatives, or the pan-transcriptome to the five \textit{Gambierdiscus} species examined, numbered 231,310 clusters. 
 Of the unique clusters, only 15.23 \% of clusters were annotated. 
 Single species clusters from \emph{G. australes}, \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G.} cf. \textit{silvae} numbered 35,356, 62,494, 32,341, 60,796 \& 41,350 clusters respectively (Table ~\ref{tbl:ClustTable}). 
@@ -429,7 +433,7 @@ The highest number of contigs in a unique cluster were 37, found in two clusters
 One of these was annotated for RNA and metal ion binding activity. 
 Of the unique clusters, 83.1 \% contained only one contig and 97.8 \% of clusters have 5 contigs or less. 
 
-\subsection*{Last common ancestor identification of contigs}
+\subsection{Last common ancestor identification of contigs}
 Combined Swissprot and trEMBL
 \begin{table} %update if delving deeper into BASTA % cut offs & where the fuck are the virals?
 \caption{LCA determination of clusters.}
@@ -505,13 +509,13 @@ with KS and dinoSL&0&0&0&0&0&0&0\\
 \FloatBarrier
 \newpage
 
-\subsubsection*{Unknown origin}
+\subsubsection{Unknown origin}
 \textbf{To do:}
 \begin{itemize}
 \item work out if PKS domains are within unknown
 \item may be bacterial origin - IF they have dinoSL, keep. If not, remove from core/pan analysis 
 \end{itemize}
-\subsubsection*{Bacterial origin}
+\subsubsection{Bacterial origin}
 %Quorum sensing controls growth and toxin production of Gambi \cite{wang2018growth}
 \textbf{To do:}
 \begin{itemize}
@@ -540,9 +544,9 @@ with KS and dinoSL&0&0&0&0&0&0&0\\
 %- -m 1 \& -l 80 for carp with swissprot db had much higher bact contamn: 2,784 seqs bact, 22,429 seqs unknown, 35,263 seqs eukar .. contamination potentially a problem here \\
 
 %\subsection*{\emph{Gambierdiscus polynesiensis} intra-species core \& pan transcriptome}
-\subsection*{Looking into toxin producers}
+\subsection{Looking into toxin producers}
 not sure how valid an approach this following section is
-\subsubsection*{Clusters that don't have \textit{G. carpenteri} in}
+\subsubsection{Clusters that don't have \textit{G. carpenteri} in}
 Rationale: This strain of carpenteri is the only one of the 5 which is a verified non-CTX producer, by LC-MS and bioassay.\\
 To do:
 \begin{itemize}
@@ -551,7 +555,7 @@ To do:
 \item check for dinoSL and LCA of clusters
 \end{itemize}
 
-\subsubsection*{\textit{G. polynesiensis} solo clusters}
+\subsubsection{\textit{G. polynesiensis} solo clusters}
 \begin{itemize}
 \item number of clusters
 \item percentage annotated
@@ -560,7 +564,7 @@ To do:
 \end{itemize}
 
 
-\subsubsection*{Polyketide synthase active domain search}
+\subsubsection{Polyketide synthase active domain search}
 
 \begin{table}
 \caption{PKS active domains found in the \emph{Gambierdiscus} species queries.}
@@ -587,7 +591,7 @@ TE&&&&&&&\\
 \end{table}
 \FloatBarrier
 
-\paragraph*{KS domains.}
+\paragraph{KS domains.}
 \FloatBarrier
 A total of 850 contigs were identified with KS domains which assembled into 314 clusters (table ~\ref{tbl:PKSTable}). 
 Nine clusters contained more than 10 contigs, with the highest number of 130 contigs from all species.
@@ -612,7 +616,17 @@ Four contigs contained \textit{G. polynesiensis} and \emph{G.} cf. \emph{silvae}
 \item are there any multi-domain  transcripts?
 \end{itemize}
 
-\section*{Discussion}
+\section{Discussion}
+Comparing five \textit{Gambierdiscus} species revealed a core, soft-core and unique fraction between the transcriptomes. 
+Further, differences between species with different toxin production characteristics were observed.
+
+\subsection{Core, soft-core and unique genes}
+The number of contigs and predicted peptides from this study was markedly variable between \textit{G. australies}, from the MMETSP dataset, in comparison to the transcriptome assemblies generated in \textbf{Chapter 4}. 
+To accommodate for the low number of contigs from \textit{G. australes}, the soft-core spanned 4 of the 5 taxa. 
+Noticeably, \textit{G. australes} was absent from 86 \% of the soft-core dataset which indicates that a large proportion of the soft-core is likely part of the \textit{Gambierdiscus} pan-transcriptome core which was not captured in the \textit{G. australes} sequencing. 
+This is a case where the relevance of a reference pan-transcriptome for sequencing efforts becomes evident.\\
+\textbf{Tim} up to here, the rest is mostly based in the whole seq dataset and ideas on what to possibly look at
+
 To go here:
 \begin{itemize}
 \item overall summary of study

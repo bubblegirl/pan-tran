@@ -228,19 +228,21 @@ The contigs which were identified to contain an active domain were then searched
 The KS domains found were aligned with MUSCLE with a maximum of 8 iterations \cite{edgar2004muscle}. 
 Maximum likelihood (ML) inference was run with the KS alignments using RaxML \cite{stamatakis2014raxml} with the -PROTGAMMAILGF flags on the University of Technology Sydney’s High-performance computing cluster (HPCC)\\
 
-\subsection{Gene Ontology annotation}
-%TODO up to here
-
 
 %\subsection*{\textit{G. polynesiensis} comparison}
 \newpage
 \section{Results}
 \FloatBarrier
-%\subsection*{Transcriptome overview}
-%- seq and annotation stats for \textit{Gambierdiscus polynesiensis} CAWD254 and Table ~\ref{tbl:SeqTable}
 \subsection{Overview of the transcriptomes}
 The progression of clustering and annotation results per transcriptome can be found in Table ~\ref{tbl:ClustTable}. 
-A total of 287,546 clusters were found across all five species. \\
+A total of 287,546 clusters were found across all five species (Fig. ~\ref{fig:SpeciesVenn}). 
+
+
+\begin{figure} 
+\includegraphics[scale=.4]{3Aug18_cluster-investigation/Species-venn.png} 
+\caption{Venn diagram of species distribution across clusters.} 
+\label{fig:SpeciesVenn}
+\end{figure} 
 
 \begin{table}
 \caption{Progression of clusters found in each \emph{Gambierdiscus} transcriptome during processing.}
@@ -249,17 +251,17 @@ A total of 287,546 clusters were found across all five species. \\
 \hline
 \textbf{Species}& \textit{G. australes}& \emph{G. carpenteri}&\emph{G. lapillus}&\emph{G. polynesiensis}&\emph{G.} cf. \emph{silvae}\\
 \hline
-\textbf{Contigs \#}&102,863&263,829&148,972&270,315&191,224\\
+\textbf{Contigs}&102,863&263,829&148,972&270,315&191,224\\
 \hline
-\textbf{dinoSL \#}&304&683&232&1,570&1,524\\
+\textbf{Spliced leader contigs}&304&683&232&1,570&1,524\\
 \hline
-\textbf{Nucleotide clusters \# (cd-hit)}&102,861&263,743&148,966&270,265&191,205\\
+\textbf{Nucleotide clusters (cd-hit)}&102,861&263,743&148,966&270,265&191,205\\
 \hline
-\textbf{Predicted coding regions \# (Transdecoder)}&63,299&180,568&111,862&176,290&132,688\\
+\textbf{Predicted coding regions (Transdecoder)}&63,299&180,568&111,862&176,290&132,688\\
 \hline
 %\textbf{Protein clusters \# (cd-hit)}&60,166&139,699&92,418&139,487&107,766\\
 %\hline
-\textbf{Contigs annotated \# (Interpro Scan)}&131,970&334,737&225,324&225,324&254,844\\ 
+\textbf{Contigs annotated (Interpro Scan)}&131,970&334,737&225,324&225,324&254,844\\ 
 \hline
 %\textbf{Contigs with Uniprot hits \#}&&&&&\\ 
 %\hline
@@ -283,21 +285,14 @@ The GOs were split up into the three functional groups defined by the consortium
 GO basic is structured in a hirachical manner, with parent and child terms where child terms are more specific than parent terms. 
 For a general overview of functions present in each transcriptome, level 1 GO terms were elucidated (Figs. ~\ref{fig:SpecGo1Bio}, ~\ref{fig:SpecGo1Cell} \& ~\ref{fig:SpecGo1Molec}). 
 A more in depth query of the functions present in each transcriptome was conducted with a GO search of the child terms at level 2 (Figs. ~\ref{fig:SpecGo2Bio}, ~\ref{fig:SpecGo2Cell} \& ~\ref{fig:SpecGo2Molec}). \\
-\textbf{To do:}
-\begin{itemize}
-\item \textbf{Tim} I think I'm going to need to take out anything that links to Bacterial or unknown LCA and then re-run GOSUM. Thoughts?
-\item heatmap (evol relationship inferred from clustering, compare to phylogeny in \textbf{chapter 4}) from get\_hom is throwing up errors
-\item describe differences in graphs once I know what needs to be taken out and re-run
-\item GOSUM lvl2 graphs are partially missing descriptions on x-axis. Fix when re-run
-\end{itemize}
-
-
-\begin{figure} 
-\includegraphics[scale=.4]{3Aug18_cluster-investigation/Species-venn.png} 
-\caption{Venn diagram of species distribution across clusters.} 
-\label{fig:SpeciesVenn}
-\end{figure} 
-\FloatBarrier
+The GO annotations found at level 1 between the species of \textit{Gambierdiscus} were similar, with the exception of \textit{G. australes} in several instances. 
+For GOs assigned part of catalytic activity in molecular processes (Fig. ~\ref{fig:PanGo1Molec}) as well as both the metobolic and cellular processes in the biological processes (Fig. ~\ref{fig:PanGo1Bio}), \textit{G. australes} was underrepresented. 
+Within the molecular processes (Fig. ~\ref{fig:PanGo1Molec}), the most common annotation was for catalytic activity, followed by binding then transporter activities. 
+Molecular carrier activity was only registered for \textit{G. australes} and \textit{G. carpenteri} with 1 annotation each.
+For GO annotations within the cellular processes (~\ref{fig:PanGo1Cell}), the most common match was to cell parts followed by protein containing complexes then organelle parts. 
+Only \textit{G. carpenteri} and \textit{G. polynesiensis} had one annotation each for cell junction activity. 
+The highest number of GOs within biological processes matched to cellular processes (Fig. ~\ref{fig:PanGo1Bio}), closely followed by metabolic processes then biological regulation and localization. 
+The lease represented biological GO annotation was related to growth with only one annotation for \textit{G. holmesii} and \textit{G. polynesiensis}.
 
 \begin{figure} 
 \includegraphics[scale=.9]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum1-cell-split.png} 
@@ -315,12 +310,14 @@ A more in depth query of the functions present in each transcriptome was conduct
 
 
 
+
 \begin{figure} 
 \includegraphics[scale=1]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum1-molec-split.png} 
 \caption{Summary of molecular GO annotations between \textit{Gambierdiscus} species at GOSUM level 1 from Suppl. table ~\ref{tbl:SpGO1}.} 
 \label{fig:SpecGo1Molec}
 \end{figure} 
 \FloatBarrier
+At level 2 of GO annotations 
 
 \begin{figure} 
 \includegraphics[scale=.45]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum2-bio2-split.png} 
@@ -344,20 +341,7 @@ A more in depth query of the functions present in each transcriptome was conduct
 \FloatBarrier
 
 \subsection{Transcriptome similarity clustering}
-%TODO re-run GOSUM based on 
 
-
-\FloatBarrier
-\textbf{To do:}
-\begin{itemize}
-\item describe differences in graphs once I know what needs to be taken out and re-run
-\item GOSUM lvl2 graphs are partially missing descriptions on x-axis. Fix when re-run
-\end{itemize}
-Potentially interesting points, if still there after bact and unknown outtakes:\\
-- intracellular parts in pan (gosum2 cell)\\
-- organelle memb in core and softcore, seem essential and not in unique (gosum2 cell)\\
-- core and unique pretty evenly matched in most entries for gosum2 molec, except catalytic activity binding on DNA is  much higher in unique and a little higher for binding RNA\\
-- very little difference between core and unique... possbile reasons? not annotated, should be combining core \& softcore ?
 
 \FloatBarrier
 \begin{figure} 

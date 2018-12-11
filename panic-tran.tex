@@ -147,29 +147,14 @@ Further to exploring the shared and transient genetic components within a genus,
 %maize uses trans rather than gen data too due to repetitive seqs, pan-tran showed such large variation that the idea of 'reference genome' is incomplete as up o 50% can differ. so core/pan more representative of diversity \cite{jin2016maize} 
 % wheat pathogen \textit{Zymoseptoria tritici} genome not representative of species, need pan and core for accurate assessment \cite{plissonneau2018pangenome}
 
-%In this study.. go through LC-MS and toxicology info
-This study aims to provide a baseline for \textit{Gambierdiscus de novo} transcriptome sequencing by presenting the pan-transcriptome of five species, which can be expanded and refined in other studies. 
-The taxa used span toxic and non-toxic members of the genus from both the Cook Islands and Australia.
+Five transcriptomes of \textit{Gambierdiscus} were compared in this study with the aim of providing a pan-transcriptomic baseline \textit{Gambierdiscus de novo} transcriptome sequencing, which can be expanded and refined in future studies. 
+The taxa originated from two locations in Australia (Merimbula, NSW, and Heron Island, QLD) and Rarotonga in the Cook Islands (Table ~\ref{tbl:StrainTable}). 
+All of the five species have been implicated in MTX production via bioassays, while \textit{G. carpenteri} did not register for CTX-like activity in a bioassay \cite{larsson2018toxicology}). 
+The toxin profiles registered all species apart from \textit{G. carpenteri} as an MTX producer, while only \textit{G. polynesiensis} had a confirmed CTX production profile (Table ~\ref{tbl:StrainTable})
+This study revealed a set of core-transcripts shared by all taxa as  well as a subset of species specific, unique portion of the transcriptome. 
+The results in this study could provide an avenue of investigation of quering the expression differences between toxic and non-toxic species of \textit{Gambierdiscus}.
+
 %TODO add 2 sentences on findings and one on relevance
-
-\newpage
-\section{Methods}
-%more shit for manuscript:
-%\subsection*{Culture conditions}
-% Kirsty to insert method but not in chapter
-%\subsection*{RNA isolation}
-% Kirsty to insert method but not in chapter
-%\subsection*{Library prep and sequencing}
-% Kirsty to insert method but not in chapter
-Scripts used for this project are available on Github under hydrahamster/pan-tran. 
-Venn diagrams were created with InteractiVenn \cite{heberle2015venn}. 
-\subsection{Transcriptome acquisition}
-Species of \textit{Gambierdiscus} used in this chapter are sumarized in Table ~\ref{tbl:StrainTable}. 
-Toxicity and toxin profile reports are specific to the strains used as inter-species variation in toxin production was recently reported \cite{larsson2018toxicology,rhodes2017epiphytic}, unless noted otherwise. 
-The \textit{G. polynesiensis} toxin profile was elucidated by Tim Harwood at the Cawthron institute with the same methodology as for \textit{G. lapillus} in \textbf{Capter 2}. 
-Seq libraries were assembled as per the transcriptome assembly subsection in the methods of \textbf{chapter 4}, without diginorm. \\
-\textbf{Tim:} the \textit{G. australes} CAWD149 transcriptome on MMETSP was from a single RNA extraction
-
 \FloatBarrier
 \begin{table}
 \caption{\emph{Gambierdiscus} species transcriptomes used in this study along with their toxicity, toxin profile, accession numbers and source. Where possible, information is strain specific \& otherwise denoted with *}
@@ -190,11 +175,30 @@ Seq libraries were assembled as per the transcriptome assembly subsection in the
 \hline
 \textbf{Toxicity via bioassay}&CTX +ve; MTX N/A&CTX -ve; MTX +ve&CTX +ve*; MTX +ve*&CTX +ve*; MTX +ve*&CTX +ve*; MTX +ve*\\
 \hline
-\textbf{References}&\cite{keeling2014marine,rhodes2010toxic,munday2017ciguatoxins}&\cite{larsson2018toxicology}&\cite{larsson2018toxicology,kretzschmar2017characterization}&&\cite{larsson2018toxicology,kretzschmar2017characterization}\\
+\textbf{References}&\cite{keeling2014marine,rhodes2010toxic,munday2017ciguatoxins}&\cite{larsson2018toxicology}&\cite{larsson2018toxicology,kretzschmar2017characterization}&\textbf{this study}, \cite{chinain2010growth}&\cite{larsson2018toxicology,kretzschmar2017characterization}\\
 \hline
 \end{tabular}
 \end{table}
 \FloatBarrier
+\newpage
+\section{Methods}
+%more shit for manuscript:
+%\subsection*{Culture conditions}
+% Kirsty to insert method but not in chapter
+%\subsection*{RNA isolation}
+% Kirsty to insert method but not in chapter
+%\subsection*{Library prep and sequencing}
+% Kirsty to insert method but not in chapter
+Scripts used for this project are available on Github under hydrahamster/pan-tran. 
+Venn diagrams were created with InteractiVenn \cite{heberle2015venn}. 
+\subsection{Transcriptome acquisition}
+Species of \textit{Gambierdiscus} used in this chapter are summarized in Table ~\ref{tbl:StrainTable}. 
+Toxicity and toxin profile reports are specific to the strains used as inter-species variation in toxin production was recently reported \cite{larsson2018toxicology,rhodes2017epiphytic}, unless noted otherwise. 
+The \textit{G. polynesiensis} toxin profile was elucidated by Tim Harwood at the Cawthron institute with the same methodology as for \textit{G. lapillus} in \textbf{Capter 2}. 
+Seq libraries were assembled as per the transcriptome assembly subsection in the methods of \textbf{chapter 4}, without diginorm. \\
+
+
+
 %\textit{Gambierdiscus polynesiensis}&CAWD212&CTX +ve; MTX +ve&CTX N/A; MTX N/A&Kohli pers. comm.&\cite{rhodes2014production}\\
 %\hline
 %\textit{Gambierdiscus polynesiensis}&CAWD254&CTX -ve; MTX -ve&CTX N/A; MTX N/A&&This study\\
@@ -205,7 +209,7 @@ Seq libraries were assembled as per the transcriptome assembly subsection in the
 
 
 \subsection{Spliced leader search}
-The spliced leader sequences reported by Zhang et al. (2007) were used to build a hmmer library. 
+The spliced leader sequences reported by Zhang et al. (2007) were used to build a hmmer library \cite{zhang2007spliced}. 
 The transcriptome assemblies were searched with the dinoSL hmmer library to investigate for spliced leader presence. 
 All clusters were searched for membership of one or more contigs with a dinoSL.
 
@@ -215,7 +219,7 @@ Transdecoder was use to predict coding regions on the clustered nucleotide seque
 Protein clusters were annotated with Interproscan v5.27 with local lookup server \cite{quevillon2005interproscan}.
 Protein clusters were processed to include the species of origin instead of the TRINITY tag and concatenated for input to get\_homologues \cite{vinuesa2015robust}. 
 The -t 0 flag was used for get\_homologues to acquire all possible clusters even with only one species representative, and -G for the OMCL algorithm. 
-The resulting pan-, core- and softcore-clusters were matched with their interpro annotations and GO terms were queried with GOSUM against the basic Gene Ontology (GO) database \cite{timgosum,ashburner2000gene,gene2016expansion}. 
+The resulting core-, softcore- and unique-clusters were matched with their interpro annotations and GO terms were queried with GOSUM against the basic Gene Ontology (GO) database \cite{timgosum,ashburner2000gene,gene2016expansion}. 
 GOSUM was run at levels 1 and 2 of GOs with the go-basic GO reference. 
 
 \subsection{Ketosynthase domain search}
@@ -223,16 +227,10 @@ The transcriptome assemblies were queried for the ketosynthase (KS) active domai
 The contigs which were identified to contain an active domain were then searched for within the clusters to identify how the active domains clustered; and the assemblies were searched to compare KS abundance between species. 
 The KS domains found were aligned with MUSCLE with a maximum of 8 iterations \cite{edgar2004muscle}. 
 Maximum likelihood (ML) inference was run with the KS alignments using RaxML \cite{stamatakis2014raxml} with the -PROTGAMMAILGF flags on the University of Technology Sydney’s High-performance computing cluster (HPCC)\\
-To do:
-\begin{itemize}
-\item if time, need to download ACP, ET, KR, DR, AT and TE sequences and make hmmer libs -- inclusion of these extra domains is heavily dependent on time. 
-Pretty much all studies so far just looked for the KS domain, though not sure why - all 7 are necessary to synthesize a polyketide structure.
-\item find conserved sequences of each KS cluster (yay for hmmer) and align clusters, phylogeny to see if there is anything interesting there 
-\end{itemize}
 
-\subsection{Last common ancestor determination of contigs}
-Predicted proteins of each transcriptome were searched against the Uniprot databases SwissProt and trEMBL \cite{uniprot2010ongoing}. 
-BASTA was used to extract the taxonomic determination from the database search for each contig and the associated last common ancestor  \cite{kahlke2018basta}.
+\subsection{Gene Ontology annotation}
+%TODO up to here
+
 
 %\subsection*{\textit{G. polynesiensis} comparison}
 \newpage
@@ -263,13 +261,13 @@ A total of 287,546 clusters were found across all five species. \\
 %\hline
 \textbf{Contigs annotated \# (Interpro Scan)}&131,970&334,737&225,324&225,324&254,844\\ 
 \hline
-\textbf{Contigs with Uniprot hits \#}&&&&&\\ 
+%\textbf{Contigs with Uniprot hits \#}&&&&&\\ 
+%\hline
+\textbf{Core-transcriptome clusters}&13,750&13,750&13,750&13,750&13,750\\
 \hline
-\textbf{Part of core transcriptome clusters}&13,750&13,750&13,750&13,750&13,750\\
+\textbf{Softcore-transcriptome clusters}&2,372&16,058&16,297&16,557&16,636\\
 \hline
-\textbf{Part of softcore transcriptome clusters}&2,372&16,058&16,297&16,557&16,636\\
-\hline
-\textbf{Pan-transcriptome clusters}&35,356&61,494&32,341&60,769&41,350\\
+\textbf{Unique clusters}&35,356&61,494&32,341&60,769&41,350\\
 \hline
 %&&&&&\\
 \end{tabular}

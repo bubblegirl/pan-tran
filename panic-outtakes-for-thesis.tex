@@ -167,6 +167,76 @@ with KS and dinoSL&0&0&0&0&0&0&0\\
 
 %\subsection*{\emph{Gambierdiscus polynesiensis} intra-species core \& pan transcriptome}
 
+\subsection{Looking into toxin producers}
+not sure how valid an approach this following section is
+\subsubsection{Clusters that don't have \textit{G. carpenteri} in}
+Rationale: This strain of carpenteri is the only one of the 5 which is a verified non-CTX producer, by LC-MS and bioassay.\\
+To do:
+\begin{itemize}
+\item find clusters excluding carp
+\item look for clusters with higher number of contigs from poly and silvae as those are the two more toxic ones
+\item check for dinoSL and LCA of clusters
+\end{itemize}
+
+\subsubsection{\textit{G. polynesiensis} solo clusters}
+\begin{itemize}
+\item number of clusters
+\item percentage annotated
+\item pathways present (another GOSUM adventure?)
+\item as \textit{G. silvae} and to a much reduced extend, \textit{G. lapillus}, also produce CTX, is the solo polynesiensis section relevant?
+\end{itemize}
+
+\subsubsection{Polyketide synthase active domain search}
+\begin{table}
+\caption{PKS active domains found in the \emph{Gambierdiscus} species queries.}
+\label{tbl:PKSTable}
+\begin{tabular}{ | p{1.65cm} | p{1.5cm} | p{1.5cm} | p{1.5cm} | p{1.7cm} | p{1.5cm}| p{1.5cm}| p{1.5cm}|}
+\hline
+\textbf{Active domain}& \textit{G. australes}& \emph{G. carpenteri}&\emph{G. lapillus}&\emph{G. polynesiensis}&\emph{G.} cf. \emph{silvae}&\textbf{Total contigs}&\textbf{\# clusters}\\
+\hline
+ACP&&&&&&&\\
+\hline
+AT&&&&&&&\\
+\hline
+DR&&&&&&&\\
+\hline
+ET&&&&&&&\\
+\hline
+KS&130&195&150&221&154&850&314\\
+\hline
+KR&&&&&&&\\
+\hline
+TE&&&&&&&\\
+\hline
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+
+\subsection{Keto synthase active domain search}
+\textbf{To do:}
+\begin{itemize}
+\item are there any multi-domain  transcripts?
+\end{itemize}
+
+\section{discussion}
+To go here:
+\begin{itemize}
+\item overall summary of study
+\item core and pan more likely to be accurate without being axenic unless same contamination \textbf{vs} removing bact LCA
+\item spliced leader sites really low. potentially interesting - the two highest ones are from same phylogenetic clade, while the other three are representatives from the other two main clades. Also poly and silvae are from separate seq runs, so not an artefact from that front.
+\item \textit{G. australes} seq is quite bad in comparison as can be seen in the GOSUM figs and the comparative number of contigs, predicted proteins and softcore clusters
+\item \textbf{Tim} not sure if I can do something like Fig 2 - only 5 isolates to put in, and I think I need to look at that again with more sleep to work out what's going on and if I could transfer the concept., there are over 200,000 pan-tran clusters, I don't think I can work out whether they are genophyletic or monophyletic for that many
+\end{itemize}
+
+\subsubsection*{Bacterial association with host}
+\begin{itemize}
+\item really depends what the basta results are and if anything interesting is found
+\item 'fundamental shift' in transcript expression observed in \textit{A. tamarense} based on bacterial presence, much higher than N or P depletion \cite{moustafa2010transcriptome}
+\end{itemize}
+
+
+
 \newpage
 \bibliographystyle{acm}
 \bibliography{pantran.bib}

@@ -413,7 +413,11 @@ For biological processes, the prevalent GO annotations matched to cellular proce
 \paragraph{Level 2 GO annotations for pan-transcriptomes.}
 \FloatBarrier
 While differences between the biological, cellular and molecular processes were more distinctive at level 2, with the most common pattern among all three groupings of the core and unique clusters closely matching the number of GO terms with one or the other dominant, and the softcore clusters as less prevalent (Figs. ~\ref{fig:PanGo2Bio}, ~\ref{fig:PanGo2Cell} \& ~\ref{fig:PanGo2Molec}). 
-Only the unique clusters had annotations matching to  
+Only the unique clusters had annotations matching to DNA binding transcription factor activity, metallochaperone activity and water binding in the molecular processes while the most common GO annotations for the pan-transcriptome matched to transferase, hydrolase and oxidoreductase activities in descending order (Fig. ~\ref{fig:PanGo2Molec}). 
+Within the cellular processes, most annotations matched to intracellular parts, followed by intracellular organelle parts then membrane protein complexes (Fig. ~\ref{fig:PanGo2Cell}). 
+Annotations solely from unique clusters were from cell-cell junction complexes, a viral membrane, contractile fibre parts, bacterila-type flagellum and an external encapsulating structure part. 
+The biological processes annotations most commonly matched to organic substance metabolic processes, cellular metabolic processes and primary metabolic processes in descending order (Fig. ~\ref{fig:PanGo2Bio}). 
+Unique clusters were the only representatives for system processes, immune response, cell adhesion, cell death, sperm-egg recognition, cell motilityand a protein activation cascade. 
 
 \begin{figure} 
 \includegraphics[scale=.75]{3Aug18_cluster-investigation/figures/gosum-pan/Pan-gosum2-bio-split.png} 
@@ -437,56 +441,10 @@ Only the unique clusters had annotations matching to
 \FloatBarrier
 
 
-\subsection{Looking into toxin producers}
-not sure how valid an approach this following section is
-\subsubsection{Clusters that don't have \textit{G. carpenteri} in}
-Rationale: This strain of carpenteri is the only one of the 5 which is a verified non-CTX producer, by LC-MS and bioassay.\\
-To do:
-\begin{itemize}
-\item find clusters excluding carp
-\item look for clusters with higher number of contigs from poly and silvae as those are the two more toxic ones
-\item check for dinoSL and LCA of clusters
-\end{itemize}
 
-\subsubsection{\textit{G. polynesiensis} solo clusters}
-\begin{itemize}
-\item number of clusters
-\item percentage annotated
-\item pathways present (another GOSUM adventure?)
-\item as \textit{G. silvae} and to a much reduced extend, \textit{G. lapillus}, also produce CTX, is the solo polynesiensis section relevant?
-\end{itemize}
-
-
-\subsubsection{Polyketide synthase active domain search}
-
-\begin{table}
-\caption{PKS active domains found in the \emph{Gambierdiscus} species queries.}
-\label{tbl:PKSTable}
-\begin{tabular}{ | p{1.65cm} | p{1.5cm} | p{1.5cm} | p{1.5cm} | p{1.7cm} | p{1.5cm}| p{1.5cm}| p{1.5cm}|}
-\hline
-\textbf{Active domain}& \textit{G. australes}& \emph{G. carpenteri}&\emph{G. lapillus}&\emph{G. polynesiensis}&\emph{G.} cf. \emph{silvae}&\textbf{Total contigs}&\textbf{\# clusters}\\
-\hline
-ACP&&&&&&&\\
-\hline
-AT&&&&&&&\\
-\hline
-DR&&&&&&&\\
-\hline
-ET&&&&&&&\\
-\hline
-KS&130&195&150&221&154&850&314\\
-\hline
-KR&&&&&&&\\
-\hline
-TE&&&&&&&\\
-\hline
-\end{tabular}
-\end{table}
+\subsection{Keto synthase active domain search}
 \FloatBarrier
-
-\paragraph{KS domains.}
-\FloatBarrier
-A total of 850 contigs were identified with KS domains which assembled into 314 clusters (table ~\ref{tbl:PKSTable}). 
+A total of 850 contigs were identified with KS domains which assembled into 314 clusters (Fig. ~\ref{fig:KSVenn}). 
 Nine clusters contained more than 10 contigs, with the highest number of 130 contigs from all species.
 9 clusters contained 10 contigs or more, of which only two did not contain all the taxa examined.
 57 of the 314 clusters contained contigs from multiple species, so 81.8 \% of KS clusters were species specific while 78.7 \% contained only a single contig (Fig. ~\ref{fig:KSVenn}). 
@@ -504,35 +462,23 @@ Four contigs contained \textit{G. polynesiensis} and \emph{G.} cf. \emph{silvae}
 \end{figure} 
 \FloatBarrier
 
-\textbf{To do:}
-\begin{itemize}
-\item are there any multi-domain  transcripts?
-\end{itemize}
-
 \section{Discussion}
 Comparing five \textit{Gambierdiscus} species revealed a core, soft-core and unique fraction between the transcriptomes. 
-Further, differences between species with different toxin production characteristics were observed.
+Further, differences between species with different toxin production characteristics were observed. 
+Interestingly, the abundance of dinoSL was quite low (table ~\ref{tbl:ClustTable}) compared to the abundance observed by Zhang et al. (2009). 
+Similar to this study, low abundance of spliced leaders has been observed in other dinoflagellates \cite{guo2011spliced,bachvaroff2008stop}. 
+The function of the spliced leader, and hence whether this variation in observation between high and low abundance is species specific or due to assembly method employed, is yet unknown.
+Interestingly, \textit{G. homesii} and \textit{G. polynesiensis} had the most contigs with dinoSLs. 
+These were from different sequencing runs as well as collected from different geographic locations, but are phylogenetically closely related. %TODO link appendix holmesii paper
 
 \subsection{Core, soft-core and unique genes}
-The number of contigs and predicted peptides from this study was markedly variable between \textit{G. australies}, from the MMETSP dataset, in comparison to the transcriptome assemblies generated in \textbf{Chapter 4}. 
+The number of contigs and predicted peptides from this study was markedly less for \textit{G. australes}, from the MMETSP dataset, in comparison to the transcriptome assemblies generated in \textbf{Chapter 4}. 
 To accommodate for the low number of contigs from \textit{G. australes}, the soft-core spanned 4 of the 5 taxa. 
 Noticeably, \textit{G. australes} was absent from 86 \% of the soft-core dataset which indicates that a large proportion of the soft-core is likely part of the \textit{Gambierdiscus} pan-transcriptome core which was not captured in the \textit{G. australes} sequencing. 
 This is a case where the relevance of a reference pan-transcriptome for sequencing efforts becomes evident.\\
-\textbf{Tim} up to here, the rest is mostly based in the whole seq dataset and ideas on what to possibly look at
-
-To go here:
-\begin{itemize}
-\item overall summary of study
-\item core and pan more likely to be accurate without being axenic unless same contamination \textbf{vs} removing bact LCA
-\item spliced leader sites really low. potentially interesting - the two highest ones are from same phylogenetic clade, while the other three are representatives from the other two main clades. Also poly and silvae are from separate seq runs, so not an artefact from that front.
-\item \textit{G. australes} seq is quite bad in comparison as can be seen in the GOSUM figs and the comparative number of contigs, predicted proteins and softcore clusters
-\item \textbf{Tim} not sure if I can do something like Fig 2 - only 5 isolates to put in, and I think I need to look at that again with more sleep to work out what's going on and if I could transfer the concept., there are over 200,000 pan-tran clusters, I don't think I can work out whether they are genophyletic or monophyletic for that many
-\end{itemize}
-
-\subsection{dinoSL}
--differences between transcriptomes... either seq metod related, or taxa relate. I think silvae and poly had the most, which are from the same sub clade?
-- super low number of dinoSL found in libraries, not representative of all the transcripts \cite{guo2011spliced} and they cite \cite{bachvaroff2008stop} as similar, but incompatible with findings by \cite{zhang2009retrieval}.. check zhang 2007 is it a detection thing, or genus/species specific differences
-\subsection*{core \textit{Gambierdiscus} transcriptome}
+ \cite{lidie2005gene} comprehensive index of genes in \textit{K. brevis} to compare to as well as functional summaries
+ 
+ \subsection{core \textit{Gambierdiscus} transcriptome}
  \cite{lidie2005gene} comprehensive index of genes in \textit{K. brevis} to compare to as well as functional summaries 
 
 \subsubsection*{discuss common \& different functions found}
@@ -553,32 +499,34 @@ Way higher for other gambis.\\
 \item \textbf{Tim} I'm not sure we know enough about these pathways to do something like fig 5 
 \end{itemize}
 
-\subsubsection*{Bacterial association with host}
-\begin{itemize}
-\item really depends what the basta results are and if anything interesting is found
-\item 'fundamental shift' in transcript expression observed in \textit{A. tamarense} based on bacterial presence, much higher than N or P depletion \cite{moustafa2010transcriptome}
-\end{itemize}
 
-\subsubsection*{discuss usefulness for future studies}
-\begin{itemize}
-\item Usefullness of core transcriptome for RNA sequencing studies
-\item Investigate poly only KS clusters or clusters with high number of poly reps
-\end{itemize}
+\subsection{Areas for possible improvement in this study}
 
-\subsubsection*{discuss potential short comings} 
+\paragraph{Contaminants in dataset.}
+The RNA-seq libraries were constructed from whole RNA seq runs with non-axenic cultures, hence it is likely that bacterial RNA is a subset of the analysis. 
+It is unlikely that the same contamination persists in the core and softcore clusters, i.e. across all four to five species collected from Australia, the Cook Islands and over a 10 year time span. 
+However the unique clusters could well be contaminated with bacterial contigs. 
+Hence it would be pertinent to utilize a eukaryote specific RNA-seq strategy for future studies, or devise a method to separate bacterial from eukaryotic contigs post sequencing.
+
+\paragraph{Coverage of taxa.}
+%TODO up to here
+The number of taxa
+Hence due to limited species and the singular strain per species coverage, this represents an exploratory study for establishing a pan-transcriptome for \textit{Gambierdiscus} which should be improved upon. 
+
 \begin{itemize}
 \item from different seq runs and methods and seq depth may vary, especially \textit{G. australes}
 \item intra-speces variation so one isolate per species may not be representative
 \item unknown if processes other than PKS play a role in toxin production
 \end{itemize}
-%\subsection*{core \textit{G. polynesiensis} transcriptome}
-%- discuss common gene pathways found \\
-%-discuss usefulness for future studies\\
-%-discuss potential short commings
 
 %\newpage
 \section*{Conclusion}
 
+%\subsubsection*{discuss usefulness for future studies}
+\begin{itemize}
+\item Usefullness of core transcriptome for RNA sequencing studies
+\item Investigate poly only KS clusters or clusters with high number of poly reps
+\end{itemize}
 
 \section*{Supplementary}
 - need to add australes

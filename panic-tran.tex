@@ -46,7 +46,7 @@ It has been verified using LCMS on multiple strains that the species \textit{Gam
 Other species appear to produce maitotoxins, gambierol, and other uncharacterised toxins. 
 An understanding of the evolution of \textit{Gambierdiscus} and their toxins requires information regarding their genetics. 
 Transcriptomic sequencing is a feasible alternative to genome sequencing. 
-In this study, we generated de novo RNA-seq libraries for \textit{Gambierdiscus polynesiensis}, \textit{Gambierdiscus carpenteri}, \textit{Gambierdiscus} cf. \textit{silvae} and \textit{Gambierdiscus lapillus}, compared these to a previously sequenced \textit{Gambierdiscus australes}, to discover a set of core genes shared by all species. 
+In this study, we generated de novo RNA-seq libraries for \textit{Gambierdiscus polynesiensis}, \textit{Gambierdiscus carpenteri}, \textit{Gambierdiscus holmesii} and \textit{Gambierdiscus lapillus}, compared these to a previously sequenced \textit{Gambierdiscus australes}, to discover a set of core genes shared by all species. 
 We present a Gambierdiscus core transcriptome, which might be used to investigate candidate genes related to toxin production.\\
 %Further to investigate CTX production more specifically, we compared two CTX -producing strains of \textit{Gambierdiscus polynesiensis} to one non-CTX producing strain, verified by LC-MS/MS, to look for clues about pathways involved in ciguatoxin production.\\
 \textbf{To do:}
@@ -161,7 +161,7 @@ The results in this study could provide an avenue of investigation of quering th
 \label{tbl:StrainTable}
 \begin{tabular}{ | p{2.5cm} | p{2.3cm} | p{2.3cm} | p{2.3cm} | p{2.3cm} | p{2.3cm}|}
 \hline
-\textbf{Species}&\textit{G. australes}&\textit{G. carpenteri}&\textit{G. lapillus}&\textit{G. polynesiensis}&\textit{G.} cf. \textit{silvae}\\
+\textbf{Species}&\textit{G. australes}&\textit{G. carpenteri}&\textit{G. lapillus}&\textit{G. polynesiensis}&\textit{G. holmesii}\\
 \hline
 \textbf{Strain}&CAWD149&UTSMER9A&HG4&CG15&HG5\\
 \hline
@@ -249,7 +249,7 @@ A total of 287,546 clusters were found across all five species (Fig. ~\ref{fig:S
 \label{tbl:ClustTable}
 \begin{tabular}{ | p{3cm} | p{2cm} | p{2.5cm} | p{2.5cm} | p{2cm} | p{2cm}|}
 \hline
-\textbf{Species}& \textit{G. australes}& \emph{G. carpenteri}&\emph{G. lapillus}&\emph{G. polynesiensis}&\emph{G.} cf. \emph{silvae}\\
+\textbf{Species}& \textit{G. australes}& \emph{G. carpenteri}&\emph{G. lapillus}&\emph{G. polynesiensis}&\emph{G. holmesii}\\
 \hline
 \textbf{Contigs}&102,863&263,829&148,972&270,315&191,224\\
 \hline
@@ -276,12 +276,12 @@ A total of 287,546 clusters were found across all five species (Fig. ~\ref{fig:S
 \end{table}
 \FloatBarrier
 \newpage
-\textbf{Tim:} It seems kinda conspicuous that the unique clusters of \textit{G. carpenteri} \& \textit{G. poly} are almost twice the number of \textit{G. lapillus} and \textit{G. silvae}, the first two were sequenced together with 150bp read length while the other two had 75bp read length during sequencing. Does this seem odd to you too?
+\textbf{Tim:} It seems kinda conspicuous that the unique clusters of \textit{G. carpenteri} \& \textit{G. poly} are almost twice the number of \textit{G. lapillus} and \textit{G. holmesii}, the first two were sequenced together with 150bp read length while the other two had 75bp read length during sequencing. Does this seem odd to you too?
 
 \subsubsection{Core transcritome}
 A set of core genes common to all five species of \textit{Gambierdiscus} were found. 
 This set consisted of 13,750 amino acid clusters (Table ~\ref{tbl:ClustTable}) of which 45 \% were annotated with GO terms (Suppl. table ~\ref{tbl:PanGO1} \& ~\ref{tbl:PanGO2}). 
-The highest number of contigs in any core cluster was 180 cluster of unknown function with 23, 45, 32, 31 and 49 from \textit{G. australes}, \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G.} cf. \textit{silvae} respectively. 
+The highest number of contigs in any core cluster was 180 cluster of unknown function with 23, 45, 32, 31 and 49 from \textit{G. australes}, \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G. holmesii} respectively. 
 Twelve of the core clusters contained 100 or more contigs, of which 3 were unannotated. 
 The predicted protein coding regions for the other nine clusters, in descending order of contig numbers: an enzyme with catalytic activity involved in metabolic process; a calcium binding transmembrane transport channel; a protein involved in calcium binding; a protein binding enzyme; a domain for unspecified protein binding; an enzyme with O-glucosyl hydrolase activity involved in carbohydrate metabolic process; membrane bound ion transporter with cation channel activity \& ionotropic glutamate receptor activity; a transmembrane transporter with voltage-gated calcium channel activity; and calcium ion binding transmembrane ion transporter. 
 A total of 3,943 core clusters contained 10 or more contigs, so 71.32 \% of the total core clusters consisted of less than 10 contigs. 
@@ -290,7 +290,7 @@ The majority of  clusters fell within metabolic processes, cellular processes an
 \subsubsection{Softcore transcriptome}
 A softcore with 4 out of the five \textit{Gambierdiscus} species examined was identified. 
 The softcore consisted of an additional 16,980 clusters (Table ~\ref{tbl:ClustTable}) of which 48 \% were annotated  (Suppl. table ~\ref{tbl:PanGO1} \& ~\ref{tbl:PanGO2}). 
-The most prolific cluster in the softcore contained 163 contigs with unknown function, where \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G.} cf. \textit{silvae} contained 50, 42, 41 \& 30 contigs respectively. 
+The most prolific cluster in the softcore contained 163 contigs with unknown function, where \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G. holmesii} contained 50, 42, 41 \& 30 contigs respectively. 
 A further 5 clusters contained more than 100 contigs, four of which had GO annotations. 
 Of the six clusters with over 100 contigs, none had representatives contigs from \textit{G. australes}. 
 \textit{G. australes} was absent from 86 \% of the softcore clusters. 
@@ -301,7 +301,7 @@ Of the softcore, 14,035 clusters contained 10 or more contigs.
 \subsubsection{Unique part of the transcriptome}
 Clusters with single species representatives, or the pan-transcriptome to the five \textit{Gambierdiscus} species examined, numbered 231,310 clusters. 
 Of the unique clusters, only 15.23 \% of clusters were annotated. 
-Single species clusters from \emph{G. australes}, \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G.} cf. \textit{silvae} numbered 35,356, 62,494, 32,341, 60,796 \& 41,350 clusters respectively (Table ~\ref{tbl:ClustTable}). 
+Single species clusters from \emph{G. australes}, \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G. holmesii} numbered 35,356, 62,494, 32,341, 60,796 \& 41,350 clusters respectively (Table ~\ref{tbl:ClustTable}). 
 %discussion: numbers mirror depth of sequencing ie. shittiest trans has least unique
 The highest number of contigs in a unique cluster were 37, found in two clusters from \textit{G. carpenteri}. 
 One of these was annotated for RNA and metal ion binding activity. 
@@ -450,10 +450,10 @@ Nine clusters contained more than 10 contigs, with the highest number of 130 con
 57 of the 314 clusters contained contigs from multiple species, so 81.8 \% of KS clusters were species specific while 78.7 \% contained only a single contig (Fig. ~\ref{fig:KSVenn}). 
 The non-ciguatoxic \textit{G. carpenteri} was absent from 73.6 \% of the clusters. 
 Of the clusters without \textit{G. carpenteri}, none contained all four other species. 
-However one cluster contained \textit{G. lapillus}, \textit{G. polynesiensis} and \emph{G.} cf. \emph{silvae} with equally represented transcript numbers. 
-Four contigs contained \textit{G. polynesiensis} and \emph{G.} cf. \emph{silvae} only, one of which had a higher contig representation of \textit{G. polynesiensis} than \emph{G.} cf. \emph{silvae}. 
+However one cluster contained \textit{G. lapillus}, \textit{G. polynesiensis} and \emph{G. holmesii} with equally represented transcript numbers. 
+Four contigs contained \textit{G. polynesiensis} and \emph{G. holmesii} only, one of which had a higher contig representation of \textit{G. polynesiensis} than \emph{G. holmesii}. 
 \textit{G. polynesiensis} was the only representative species in 71 clusters, of which three clusters contained 2 contigs and one cluster contained 3 contigs. 
-\emph{G.} cf. \emph{silvae} was representative as the only species in 23 clusters, one of which contained 3 contigs while the other clusters contained single contigs.
+\emph{G. holmesii} was representative as the only species in 23 clusters, one of which contained 3 contigs while the other clusters contained single contigs.
 \textit{G. australes}, \textit{G. carpenteri} and \textit{G. lapillus} were the solo representatives of 81, 39 \& 35 KS clusters respectively. \\
 \begin{figure} 
 \includegraphics[scale=1]{3Aug18_cluster-investigation/pks/KS-venn.png} 
@@ -500,7 +500,9 @@ Way higher for other gambis.\\
 \end{itemize}
 
 
-\subsection{Areas for possible improvement in this study}
+\subsection{Areas for possible improvement in this study.}
+This chapter represents a novel approach to analyzing \textit{Gambierdiscus} transcriptomes and possible avenues for investigation for ciguatoxin production pathways. 
+However there are several aspects that can be improved upon with future studies.
 
 \paragraph{Contaminants in dataset.}
 The RNA-seq libraries were constructed from whole RNA seq runs with non-axenic cultures, hence it is likely that bacterial RNA is a subset of the analysis. 
@@ -509,15 +511,16 @@ However the unique clusters could well be contaminated with bacterial contigs.
 Hence it would be pertinent to utilize a eukaryote specific RNA-seq strategy for future studies, or devise a method to separate bacterial from eukaryotic contigs post sequencing.
 
 \paragraph{Coverage of taxa.}
-%TODO up to here
-The number of taxa
+As with bacterial pan-transcriptomics, eukaryotic studies reveal a correlation between the number of species and strains included for refining the core transcriptome and expanding the unique fraction of the transcriptome \cite{}. 
+The importance of including several strains of a species becomes apparent with the discovery of a non-ciguatoxic \textit{G. polynesiensis} strain \cite{}. 
+Variability in morphology and toxicity has also been observed in \textit{G. lapillus} \cite{kretzschmar2017characterization}. 
+While this study sought to cover taxa from the three main \textit{Gambierdiscus} clades, an increase in species and strain coverage is highly likely to impact the resolution of the core and unique portions especially as the sequencing coverage of the \textit{G. australes} transcriptome is less in depth than the other four species (table ~\ref{tbl:ClustTable}).
 Hence due to limited species and the singular strain per species coverage, this represents an exploratory study for establishing a pan-transcriptome for \textit{Gambierdiscus} which should be improved upon. 
 
-\begin{itemize}
-\item from different seq runs and methods and seq depth may vary, especially \textit{G. australes}
-\item intra-speces variation so one isolate per species may not be representative
-\item unknown if processes other than PKS play a role in toxin production
-\end{itemize}
+\paragraph{PKS active domain search.}
+PKS complexes consist of a number of active domains that synthesize and manipulate the polyketide backbone. 
+The KS domain is but one of several essential domains for a functional polyketide. 
+The search for active domains should be extended to include other domains for comparison in the search for the ciguatoxin production pathways.
 
 %\newpage
 \section*{Conclusion}
@@ -536,7 +539,7 @@ Hence due to limited species and the singular strain per species coverage, this 
 \caption{GO terms and number of contigs per species at GO ontology level 1.}\\
 \hline
 \label{tbl:SpGO1}
-GO acession&GO terms&\emph{G. carpenteri}&\emph{G. lapillus}&\emph{G. polynesiensis}&\emph{G.} cf. \emph{silvae}\\
+GO acession&GO terms&\emph{G. carpenteri}&\emph{G. lapillus}&\emph{G. polynesiensis}&\emph{G. holmesii}\\
 \hline
  \multicolumn{6}{| c |}{Biological processes}\\
  \hline
@@ -638,7 +641,7 @@ GO:0140110&transcription regulator activity&6&4&7&4\\
 \caption{GO terms and number of contigs per species at GO ontology level 2, child terms of Table ~\ref{tbl:SpGO1}.}\\
 \hline
 \label{tbl:SpGO2}
-GO acession&GO terms&\emph{G. carpenteri}&\emph{G. lapillus}&\emph{G. polynesiensis}&\emph{G.} cf. \emph{silvae}\\
+GO acession&GO terms&\emph{G. carpenteri}&\emph{G. lapillus}&\emph{G. polynesiensis}&\emph{G. holmesii}\\
 \hline
  \multicolumn{6}{| c |}{Biological processes}\\
  \hline
@@ -1340,7 +1343,7 @@ GO:1901681&sulfur compound binding&3&3&3\\
 \caption{KS domains found per cluster and total number of contigs present.}\\
 \hline
 \label{tbl:KS}
-\textbf{Cluster ID}&\textit{G. australes}&\emph{G. carpenteri}&\emph{G. lapillus}&\emph{G. polynesiensis}&\emph{G.} cf. \emph{silvae}&\textbf{Total contigs}\\
+\textbf{Cluster ID}&\textit{G. australes}&\emph{G. carpenteri}&\emph{G. lapillus}&\emph{G. polynesiensis}&\emph{G. holmesii}&\textbf{Total contigs}\\
  \hline 
  988&6&40&29&24&31&130\\ % 988\_MMETSP0766\_Gambierdiscus-australes\_DN11896\_c0\_g2\_i1.p1.faa
  \hline 

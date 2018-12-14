@@ -278,15 +278,44 @@ A total of 287,546 clusters were found across all five species (Fig. ~\ref{fig:S
 \newpage
 \textbf{Tim:} It seems kinda conspicuous that the unique clusters of \textit{G. carpenteri} \& \textit{G. poly} are almost twice the number of \textit{G. lapillus} and \textit{G. silvae}, the first two were sequenced together with 150bp read length while the other two had 75bp read length during sequencing. Does this seem odd to you too?
 
-\subsubsection{Comparison of \emph{Gambierdiscus} inter-species transcriptome annotations}
+\subsubsection{Core transcritome}
+A set of core genes common to all five species of \textit{Gambierdiscus} were found. 
+This set consisted of 13,750 amino acid clusters (Table ~\ref{tbl:ClustTable}) of which 45 \% were annotated with GO terms (Suppl. table ~\ref{tbl:PanGO1} \& ~\ref{tbl:PanGO2}). 
+The highest number of contigs in any core cluster was 180 cluster of unknown function with 23, 45, 32, 31 and 49 from \textit{G. australes}, \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G.} cf. \textit{silvae} respectively. 
+Twelve of the core clusters contained 100 or more contigs, of which 3 were unannotated. 
+The predicted protein coding regions for the other nine clusters, in descending order of contig numbers: an enzyme with catalytic activity involved in metabolic process; a calcium binding transmembrane transport channel; a protein involved in calcium binding; a protein binding enzyme; a domain for unspecified protein binding; an enzyme with O-glucosyl hydrolase activity involved in carbohydrate metabolic process; membrane bound ion transporter with cation channel activity \& ionotropic glutamate receptor activity; a transmembrane transporter with voltage-gated calcium channel activity; and calcium ion binding transmembrane ion transporter. 
+A total of 3,943 core clusters contained 10 or more contigs, so 71.32 \% of the total core clusters consisted of less than 10 contigs. 
+The majority of  clusters fell within metabolic processes, cellular processes and catalytic activity with \%, \% and \% of annotated clusters respectively. \textbf{Tim} - so adding up the lvl1 gosum counts for bio, cell and molec doesn't add up to the total annotated clusters.. am I correct in thinking that this is because annotations can go to other functions too?
+
+\subsubsection{Softcore transcriptome}
+A softcore with 4 out of the five \textit{Gambierdiscus} species examined was identified. 
+The softcore consisted of an additional 16,980 clusters (Table ~\ref{tbl:ClustTable}) of which 48 \% were annotated  (Suppl. table ~\ref{tbl:PanGO1} \& ~\ref{tbl:PanGO2}). 
+The most prolific cluster in the softcore contained 163 contigs with unknown function, where \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G.} cf. \textit{silvae} contained 50, 42, 41 \& 30 contigs respectively. 
+A further 5 clusters contained more than 100 contigs, four of which had GO annotations. 
+Of the six clusters with over 100 contigs, none had representatives contigs from \textit{G. australes}. 
+\textit{G. australes} was absent from 86 \% of the softcore clusters. 
+%comment about seq differences? Some fuck up common thuings
+In descending order of contigs, they matched to: a protein involved in selective protein binding; a protein involved in actin binding; a protein involved in calcium binding; and a protein with cysteine-type peptidase activity. 
+Of the softcore, 14,035 clusters contained 10 or more contigs. 
+
+\subsubsection{Unique part of the transcriptome}
+Clusters with single species representatives, or the pan-transcriptome to the five \textit{Gambierdiscus} species examined, numbered 231,310 clusters. 
+Of the unique clusters, only 15.23 \% of clusters were annotated. 
+Single species clusters from \emph{G. australes}, \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G.} cf. \textit{silvae} numbered 35,356, 62,494, 32,341, 60,796 \& 41,350 clusters respectively (Table ~\ref{tbl:ClustTable}). 
+%discussion: numbers mirror depth of sequencing ie. shittiest trans has least unique
+The highest number of contigs in a unique cluster were 37, found in two clusters from \textit{G. carpenteri}. 
+One of these was annotated for RNA and metal ion binding activity. 
+Of the unique clusters, 83.1 \% contained only one contig and 97.8 \% of clusters have 5 contigs or less. 
+
+\subsubsection{Comparison of gene ontology annotations.}
 \FloatBarrier
 
-The GOs were split up into the three functional groups defined by the consortium: 1) Molecular processes (Figs. ~\ref{fig:SpecGo1Molec} \& ~\ref{fig:SpecGo2Molec}) defined as biochemical or a macromolecule directly interacting with other molecules; 2) Cellular components (Figs. ~\ref{fig:SpecGo1Cell} \& ~\ref{fig:SpecGo2Cell}) defined by the location within the cell where a molecular process takes place; and 3) Biological process (Figs ~\ref{fig:SpecGo1Bio} \& ~\ref{fig:SpecGo2Bio}) which is defined as a molecular machinery participating in the execution of the cell's genetic programming, e.g. cell division.
+The GOs were split up into the three functional groups defined by the consortium: 1) Molecular processes (Figs. ~\ref{fig:SpecGo1Molec}, ~\ref{fig:SpecGo2Molec}, ~\ref{fig:PanGo1Molec} \& ~\ref{fig:PanGo2Molec}) defined as biochemical or a macromolecule directly interacting with other molecules; 2) Cellular components (Figs. ~\ref{fig:SpecGo1Cell}, ~\ref{fig:SpecGo2Cell}, ~\ref{fig:PanGo1Cell} \& ~\ref{fig:PanGo2Cell}) defined by the location within the cell where a molecular process takes place; and 3) Biological process (Figs ~\ref{fig:SpecGo1Bio}, ~\ref{fig:SpecGo2Bio}, ~\ref{fig:PanGo1Bio} \& ~\ref{fig:PanGo2Bio}) which is defined as a molecular machinery participating in the execution of the cell's genetic programming, e.g. cell division.
 GO basic is structured in a hirachical manner, with parent and child terms where child terms are more specific than parent terms. 
-For a general overview of functions present in each transcriptome, level 1 GO terms were elucidated (Figs. ~\ref{fig:SpecGo1Bio}, ~\ref{fig:SpecGo1Cell} \& ~\ref{fig:SpecGo1Molec}). 
-A more in depth query of the functions present in each transcriptome was conducted with a GO search of the child terms at level 2 (Figs. ~\ref{fig:SpecGo2Bio}, ~\ref{fig:SpecGo2Cell} \& ~\ref{fig:SpecGo2Molec}). 
+For a general overview of functions present in each transcriptome, level 1 GO terms were elucidated (Figs. ~\ref{fig:SpecGo1Bio}, ~\ref{fig:SpecGo1Cell} ~\ref{fig:SpecGo1Molec}, ~\ref{fig:PanGo1Bio}, ~\ref{fig:PanGo1Cell} \& ~\ref{fig:PanGo1Molec}). 
+A more in depth query of the functions present in each transcriptome was conducted with a GO search of the child terms at level 2 (Figs. ~\ref{fig:SpecGo2Bio}, ~\ref{fig:SpecGo2Cell}, ~\ref{fig:SpecGo2Molec}, ~\ref{fig:PanGo2Bio}, ~\ref{fig:PanGo2Cell} \& ~\ref{fig:PanGo2Molec}). 
 
-\paragraph{Level 1 GO annotations.}
+\paragraph{Level 1 GO annotations between \textit{Gambierdiscus} species.}
 \FloatBarrier
 The GO annotations found at level 1 between the species of \textit{Gambierdiscus} were similar, with the exception of \textit{G. australes} in several instances. 
 For GOs assigned part of catalytic activity in molecular processes (Fig. ~\ref{fig:PanGo1Molec}) as well as both the metobolic and cellular processes in the biological processes (Fig. ~\ref{fig:PanGo1Bio}), \textit{G. australes} was underrepresented. 
@@ -318,7 +347,7 @@ The lease represented biological GO annotation was related to growth with only o
 \label{fig:SpecGo1Molec}
 \end{figure} 
 \FloatBarrier
-\paragraph{Level 2 GO annotations.}
+\paragraph{Level 2 GO annotations between \textit{Gambierdiscus} species.}
 \FloatBarrier
 At level 2 of GO annotations, difference between species becomes more apparent. 
 While inter-species variations across the molecular, cellular and biological processes (Figs. ~\ref{fig:PanGo2Bio}, ~\ref{fig:PanGo2Cell} \& ~\ref{fig:PanGo2Molec}) are apparent, consistently \textit{G. australes} is underrepresented or absent across all three processes. 
@@ -350,53 +379,55 @@ Organic substance metabolic processes, cellular metabolic processes and primary 
 
 \FloatBarrier
 
-\subsection{Transcriptome similarity clustering}
-
-
-\paragraph{Level 1 GO annotations.}
+\paragraph{Level 1 GO annotations for pan-transcriptomes.}
 \FloatBarrier
-
+Similarity between the core-, softcore- and unique-transcriptomes was consistent across the biological, cellular and molecular processes groups. 
+Predominantly the unique clusters had a higher represenation in each process with the exception for annotations matching to extracellular region parts and synpase parts within cellular processes (Fig. ~\ref{fig:PanGo1Cell}) as well as developmental processes within the biological processes (Fig. ~\ref{fig:PanGo1Bio}). 
+GO annotations most commonly matched to catalytic activity then binding and transporter activities in the molecular processes (Fig. ~\ref{fig:PanGo1Molec}). 
+Within the cellular processes, annotations predominantly matched to cellular parts, followed by protein-containing complexes and organelle parts (Fig. ~\ref{fig:PanGo1Bio}). 
+For biological processes, the prevalent GO annotations matched to cellular processes, metabolic processes and localization (Fig. ~\ref{fig:PanGo1Bio}).
 
 \begin{figure} 
 \includegraphics[scale=.58]{3Aug18_cluster-investigation/figures/gosum-pan/Pan-gosum1-bio-split.png} 
 \caption{Summary of biological processes GO annotations between core, softcore and unique clusters at GOSUM level 1.} 
 \label{fig:PanGo1Bio}
 \end{figure} 
-\FloatBarrier
+
 
 \begin{figure} 
 \includegraphics[scale=.8]{3Aug18_cluster-investigation/figures/gosum-pan/Pan-gosum1-cell-split.png} 
 \caption{Summary of cellular GO annotations between core, softcore and unique clusters at GOSUM level 1.} 
 \label{fig:PanGo1Cell}
 \end{figure} 
-\FloatBarrier
+
 
 \begin{figure} 
 \includegraphics[scale=.6]{3Aug18_cluster-investigation/figures/gosum-pan/Pan-gosum1-molec-split.png} 
 \caption{Summary of molecular GO annotations between core, softcore and unique clusters at GOSUM level 1.} 
 \label{fig:PanGo1Molec}
 \end{figure} 
-\FloatBarrier
 
 
-\FloatBarrier
-\paragraph{Level 2 GO annotations.}
-\FloatBarrier
 
+\FloatBarrier
+\paragraph{Level 2 GO annotations for pan-transcriptomes.}
+\FloatBarrier
+While differences between the biological, cellular and molecular processes were more distinctive at level 2, with the most common pattern among all three groupings of the core and unique clusters closely matching the number of GO terms with one or the other dominant, and the softcore clusters as less prevalent (Figs. ~\ref{fig:PanGo2Bio}, ~\ref{fig:PanGo2Cell} \& ~\ref{fig:PanGo2Molec}). 
+Only the unique clusters had annotations matching to  
 
 \begin{figure} 
 \includegraphics[scale=.75]{3Aug18_cluster-investigation/figures/gosum-pan/Pan-gosum2-bio-split.png} 
 \caption{Summary of biological processes GO annotations between core, softcore and unique clusters at GOSUM level 2.} 
 \label{fig:PanGo2Bio}
 \end{figure} 
-\FloatBarrier
+
 
 \begin{figure} 
 \includegraphics[scale=.8]{3Aug18_cluster-investigation/figures/gosum-pan/Pan-gosum2-cell-split.png} 
 \caption{Summary of cellular GO annotations between core, softcore and unique clusters at GOSUM level 2.} 
 \label{fig:PanGo2Cell}
 \end{figure} 
-\FloatBarrier
+
 
 \begin{figure} 
 \includegraphics[scale=.78]{3Aug18_cluster-investigation/figures/gosum-pan/Pan-gosum2-molec-split.png} 
@@ -405,146 +436,7 @@ Organic substance metabolic processes, cellular metabolic processes and primary 
 \end{figure} 
 \FloatBarrier
 
-\subsubsection{Core transcritome}
-A set of core genes common to all five species of \textit{Gambierdiscus} were found. 
-This set consisted of 13,750 amino acid clusters (Table ~\ref{tbl:ClustTable}) of which 45 \% were annotated with GO terms (Suppl. table ~\ref{tbl:PanGO1} \& ~\ref{tbl:PanGO2}). 
-The highest number of contigs in any core cluster was 180 cluster of unknown function with 23, 45, 32, 31 and 49 from \textit{G. australes}, \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G.} cf. \textit{silvae} respectively. 
-Twelve of the core clusters contained 100 or more contigs, of which 3 were unannotated. 
-The predicted protein coding regions for the other nine clusters, in descending order of contig numbers: an enzyme with catalytic activity involved in metabolic process; a calcium binding transmembrane transport channel; a protein involved in calcium binding; a protein binding enzyme; a domain for unspecified protein binding; an enzyme with O-glucosyl hydrolase activity involved in carbohydrate metabolic process; membrane bound ion transporter with cation channel activity \& ionotropic glutamate receptor activity; a transmembrane transporter with voltage-gated calcium channel activity; and calcium ion binding transmembrane ion transporter. 
-A total of 3,943 core clusters contained 10 or more contigs, so 71.32 \% of the total core clusters consisted of less than 10 contigs. 
-The majority of  clusters fell within metabolic processes, cellular processes and catalytic activity with \%, \% and \% of annotated clusters respectively. \textbf{Tim} - so adding up the lvl1 gosum counts for bio, cell and molec doesn't add up to the total annotated clusters.. am I correct in thinking that this is because annotations can go to other functions too?
 
-\subsubsection{Softcore transcriptome}
-A softcore with 4 out of the five \textit{Gambierdiscus} species examined was identified. 
-The softcore consisted of an additional 16,980 clusters (Table ~\ref{tbl:ClustTable}) of which 48 \% were annotated  (Suppl. table ~\ref{tbl:PanGO1} \& ~\ref{tbl:PanGO2}). 
-The most prolific cluster in the softcore contained 163 contigs with unknown function, where \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G.} cf. \textit{silvae} contained 50, 42, 41 \& 30 contigs respectively. 
-A further 5 clusters contained more than 100 contigs, four of which had GO annotations. 
-Of the six clusters with over 100 contigs, none had representatives contigs from \textit{G. australes}. 
-\textit{G. australes} was absent from 86 \% of the softcore clusters. 
-%comment about seq differences? Some fuck up common thuings
-In descending order of contigs, they matched to: a protein involved in selective protein binding; a protein involved in actin binding; a protein involved in calcium binding; and a protein with cysteine-type peptidase activity. 
-Of the softcore, 14,035 clusters contained 10 or more contigs. 
-
-\subsubsection{Unique part of the transcriptome}
-Clusters with single species representatives, or the pan-transcriptome to the five \textit{Gambierdiscus} species examined, numbered 231,310 clusters. 
-Of the unique clusters, only 15.23 \% of clusters were annotated. 
-Single species clusters from \emph{G. australes}, \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G.} cf. \textit{silvae} numbered 35,356, 62,494, 32,341, 60,796 \& 41,350 clusters respectively (Table ~\ref{tbl:ClustTable}). 
-%discussion: numbers mirror depth of sequencing ie. shittiest trans has least unique
-The highest number of contigs in a unique cluster were 37, found in two clusters from \textit{G. carpenteri}. 
-One of these was annotated for RNA and metal ion binding activity. 
-Of the unique clusters, 83.1 \% contained only one contig and 97.8 \% of clusters have 5 contigs or less. 
-
-\subsection{Last common ancestor identification of contigs}
-Combined Swissprot and trEMBL
-\begin{table} %update if delving deeper into BASTA % cut offs & where the fuck are the virals?
-\caption{LCA determination of clusters.}
-\label{tbl:LCAClust}
-\begin{tabular}{ | p{1.5cm} | p{1.5cm} | p{1.5cm} | p{1.5cm} |p{1.5cm} |p{1.5cm} |p{1.5cm} |p{1.5cm} |}
-\hline
-&Eukaryotic consensus&Eukaryotic unsure&Bacteria consensus&Bacteria unsure&Unknown between dbs&Unknown within db&Undetermined\\
-\hline
-Number of clusters&81,702&23,158&3,001&3,214&29,112&1,059&146,300\\
-\hline
-%\textbf{Number of clusters with all species}&&&&&&&\\
-%\hline
-%\textbf{Number of solo clusters}&&&&&&&\\
-%\hline
-With dinoSL&341&76&11&12&81&6&759\\
-\hline
-with KS&0&8&0&5&255&0&7\\
-\hline
-with KS and dinoSL&0&0&0&0&0&0&0\\
-\hline
-%&&&&&&\\
-\end{tabular}
-\end{table}
-
-\FloatBarrier
-\begin{table}
-\caption{basta trEMBL found in each \emph{Gambierdiscus} transcriptome during processing.}
-\label{tbl:bastaTable}
-\begin{tabular}{ | p{3cm} | p{2cm} | p{2.5cm} | p{2.5cm} | p{2cm} | p{2cm}|}
-\hline
-\textbf{Species}& \textit{G. australes}& \emph{G. carpenteri}&\emph{G. lapillus}&\emph{G. polynesiensis}&\emph{G.} cf. \emph{silvae}\\
-\hline
-\textbf{Contigs}&102,863&263,829&148,972&270,315&191,224 \\
-\hline
- \multicolumn{6}{| c |}{SwillProt}\\ %using the lax one
- \hline
- \textbf{SwissProt hits}&62,240&176,000&109,662&171,741&129,913\\ %cut -f 1 carpenteri_BASTA/blast_output/*_blast.out |uniq| wc -l
-\hline
-\textbf{BASTA positive ID}&19,335&60,811&40,151&57,448&43,372\\ % -m 1
-\hline
-\textbf{Eukaryotic origin}&10,720&35,263&22,643&32,098&24,096\\
-\hline
-\textbf{Bacterial origin}&826&2,784&1,799&2,438&32,098\\
-\hline
-\textbf{Unknown origin}&7,709&22,429&15,471&22,571&17,072\\
-\hline
- \multicolumn{6}{| c |}{trEMBL}\\
- \hline
-\textbf{trEMBL hits}&61,161&169,810&106,554&165,793&126,208\\  %cut -f 1 carp_BASTA_trembl/blast_output/*_trEMBL.out |uniq| wc -l
-\hline
-\textbf{BASTA positive ID}&37,067&106,960&71,100&103,053&106,960\\
-\hline
-\textbf{Eukaryotic origin}&25,015&65,986&44,320&62,274&49,516\\ %cat CAWD149_Gambierdiscus-australes_trEMBL | grep Eukaryota | wc -l
-\hline
-\textbf{Bacterial origin}&654&2,213&1,404&2,101&1,688\\
-\hline
-\textbf{Unknown origin}&11,358&38,622&25,267&38,528&27,623\\
-\hline
- \multicolumn{6}{| c |}{db differences}\\
-\hline
-\textbf{contigs with LCA}&37,294&108,160&71,768&104,252&79,692\\
-\hline
-\textbf{db consensus}&13,136&37,622&25,688&36,446&28,046\\
-\hline
-\textbf{unknown plus LCA}&5,821&21,399&13,434&19,247&14,158\\
-\hline
-\textbf{LCA conflict, euk \& bact}&116&440&253&394&289\\
-\hline
-%\hline
-%&&&&&\\
-\end{tabular}
-\end{table}
-\FloatBarrier
-\newpage
-
-\subsubsection{Unknown origin}
-\textbf{To do:}
-\begin{itemize}
-\item work out if PKS domains are within unknown
-\item may be bacterial origin - IF they have dinoSL, keep. If not, remove from core/pan analysis 
-\end{itemize}
-\subsubsection{Bacterial origin}
-%Quorum sensing controls growth and toxin production of Gambi \cite{wang2018growth}
-\textbf{To do:}
-\begin{itemize}
-\item re-running with uniprot\_trembl.fasta to see how percentage identity values differ to swissprot database
-\item merge trEMBL and swissprot databases and see how BASTA goes in comparison
-\item check if LCA is specific enough for Proteobacteria or gamma-Proteobacteria regarding Quorum sensing taxa
-\item make new directory with bacterial origin 
-\item dinoSL search to see if any of bact origin are from dinos
-\item look if bact contigs found in unique or core clusters
-\item check if core bacteriome (how wanky is that word) or any species specific
-\item check for regional link of host association. Lapillus and silvae are from Heron Island from same collection trip, poly and australes are from Rarotonga collected 9 years apart, carp is from temperate Merimbula Merimbula)
-\end{itemize}
-
-%BASTA results, default -l and -m flags ie. likely going to change as swissprot percentage match super low:\\
-%- australes: 0 bact, 53 Unknown \\
-%- carp: 3 bact (all unique clusters, one annotated as ATP binding), 72 Unknown \\
-%UTSMER9A3_Gambierdiscus-carpenteri_DN31153_c0_g1_i1.p2	Bacteria;Proteobacteria;Gammaproteobacteria; -- in unique 236528_UTSMER9A3_Gambierdiscus-carpenteri_DN31153_c0_g1_i1.p2.faa	not annotated
-%UTSMER9A3_Gambierdiscus-carpenteri_DN20628_c0_g1_i1.p1	Bacteria;Proteobacteria; -- in unique 233838_UTSMER9A3_Gambierdiscus-carpenteri_DN20628_c0_g1_i1.p1.faa	not annotated
-%UTSMER9A3_Gambierdiscus-carpenteri_DN27575_c0_g1_i1.p2	Bacteria;Proteobacteria; -- in unique 235579_UTSMER9A3_Gambierdiscus-carpenteri_DN27575_c0_g1_i1.p2.faa	involved in ATP binding
-%- lap: 3 bact (all in unique clusters all annotated with mRNA processing roles) 72 Unknown \\
-%HG4_Gambierdiscus-lapillus_DN47596_c0_g1_i1.p1	Bacteria;Proteobacteria;Gammaproteobacteria; -- in unique 351586_HG4_Gambierdiscus-lapillus_DN47596_c0_g1_i1.p1.faa	a structural constituent of ribosome involved n mRNA translation
-%HG4_Gambierdiscus-lapillus_DN13474_c0_g2_i1.p2	Bacteria;Proteobacteria; -- in unique 247208_HG4_Gambierdiscus-lapillus_DN13474_c0_g2_i1.p2.faa	binds guanosine triphosphate
-%HG4_Gambierdiscus-lapillus_DN47695_c0_g1_i1.p2	Bacteria;Proteobacteria;Gammaproteobacteria; -- in unique 351653_HG4_Gambierdiscus-lapillus_DN47695_c0_g1_i1.p2.faa	involved in mRNA translation
-%- pol: 0 bact, 95 Unknown \\
-%- sil: 0 bact, 56 Unknown \\
-%- -m 1 \& -l 80 for carp with swissprot db had much higher bact contamn: 2,784 seqs bact, 22,429 seqs unknown, 35,263 seqs eukar .. contamination potentially a problem here \\
-
-%\subsection*{\emph{Gambierdiscus polynesiensis} intra-species core \& pan transcriptome}
 \subsection{Looking into toxin producers}
 not sure how valid an approach this following section is
 \subsubsection{Clusters that don't have \textit{G. carpenteri} in}

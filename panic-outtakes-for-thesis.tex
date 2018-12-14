@@ -33,6 +33,140 @@ Pretty much all studies so far just looked for the KS domain, though not sure wh
 Predicted proteins of each transcriptome were searched against the Uniprot databases SwissProt and trEMBL \cite{uniprot2010ongoing}. 
 BASTA was used to extract the taxonomic determination from the database search for each contig and the associated last common ancestor  \cite{kahlke2018basta}.
 
+\subsubsection{Comparison of \emph{Gambierdiscus} inter-species transcriptome annotations}
+\textbf{To do:}
+\begin{itemize}
+\item \textbf{Tim} I think I'm going to need to take out anything that links to Bacterial or unknown LCA and then re-run GOSUM. Thoughts?
+\item heatmap (evol relationship inferred from clustering, compare to phylogeny in \textbf{chapter 4}) from get\_hom is throwing up errors
+\item describe differences in graphs once I know what needs to be taken out and re-run
+\item GOSUM lvl2 graphs are partially missing descriptions on x-axis. Fix when re-run
+\end{itemize}
+
+\subsection{Transcriptome similarity clustering}
+%TODO re-run GOSUM based on 
+\textbf{To do:}
+\begin{itemize}
+\item describe differences in graphs once I know what needs to be taken out and re-run
+\item GOSUM lvl2 graphs are partially missing descriptions on x-axis. Fix when re-run
+\end{itemize}
+Potentially interesting points, if still there after bact and unknown outtakes:\\
+- intracellular parts in pan (gosum2 cell)\\
+- organelle memb in core and softcore, seem essential and not in unique (gosum2 cell)\\
+- core and unique pretty evenly matched in most entries for gosum2 molec, except catalytic activity binding on DNA is  much higher in unique and a little higher for binding RNA\\
+- very little difference between core and unique... possbile reasons? not annotated, should be combining core \& softcore ?
+
+\subsection{Last common ancestor identification of contigs}
+Combined Swissprot and trEMBL
+\begin{table} %update if delving deeper into BASTA % cut offs & where the fuck are the virals?
+\caption{LCA determination of clusters.}
+\label{tbl:LCAClust}
+\begin{tabular}{ | p{1.5cm} | p{1.5cm} | p{1.5cm} | p{1.5cm} |p{1.5cm} |p{1.5cm} |p{1.5cm} |p{1.5cm} |}
+\hline
+&Eukaryotic consensus&Eukaryotic unsure&Bacteria consensus&Bacteria unsure&Unknown between dbs&Unknown within db&Undetermined\\
+\hline
+Number of clusters&81,702&23,158&3,001&3,214&29,112&1,059&146,300\\
+\hline
+%\textbf{Number of clusters with all species}&&&&&&&\\
+%\hline
+%\textbf{Number of solo clusters}&&&&&&&\\
+%\hline
+With dinoSL&341&76&11&12&81&6&759\\
+\hline
+with KS&0&8&0&5&255&0&7\\
+\hline
+with KS and dinoSL&0&0&0&0&0&0&0\\
+\hline
+%&&&&&&\\
+\end{tabular}
+\end{table}
+
+\FloatBarrier
+\begin{table}
+\caption{basta trEMBL found in each \emph{Gambierdiscus} transcriptome during processing.}
+\label{tbl:bastaTable}
+\begin{tabular}{ | p{3cm} | p{2cm} | p{2.5cm} | p{2.5cm} | p{2cm} | p{2cm}|}
+\hline
+\textbf{Species}& \textit{G. australes}& \emph{G. carpenteri}&\emph{G. lapillus}&\emph{G. polynesiensis}&\emph{G.} cf. \emph{silvae}\\
+\hline
+\textbf{Contigs}&102,863&263,829&148,972&270,315&191,224 \\
+\hline
+ \multicolumn{6}{| c |}{SwillProt}\\ %using the lax one
+ \hline
+ \textbf{SwissProt hits}&62,240&176,000&109,662&171,741&129,913\\ %cut -f 1 carpenteri_BASTA/blast_output/*_blast.out |uniq| wc -l
+\hline
+\textbf{BASTA positive ID}&19,335&60,811&40,151&57,448&43,372\\ % -m 1
+\hline
+\textbf{Eukaryotic origin}&10,720&35,263&22,643&32,098&24,096\\
+\hline
+\textbf{Bacterial origin}&826&2,784&1,799&2,438&32,098\\
+\hline
+\textbf{Unknown origin}&7,709&22,429&15,471&22,571&17,072\\
+\hline
+ \multicolumn{6}{| c |}{trEMBL}\\
+ \hline
+\textbf{trEMBL hits}&61,161&169,810&106,554&165,793&126,208\\  %cut -f 1 carp_BASTA_trembl/blast_output/*_trEMBL.out |uniq| wc -l
+\hline
+\textbf{BASTA positive ID}&37,067&106,960&71,100&103,053&106,960\\
+\hline
+\textbf{Eukaryotic origin}&25,015&65,986&44,320&62,274&49,516\\ %cat CAWD149_Gambierdiscus-australes_trEMBL | grep Eukaryota | wc -l
+\hline
+\textbf{Bacterial origin}&654&2,213&1,404&2,101&1,688\\
+\hline
+\textbf{Unknown origin}&11,358&38,622&25,267&38,528&27,623\\
+\hline
+ \multicolumn{6}{| c |}{db differences}\\
+\hline
+\textbf{contigs with LCA}&37,294&108,160&71,768&104,252&79,692\\
+\hline
+\textbf{db consensus}&13,136&37,622&25,688&36,446&28,046\\
+\hline
+\textbf{unknown plus LCA}&5,821&21,399&13,434&19,247&14,158\\
+\hline
+\textbf{LCA conflict, euk \& bact}&116&440&253&394&289\\
+\hline
+%\hline
+%&&&&&\\
+\end{tabular}
+\end{table}
+\FloatBarrier
+\newpage
+
+\subsubsection{Unknown origin}
+\textbf{To do:}
+\begin{itemize}
+\item work out if PKS domains are within unknown
+\item may be bacterial origin - IF they have dinoSL, keep. If not, remove from core/pan analysis 
+\end{itemize}
+\subsubsection{Bacterial origin}
+%Quorum sensing controls growth and toxin production of Gambi \cite{wang2018growth}
+\textbf{To do:}
+\begin{itemize}
+\item re-running with uniprot\_trembl.fasta to see how percentage identity values differ to swissprot database
+\item merge trEMBL and swissprot databases and see how BASTA goes in comparison
+\item check if LCA is specific enough for Proteobacteria or gamma-Proteobacteria regarding Quorum sensing taxa
+\item make new directory with bacterial origin 
+\item dinoSL search to see if any of bact origin are from dinos
+\item look if bact contigs found in unique or core clusters
+\item check if core bacteriome (how wanky is that word) or any species specific
+\item check for regional link of host association. Lapillus and silvae are from Heron Island from same collection trip, poly and australes are from Rarotonga collected 9 years apart, carp is from temperate Merimbula Merimbula)
+\end{itemize}
+
+%BASTA results, default -l and -m flags ie. likely going to change as swissprot percentage match super low:\\
+%- australes: 0 bact, 53 Unknown \\
+%- carp: 3 bact (all unique clusters, one annotated as ATP binding), 72 Unknown \\
+%UTSMER9A3_Gambierdiscus-carpenteri_DN31153_c0_g1_i1.p2	Bacteria;Proteobacteria;Gammaproteobacteria; -- in unique 236528_UTSMER9A3_Gambierdiscus-carpenteri_DN31153_c0_g1_i1.p2.faa	not annotated
+%UTSMER9A3_Gambierdiscus-carpenteri_DN20628_c0_g1_i1.p1	Bacteria;Proteobacteria; -- in unique 233838_UTSMER9A3_Gambierdiscus-carpenteri_DN20628_c0_g1_i1.p1.faa	not annotated
+%UTSMER9A3_Gambierdiscus-carpenteri_DN27575_c0_g1_i1.p2	Bacteria;Proteobacteria; -- in unique 235579_UTSMER9A3_Gambierdiscus-carpenteri_DN27575_c0_g1_i1.p2.faa	involved in ATP binding
+%- lap: 3 bact (all in unique clusters all annotated with mRNA processing roles) 72 Unknown \\
+%HG4_Gambierdiscus-lapillus_DN47596_c0_g1_i1.p1	Bacteria;Proteobacteria;Gammaproteobacteria; -- in unique 351586_HG4_Gambierdiscus-lapillus_DN47596_c0_g1_i1.p1.faa	a structural constituent of ribosome involved n mRNA translation
+%HG4_Gambierdiscus-lapillus_DN13474_c0_g2_i1.p2	Bacteria;Proteobacteria; -- in unique 247208_HG4_Gambierdiscus-lapillus_DN13474_c0_g2_i1.p2.faa	binds guanosine triphosphate
+%HG4_Gambierdiscus-lapillus_DN47695_c0_g1_i1.p2	Bacteria;Proteobacteria;Gammaproteobacteria; -- in unique 351653_HG4_Gambierdiscus-lapillus_DN47695_c0_g1_i1.p2.faa	involved in mRNA translation
+%- pol: 0 bact, 95 Unknown \\
+%- sil: 0 bact, 56 Unknown \\
+%- -m 1 \& -l 80 for carp with swissprot db had much higher bact contamn: 2,784 seqs bact, 22,429 seqs unknown, 35,263 seqs eukar .. contamination potentially a problem here \\
+
+%\subsection*{\emph{Gambierdiscus polynesiensis} intra-species core \& pan transcriptome}
+
 \newpage
 \bibliographystyle{acm}
 \bibliography{pantran.bib}

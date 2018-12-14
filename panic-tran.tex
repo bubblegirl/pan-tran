@@ -284,7 +284,10 @@ A total of 287,546 clusters were found across all five species (Fig. ~\ref{fig:S
 The GOs were split up into the three functional groups defined by the consortium: 1) Molecular processes (Figs. ~\ref{fig:SpecGo1Molec} \& ~\ref{fig:SpecGo2Molec}) defined as biochemical or a macromolecule directly interacting with other molecules; 2) Cellular components (Figs. ~\ref{fig:SpecGo1Cell} \& ~\ref{fig:SpecGo2Cell}) defined by the location within the cell where a molecular process takes place; and 3) Biological process (Figs ~\ref{fig:SpecGo1Bio} \& ~\ref{fig:SpecGo2Bio}) which is defined as a molecular machinery participating in the execution of the cell's genetic programming, e.g. cell division.
 GO basic is structured in a hirachical manner, with parent and child terms where child terms are more specific than parent terms. 
 For a general overview of functions present in each transcriptome, level 1 GO terms were elucidated (Figs. ~\ref{fig:SpecGo1Bio}, ~\ref{fig:SpecGo1Cell} \& ~\ref{fig:SpecGo1Molec}). 
-A more in depth query of the functions present in each transcriptome was conducted with a GO search of the child terms at level 2 (Figs. ~\ref{fig:SpecGo2Bio}, ~\ref{fig:SpecGo2Cell} \& ~\ref{fig:SpecGo2Molec}). \\
+A more in depth query of the functions present in each transcriptome was conducted with a GO search of the child terms at level 2 (Figs. ~\ref{fig:SpecGo2Bio}, ~\ref{fig:SpecGo2Cell} \& ~\ref{fig:SpecGo2Molec}). 
+
+\paragraph{Level 1 GO annotations.}
+\FloatBarrier
 The GO annotations found at level 1 between the species of \textit{Gambierdiscus} were similar, with the exception of \textit{G. australes} in several instances. 
 For GOs assigned part of catalytic activity in molecular processes (Fig. ~\ref{fig:PanGo1Molec}) as well as both the metobolic and cellular processes in the biological processes (Fig. ~\ref{fig:PanGo1Bio}), \textit{G. australes} was underrepresented. 
 Within the molecular processes (Fig. ~\ref{fig:PanGo1Molec}), the most common annotation was for catalytic activity, followed by binding then transporter activities. 
@@ -299,15 +302,13 @@ The lease represented biological GO annotation was related to growth with only o
 \caption{Summary of cellular GO annotations between \textit{Gambierdiscus} species at GOSUM level 1 from Suppl. table ~\ref{tbl:SpGO1}.} 
 \label{fig:SpecGo1Cell}
 \end{figure} 
-\FloatBarrier
+
 
 \begin{figure} 
 \includegraphics[scale=.7]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum1-bio-split.png} 
 \caption{Summary of biological processes GO annotations between \textit{Gambierdiscus} species at GOSUM level 1 from Suppl. table ~\ref{tbl:SpGO1}.} 
 \label{fig:SpecGo1Bio}
 \end{figure} 
-\FloatBarrier
-
 
 
 
@@ -317,33 +318,45 @@ The lease represented biological GO annotation was related to growth with only o
 \label{fig:SpecGo1Molec}
 \end{figure} 
 \FloatBarrier
-At level 2 of GO annotations 
+\paragraph{Level 2 GO annotations.}
+\FloatBarrier
+At level 2 of GO annotations, difference between species becomes more apparent. 
+While inter-species variations across the molecular, cellular and biological processes (Figs. ~\ref{fig:PanGo2Bio}, ~\ref{fig:PanGo2Cell} \& ~\ref{fig:PanGo2Molec}) are apparent, consistently \textit{G. australes} is underrepresented or absent across all three processes. 
+Conversely, \textit{G. australes} was the only species with a small number of GO annotations to nucleocytoplasmic carrier activity as well as general transcription initiation factor activity within the molecular processes, and anatomical structure morphogenisis as well as movement within environment as part of symbiotic interaction in the biological processes. 
+\textit{G. holmesii} had a much higher representation of GO terms matching sperm-egg recognition. 
+The most common molecular process (Fig. ~\ref{fig:PanGo2Molec}) mapped to transferase activities, followed by hydrolase activity and oxidoreductase activity. 
+For cellular processes (Fig. ~\ref{fig:PanGo2Cell}) the highest number of GOs was matched to intracellular parts, then inttracellular organelle parts and membrane protein complexes. 
+Organic substance metabolic processes, cellular metabolic processes and primary metabolic processes had the most GO annotation matches, in that order, for the biological processes group ( Fig. ~\ref{fig:PanGo2Bio}). 
 
 \begin{figure} 
 \includegraphics[scale=.45]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum2-bio2-split.png} 
 \caption{Summary of biological processes GO annotations between \textit{Gambierdiscus} species at GOSUM level 2 from Suppl. table ~\ref{tbl:SpGO2}.} 
 \label{fig:SpecGo2Bio}
 \end{figure} 
-\FloatBarrier
+
 
 \begin{figure} 
 \includegraphics[scale=.6]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum2-cell2-split.png} 
 \caption{Summary of cellular GO annotations between \textit{Gambierdiscus} species at GOSUM level 2 from Suppl. table ~\ref{tbl:SpGO2}.} 
 \label{fig:SpecGo2Cell}
 \end{figure} 
-\FloatBarrier
+
 
 \begin{figure} 
 \includegraphics[scale=.6]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum2-molec-split.png} 
 \caption{Summary of molecular GO annotations between \textit{Gambierdiscus} species at GOSUM level 2 from Suppl. table ~\ref{tbl:SpGO2}.}  
 \label{fig:SpecGo2Molec}
 \end{figure} 
+
 \FloatBarrier
 
 \subsection{Transcriptome similarity clustering}
 
 
+\paragraph{Level 1 GO annotations.}
 \FloatBarrier
+
+
 \begin{figure} 
 \includegraphics[scale=.58]{3Aug18_cluster-investigation/figures/gosum-pan/Pan-gosum1-bio-graph.png} 
 \caption{Summary of biological processes GO annotations between core, softcore and unique clusters at GOSUM level 1.} 
@@ -364,6 +377,12 @@ At level 2 of GO annotations
 \label{fig:PanGo1Molec}
 \end{figure} 
 \FloatBarrier
+
+
+\FloatBarrier
+\paragraph{Level 2 GO annotations.}
+\FloatBarrier
+
 
 \begin{figure} 
 \includegraphics[scale=.75]{3Aug18_cluster-investigation/figures/gosum-pan/Pan-gosum2-bio-split.png} 

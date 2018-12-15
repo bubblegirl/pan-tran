@@ -145,9 +145,9 @@ The pan-genome analyses concept has been applied at different taxonomic levels, 
 
 Five transcriptomes of \textit{Gambierdiscus} were compared in this study with the aim of providing a pan-transcriptome for \textit{Gambierdiscus de novo} transcriptome sequencing, which can be expanded and refined in future studies. 
 The taxa originated from two locations in Australia (Merimbula, NSW, and Heron Island, QLD) and Rarotonga in the Cook Islands (Table ~\ref{tbl:StrainTable}). 
-All of the five species have been implicated in MTX production via bioassays, while \textit{G. carpenteri} did not register for CTX-like activity in a bioassay \cite{larsson2018toxicology}). 
-The toxin profiles registered all species apart from \textit{G. carpenteri} as an MTX producer, while only \textit{G. polynesiensis} had a confirmed CTX production profile (Table ~\ref{tbl:StrainTable})
-This study revealed a set of core-transcripts shared by all taxa as  well as a subset of species specific, accessory portion of the transcriptome. 
+All of the five species have shown MTX-like bioactivity, while \textit{G. carpenteri} did not register for CTX-like activity in a bioassay \cite{larsson2018toxicology}). 
+The toxin profiles registered all species apart from \textit{G. carpenteri} as MTX producers, while only \textit{G. polynesiensis} had a confirmed CTX production profile (Table ~\ref{tbl:StrainTable}).
+This study revealed a set of core-transcripts shared by all taxa as  well as a subset of species-specific, accessory portions of the transcriptome. 
 The results in this study could provide an avenue of investigation of querying the expression differences between toxic and non-toxic species of \textit{Gambierdiscus}.
 
 %TODO add 2 sentences on findings and one on relevance
@@ -165,7 +165,7 @@ The results in this study could provide an avenue of investigation of querying t
 \hline
 \textbf{Accession ID}&MMETSP0766&SRR6821720&SRR6821722&SRR6821723&SRR6821721\\
 \hline
-\textbf{Isolation location}&Rarotonga, Cook Islands (2007)&Merimbula, Australia (2014)&Heron Island, Australia (2014)&Rarotonga, Cook Islands (2014)&Heron Island, Australia (2014)\\
+\textbf{Isolation location and year}&Rarotonga, Cook Islands (2007)&Merimbula, Australia (2014)&Heron Island, Australia (2014)&Rarotonga, Cook Islands (2014)&Heron Island, Australia (2014)\\
 \hline
 \textbf{Toxin profile (LC-MS/MS)}&CTX -ve; MTX +ve&CTX -ve; MTX -ve&CTX -ve; MTX +ve&CTX +ve; MTX +ve&CTX -ve; MTX +ve\\
 \hline
@@ -191,9 +191,9 @@ Bar graphs were generated in Origin Pro (OriginLab, Northampton, MA).
 
 \subsection{Transcriptome acquisition}
 Species of \textit{Gambierdiscus} used in this chapter are summarized in Table ~\ref{tbl:StrainTable}. 
-Toxicity and toxin profile reports are specific to the strains used as inter-species variation in toxin production was recently reported \cite{larsson2018toxicology,rhodes2017epiphytic}, unless noted otherwise. 
-The \textit{G. polynesiensis} toxin profile was elucidated by Tim Harwood at the Cawthron institute with the same methodology as for \textit{G. lapillus} in \textbf{Capter 2}. 
-RNA-seq libraries were assembled as per the transcriptome assembly subsection in the methods of \textbf{chapter 4}, without diginorm. \\
+Unless otherwise noted, toxicity and toxin profile reports are specific to the strains used as inter-species variation in toxin production has been recently reported \cite{larsson2018toxicology,rhodes2017epiphytic}. 
+The \textit{G. polynesiensis} toxin profile was elucidated by Tim Harwood at the Cawthron Institute (Nelson, NZ) with the same methodology as for \textit{G. lapillus} used in \textbf{Chapter 2}. 
+RNA-seq libraries were assembled as per the transcriptome assembly subsection in the methods of \textbf{Chapter 4}, without diginorm. \\
  %TODO link methods section in ch4
 
 
@@ -241,7 +241,7 @@ A total of 287,546 clusters were found across all five species (Fig. ~\ref{fig:S
 
 \begin{figure} 
 \includegraphics[scale=.4]{3Aug18_cluster-investigation/Species-venn.png} 
-\caption{Venn diagram of species distribution across clusters.} 
+\caption{Venn diagram of cluster distribution between the five \textit{Gambierdiscus} species. Core, accessory and inter-species cluster cross over depicted.} 
 \label{fig:SpeciesVenn}
 \end{figure} 
 
@@ -282,20 +282,21 @@ A total of 287,546 clusters were found across all five species (Fig. ~\ref{fig:S
 A set of core genes common to all five species of \textit{Gambierdiscus} were found. 
 This set consisted of 13,750 amino acid clusters (Table ~\ref{tbl:ClustTable}) of which 45 \% were annotated with GO terms (Suppl. table ~\ref{tbl:PanGO1} \& ~\ref{tbl:PanGO2}). 
 %AD 151218: check grammar in the following sentence - it does not parse
-The highest number of contigs in any core cluster was 180 cluster of unknown function with 23, 45, 32, 31 and 49 from \textit{G. australes}, \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G. holmesii} respectively. 
+The largest core cluster contained 180 contigs with 
+ 23, 45, 32, 31 and 49 from \textit{G. australes}, \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G. holmesii}, respectively, and was of unknown function. 
 Twelve of the core clusters contained 100 or more contigs, of which 3 were unannotated. 
-The predicted protein coding regions for the other nine clusters, in descending order of contig numbers: an enzyme with catalytic activity involved in metabolic process; a calcium binding transmembrane transport channel; a protein involved in calcium binding; a protein binding enzyme; a domain for unspecified protein binding; an enzyme with O-glucosyl hydrolase activity involved in carbohydrate metabolic process; membrane bound ion transporter with cation channel activity \& ionotropic glutamate receptor activity; a transmembrane transporter with voltage-gated calcium channel activity; and calcium ion binding transmembrane ion transporter. 
-A total of 3,943 core clusters contained 10 or more contigs, so 71.32 \% of the total core clusters consisted of less than 10 contigs. 
-%The majority of clusters fell within metabolic processes, cellular processes and catalytic activity with \%, \% and \% of annotated clusters respectively. 
+The predicted protein coding regions for the other nine clusters, in descending order of contig numbers are: an enzyme with catalytic activity involved in metabolic process, a calcium binding transmembrane transport channel, a protein involved in calcium binding, a protein binding enzyme, a domain for unspecified protein binding, an enzyme with O-glucosyl hydrolase activity involved in carbohydrate metabolic process, membrane bound ion transporter with cation channel activity \& ionotropic glutamate receptor activity, a transmembrane transporter with voltage-gated calcium channel activity, and calcium ion binding transmembrane ion transporter. 
+A total of 3,943 core clusters contained 10 or more contigs, meaning that 71.32 \% of the total core clusters consisted of less than 10 contigs. 
+The majority of clusters fell within metabolic processes, cellular processes and catalytic activity.% with \%, \% and \% of annotated clusters respectively. 
 
 \subsubsection{Softcore transcriptome}
 A soft-core with four out of the five \textit{Gambierdiscus} species examined was identified. 
 The soft-core consisted of an additional 16,980 clusters (Table ~\ref{tbl:ClustTable}) of which 48 \% were annotated  (Suppl. table ~\ref{tbl:PanGO1} \& ~\ref{tbl:PanGO2}). 
 The most prolific cluster in the soft-core contained 163 contigs with unknown function, where \textit{G. carpenteri} \textit{G. lapillus}, \textit{G. polynesiensis} and \textit{G. holmesii} contained 50, 42, 41 \& 30 contigs respectively. 
 A further 5 clusters contained more than 100 contigs, four of which had GO annotations. 
-Of the six clusters with over 100 contigs, none had representatives contigs from \textit{G. australes}. 
+Of the six clusters with over 100 contigs, none had representative contigs from \textit{G. australes}. 
 \textit{G. australes} was absent from 86 \% of the softcore clusters. 
-In descending order of contigs, they matched to: a protein involved in selective protein binding; a protein involved in actin binding; a protein involved in calcium binding; and a protein with cysteine-type peptidase activity. 
+In descending order of contigs, they matched to: a protein involved in selective protein binding, a protein involved in actin binding, a protein involved in calcium binding, and a protein with cysteine-type peptidase activity. 
 In the soft-core, 14,035 clusters contained 10 or more contigs. 
 
 \subsubsection{Accessory transcriptome}
@@ -309,32 +310,32 @@ Of the unique clusters, 83.1 \% contained only one contig and 97.8 \% of cluster
 \subsubsection{Comparison of gene ontology annotations.}
 \FloatBarrier
 
-The GOs were split up into the three functional groups defined by the consortium: 1) Molecular processes (Figs. ~\ref{fig:SpecGo1Molec}, ~\ref{fig:SpecGo2Molec}, ~\ref{fig:PanGo1Molec} \& ~\ref{fig:PanGo2Molec}) defined as biochemical or a macromolecule directly interacting with other molecules; 2) Cellular components (Figs. ~\ref{fig:SpecGo1Cell}, ~\ref{fig:SpecGo2Cell}, ~\ref{fig:PanGo1Cell} \& ~\ref{fig:PanGo2Cell}) defined by the location within the cell where a molecular process takes place; and 3) Biological process (Figs ~\ref{fig:SpecGo1Bio}, ~\ref{fig:SpecGo2Bio}, ~\ref{fig:PanGo1Bio} \& ~\ref{fig:PanGo2Bio}) which is defined as a molecular machinery participating in the execution of the cell's genetic programming, e.g. cell division.
-GO basic is structured in a hierarchical manner, with parent and child terms where child terms are more specific than parent terms. 
+The GOs were split up into the three functional groups defined by the consortium: 1) Molecular processes (Figs. ~\ref{fig:SpecGo1Molec}, ~\ref{fig:SpecGo2Molec}, ~\ref{fig:PanGo1Molec} \& ~\ref{fig:PanGo2Molec}) defined as biochemical or a macromolecule directly interacting with other molecules, 2) Cellular components (Figs. ~\ref{fig:SpecGo1Cell}, ~\ref{fig:SpecGo2Cell}, ~\ref{fig:PanGo1Cell} \& ~\ref{fig:PanGo2Cell}) defined by the location within the cell where a molecular process takes place, and 3) Biological process (Figs ~\ref{fig:SpecGo1Bio}, ~\ref{fig:SpecGo2Bio}, ~\ref{fig:PanGo1Bio} \& ~\ref{fig:PanGo2Bio}) which is defined as a molecular machinery participating in the execution of the cell's genetic programming (e.g. cell division).
+GO basic is structured in a hierarchical manner, with parent and child terms where parent terms provide a broad overview of functionality and child terms are more specific than parent terms. 
 For a general overview of functions present in each transcriptome, level 1 GO terms were elucidated (Figs. ~\ref{fig:SpecGo1Bio}, ~\ref{fig:SpecGo1Cell} ~\ref{fig:SpecGo1Molec}, ~\ref{fig:PanGo1Bio}, ~\ref{fig:PanGo1Cell} \& ~\ref{fig:PanGo1Molec}). 
 A more in depth query of the functions present in each transcriptome was conducted with a GO search of the child terms at level 2 (Figs. ~\ref{fig:SpecGo2Bio}, ~\ref{fig:SpecGo2Cell}, ~\ref{fig:SpecGo2Molec}, ~\ref{fig:PanGo2Bio}, ~\ref{fig:PanGo2Cell} \& ~\ref{fig:PanGo2Molec}). 
 
 \paragraph{Level 1 GO annotations between \textit{Gambierdiscus} species.}
 \FloatBarrier
 The GO annotations found at level 1 between the species of \textit{Gambierdiscus} were similar, with the exception of \textit{G. australes} in several instances. 
-For GOs assigned part of catalytic activity in molecular processes (Fig. ~\ref{fig:PanGo1Molec}) as well as both the metabolic and cellular processes in the biological processes (Fig. ~\ref{fig:PanGo1Bio}), \textit{G. australes} was underrepresented. 
-Within the molecular processes (Fig. ~\ref{fig:PanGo1Molec}), the most common annotation was for catalytic activity, followed by binding then transporter activities. 
+GOs assigned part of catalytic activity in molecular processes (Fig. ~\ref{fig:SpecGo1Molec}) as well as both the metabolic and cellular aspects in the biological processes (Fig. ~\ref{fig:SpecGo1Bio}), \textit{G. australes} was underrepresented as compared to the other four species. 
+Within the molecular processes (Fig. ~\ref{fig:SpecGo1Molec}), the most common annotation across all five species was for catalytic activity, followed by binding then transporter activities. 
 Molecular carrier activity was only registered for \textit{G. australes} and \textit{G. carpenteri} with 1 annotation each.
-For GO annotations within the cellular processes (Fig. ~\ref{fig:PanGo1Cell}), the most common match was to cell parts followed by protein containing complexes then organelle parts. 
-Only \textit{G. carpenteri} and \textit{G. polynesiensis} had one annotation each for cell junction activity. 
-The highest number of GOs within biological processes matched to cellular processes (Fig. ~\ref{fig:PanGo1Bio}), closely followed by metabolic processes then biological regulation and localization. 
+For GO annotations within the cellular processes (Fig. ~\ref{fig:SpecGo1Cell}), the most common match was to cell parts followed by protein containing complexes then organelle parts. 
+\textit{G. carpenteri} and \textit{G. polynesiensis} had one annotation each for cell junction activity. 
+The highest number of GOs within biological processes matched to cellular processes (Fig. ~\ref{fig:SpecGo1Bio}), closely followed by metabolic processes then biological regulation and localization. 
 The lease represented biological GO annotation was related to growth with only one annotation for \textit{G. holmesii} and \textit{G. polynesiensis}.
 
 \begin{figure} 
 \includegraphics[scale=.9]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum1-cell-split.png} 
-\caption{Summary of cellular GO annotations between \textit{Gambierdiscus} species at GOSUM level 1 from Suppl. table ~\ref{tbl:SpGO1}.} 
+\caption{Summary of cellular GO annotations between \textit{Gambierdiscus} species at GOSUM level 1.}% from Suppl. table ~\ref{tbl:SpGO1}.} 
 \label{fig:SpecGo1Cell}
 \end{figure} 
 
 
 \begin{figure} 
 \includegraphics[scale=.7]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum1-bio-split.png} 
-\caption{Summary of biological processes GO annotations between \textit{Gambierdiscus} species at GOSUM level 1 from Suppl. table ~\ref{tbl:SpGO1}.} 
+\caption{Summary of biological processes GO annotations between \textit{Gambierdiscus} species at GOSUM level 1.}% from Suppl. table ~\ref{tbl:SpGO1}.} 
 \label{fig:SpecGo1Bio}
 \end{figure} 
 
@@ -342,37 +343,38 @@ The lease represented biological GO annotation was related to growth with only o
 
 \begin{figure} 
 \includegraphics[scale=1]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum1-molec-split.png} 
-\caption{Summary of molecular GO annotations between \textit{Gambierdiscus} species at GOSUM level 1 from Suppl. table ~\ref{tbl:SpGO1}.} 
+\caption{Summary of molecular GO annotations between \textit{Gambierdiscus} species at GOSUM level 1.}% from Suppl. table ~\ref{tbl:SpGO1}.} 
 \label{fig:SpecGo1Molec}
 \end{figure} 
 \FloatBarrier
 \paragraph{Level 2 GO annotations between \textit{Gambierdiscus} species.}
 \FloatBarrier
 At level 2 of GO annotations, the difference between species becomes more apparent. 
-While inter-species variations across the molecular, cellular and biological processes (Figs. ~\ref{fig:PanGo2Bio}, ~\ref{fig:PanGo2Cell} \& ~\ref{fig:PanGo2Molec}) are apparent, consistently \textit{G. australes} is underrepresented or absent across all three processes. 
-Conversely, \textit{G. australes} was the only species with a small number of GO annotations to nucleocytoplasmic carrier activity as well as general transcription initiation factor activity within the molecular processes, and anatomical structure morphogenisis as well as movement within environment as part of symbiotic interaction in the biological processes. 
+While inter-species variations across the molecular, cellular and biological processes (Figs. ~\ref{fig:SpecGo2Bio}, ~\ref{fig:SpecGo2Cell} \& ~\ref{fig:SpecGo2Molec}) are apparent, consistently \textit{G. australes} is underrepresented or absent across all three processes. 
+However, \textit{G. australes} was the only species with a small number of GO annotations to nucleocytoplasmic carrier activity as well as general transcription initiation factor activity within the molecular processes. 
+Again in the biological processes, \textit{G. australes} was the only species matching to anatomical structure morphogenisis as well as movement within environment as part of symbiotic interaction. 
 \textit{G. holmesii} had a much higher representation of GO terms matching sperm-egg recognition. 
-The most common molecular process (Fig. ~\ref{fig:PanGo2Molec}) mapped to transferase activities, followed by hydrolase activity and oxidoreductase activity. 
-For cellular processes (Fig. ~\ref{fig:PanGo2Cell}) the highest number of GOs was matched to intracellular parts, then intracellular organelle parts and membrane protein complexes. 
-Organic substance metabolic processes, cellular metabolic processes and primary metabolic processes had the most GO annotation matches, in that order, for the biological processes group ( Fig. ~\ref{fig:PanGo2Bio}). 
+The most common molecular processes (Fig. ~\ref{fig:SpecGo2Molec}) mapped to transferase activities, followed by hydrolase activity and oxidoreductase activity. 
+For cellular processes (Fig. ~\ref{fig:SpecGo2Cell}) the highest number of GOs was matched to intracellular parts, then intracellular organelle parts and membrane protein complexes. 
+Organic substance metabolic processes, cellular metabolic processes and primary metabolic processes had the most GO annotation matches, for the biological processes group ( Fig. ~\ref{fig:SpecGo2Bio}). 
 
 \begin{figure} 
 \includegraphics[scale=.45]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum2-bio2-split.png} 
-\caption{Summary of biological processes GO annotations between \textit{Gambierdiscus} species at GOSUM level 2 from Suppl. table ~\ref{tbl:SpGO2}.} 
+\caption{Summary of biological processes GO annotations between \textit{Gambierdiscus} species at GOSUM level 2.}% from Suppl. table ~\ref{tbl:SpGO2}.} 
 \label{fig:SpecGo2Bio}
 \end{figure} 
 
 
 \begin{figure} 
 \includegraphics[scale=.6]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum2-cell2-split.png} 
-\caption{Summary of cellular GO annotations between \textit{Gambierdiscus} species at GOSUM level 2 from Suppl. table ~\ref{tbl:SpGO2}.} 
+\caption{Summary of cellular GO annotations between \textit{Gambierdiscus} species at GOSUM level 2.}% from Suppl. table ~\ref{tbl:SpGO2}.} 
 \label{fig:SpecGo2Cell}
 \end{figure} 
 
 
 \begin{figure} 
 \includegraphics[scale=.6]{3Aug18_cluster-investigation/figures/gosum-species/Species-gosum2-molec-split.png} 
-\caption{Summary of molecular GO annotations between \textit{Gambierdiscus} species at GOSUM level 2 from Suppl. table ~\ref{tbl:SpGO2}.}  
+\caption{Summary of molecular GO annotations between \textit{Gambierdiscus} species at GOSUM level 2.}% from Suppl. table ~\ref{tbl:SpGO2}.}  
 \label{fig:SpecGo2Molec}
 \end{figure} 
 
@@ -380,7 +382,7 @@ Organic substance metabolic processes, cellular metabolic processes and primary 
 
 \paragraph{Level 1 GO annotations for pan-transcriptomes.}
 \FloatBarrier
-Similarity between the core-, softcore- and unique-clusters was consistent across the biological, cellular and molecular processes groups. 
+Similarity between the core, softcore and accessory clusters was consistent across the biological, cellular and molecular processes groups. 
 Predominantly the unique clusters had a higher representation in each process with the exception for annotations matching to extracellular region parts and synpase parts within cellular processes (Fig. ~\ref{fig:PanGo1Cell}) as well as developmental processes within the biological processes (Fig. ~\ref{fig:PanGo1Bio}). 
 GO annotations most commonly matched to catalytic activity then binding and transporter activities in the molecular processes (Fig. ~\ref{fig:PanGo1Molec}). 
 Within the cellular processes, annotations predominantly matched to cellular parts, followed by protein-containing complexes and organelle parts (Fig. ~\ref{fig:PanGo1Bio}). 
@@ -415,7 +417,7 @@ While differences between the biological, cellular and molecular processes were 
 Only the unique clusters had annotations matching to DNA binding transcription factor activity, metallochaperone activity and water binding in the molecular processes while the most common GO annotations for the accessory clusters matched to transferase, hydrolase and oxidoreductase activities in descending order (Fig. ~\ref{fig:PanGo2Molec}). 
 Within the cellular processes, most annotations matched to intracellular parts, followed by intracellular organelle parts then membrane protein complexes (Fig. ~\ref{fig:PanGo2Cell}). 
 Annotations solely from unique clusters were from cell-cell junction complexes, a viral membrane, contractile fibre parts, bacterial-type flagellum and an external encapsulating structure part. 
-The biological processes annotations most commonly matched to organic substance metabolic processes, cellular metabolic processes and primary metabolic processes in descending order (Fig. ~\ref{fig:PanGo2Bio}). 
+The biological processes annotations most commonly matched to organic substance metabolic processes, cellular metabolic processes and primary metabolic processes, in descending order (Fig. ~\ref{fig:PanGo2Bio}). 
 Unique clusters were the only representatives for system processes, immune response, cell adhesion, cell death, sperm-egg recognition, cell motility and a protein activation cascade. 
 
 \begin{figure} 
@@ -445,18 +447,18 @@ Unique clusters were the only representatives for system processes, immune respo
 \FloatBarrier
 A total of 850 contigs were identified with KS domains which grouped into 314 clusters (Fig. ~\ref{fig:KSVenn}). 
 Nine clusters contained more than 10 contigs, with the highest number of 130 contigs from all species.
-9 clusters contained 10 contigs or more, of which only two did not contain all the taxa examined.
-57 of the 314 clusters contained contigs from multiple species, so 81.8 \% of KS clusters were species specific while 78.7 \% contained only a single contig (Fig. ~\ref{fig:KSVenn}). 
+Nine clusters contained 10 contigs or more, of which only two did not contain all the taxa examined.
+Fifty-seven of the 314 clusters contained contigs from multiple species, so 81.8 \% of KS clusters were species specific while 78.7 \% contained only a single contig (Fig. ~\ref{fig:KSVenn}). 
 The non-ciguatoxic \textit{G. carpenteri} was absent from 73.6 \% of the clusters. 
 Of the clusters without \textit{G. carpenteri}, none contained all four other species. 
-However one cluster contained \textit{G. lapillus}, \textit{G. polynesiensis} and \emph{G. holmesii} with equally represented transcript numbers. 
+However, one cluster contained \textit{G. lapillus}, \textit{G. polynesiensis} and \emph{G. holmesii} with equally represented transcript numbers. 
 Four contigs contained \textit{G. polynesiensis} and \emph{G. holmesii} only, one of which had a higher contig representation of \textit{G. polynesiensis} than \emph{G. holmesii}. 
 \textit{G. polynesiensis} was the only representative species in 71 clusters, of which three clusters contained 2 contigs and one cluster contained 3 contigs. 
 \emph{G. holmesii} was representative as the only species in 23 clusters, one of which contained 3 contigs while the other clusters contained single contigs.
 \textit{G. australes}, \textit{G. carpenteri} and \textit{G. lapillus} were the solo representatives of 81, 39 \& 35 KS clusters respectively. \\
 \begin{figure} 
 \includegraphics[scale=1]{3Aug18_cluster-investigation/pks/KS-venn.png} 
-\caption{Venn diagram of species in KS clusters.} 
+\caption{Venn diagram of ketosynthase containing clusters distributed across the five \textit{Gambierdiscus} species. Core, accessory and inter-species  ketosynthase cluster cross over depicted.} 
 \label{fig:KSVenn}
 \end{figure} 
 \FloatBarrier
@@ -466,7 +468,7 @@ Comparing five \textit{Gambierdiscus} species revealed a core, soft-core and uni
 Further, differences between species with different toxin production characteristics were observed. 
 The number of predicted peptides found in this study is high compared to a pan-transcriptome study of four prymnesiophyte algae \cite{koid2014comparative}. 
 The predicted peptides in the Koid et al. (2014) study ranged from around 25,000 to 56,000 peptides, where this study found a range from about 63,000 to 270,000 predicted peptides (Table ~\ref{tbl:ClustTable}). 
-The lowest number of peptides was predicted in \textit{G. australes}, similar to the findings in the prymnesiophyte algae study and both originating from the MMETSP, where sequencing occurred after a polyA-selection step for isolating eukaryotes \cite{keeling2014marine}. 
+The lowest number of peptides was predicted in \textit{G. australes}, similar to the findings in the prymnesiophyte algae study and both originating from the MMETSP, where sequencing occurred after a polyA-selection step for isolating eukaryotes \cite{keeling2014marine,koid2014comparative}. 
 \textit{G. holmesii} and \textit{G. lapillus} predicted peptides numbered 132,688 and 111,862 respectively, while the highest number of predicted peptides were found in \textit{G. carpenteri} and \textit{G. polynesiensis} at 180,568 and 176,290 respectively. %TODO link ch4 methods
 An exploration of the RNA sequencing libraries of two species of \textit{Alexandrium} could not identify common polyadenylation signal sequence motifs \cite{jaeckisch2011comparative}. 
 The implication is that the polyadenylation signal is removed during mRNA processing, in at least some dinoflagellates \cite{bachvaroff2008stop,jaeckisch2011comparative}. 
@@ -481,20 +483,20 @@ These were sequenced with different read lengths and collected from different ge
 The number of contigs and predicted peptides from this study was markedly less for \textit{G. australes}, from the MMETSP dataset, in comparison to the transcriptome assemblies generated in \textbf{Chapter 4}. 
 To accommodate for the low number of contigs from \textit{G. australes}, the softcore spanned 4 of the 5 taxa. 
 Noticeably, \textit{G. australes} was absent from 86 \% of the softcore dataset which indicates that a large proportion of the softcore is likely part of the \textit{Gambierdiscus} pan-transcriptome core which was not captured in the \textit{G. australes} sequencing. 
-This is an example where the value of a reference pan-transcriptome becomes evident.\\
+This is an example highlighting the value of a reference pan-transcriptome.\\
 There was no distinct difference between the species GO annotations, with the exception of \textit{G. australes}. 
-This is as expected, as the species operate under similar nutritional modes and within similar temperature ranges, apart from \textit{G. carpenteri} which was isolated from the temperate Merimbula region rather than the tropical or sub-tropical conditions from which \textit{G. australes}, \textit{G. holmesii}, \textit{G. carpenteri} and \textit{G. polynesiensis} hail. \\
-However no difference was observed in the biological, cellular and molecular GO annotation groups at levels 1 and 2 between the core, softcore and unique clusters either. 
+This is as expected, as the species operate under similar nutritional modes and within similar temperature ranges \cite{kibler2012growth,parsons2012gambierdiscus} and were isolated from tropical or sub-tropical conditions, apart from \textit{G. carpenteri} which was isolated from the temperate Merimbula region \cite{larsson2018toxicology}. \\
+No difference was observed in the biological, cellular and molecular GO annotation groups at levels 1 and 2 between the core, softcore and accessory clusters. 
 This is somewhat less expected as as it would be reasonable to predict a functional difference for genes unique to each species. 
 Possible reasons could be that this observation only captures predicted peptides with GO annotations which were only 15.23 \% of the 231,310 accessory clusters. 
 This indicates that no functional match for over 196,000 of the accessory clusters could be found and no indication what their function might be could be extrapolated. 
 As dinoflagellate sequencing and genome exploration is still comparably sparse, it follows that a lack of annotated references in the sequencing databases translates to low annotation rates.
 The need for annotations and a comparable reference transcriptome becomes apparent when investigating genetic elements as uncharacterized as these.
 
-\subsection{Ketosynthase domain detection.}
+\subsection{Ketosynthase domain detection}
 Between all five species, 850 contigs with KS domains were identified. 
 These resolved into 314 clusters, of which 17 were shared among all species. 
-The majority ( 81.8 \%) resolved as unique clusters per species, ranging from 24 clusters for \textit{G. holmesii} to 82 clusters for \textit{G. australes}. 
+The majority (81.8 \%) resolved as unique clusters per species, ranging from 24 clusters for \textit{G. holmesii} to 82 clusters for \textit{G. australes}. 
 The toxin profile for \textit{G. polynesiensis} and the toxicity assay conducted by Larsson et al. (2018) for \textit{G. holmesii} indicate that these two species are the most ciguatoxic of the taxa included in this study. 
 While \textit{G. lapillus} displayed lower levels of ciguatoxicity in bioassays, the strain included here (HG4) was the least toxic of the \textit{G. lapillus} strains tested in \textbf{Chapter 2}. %TODO link ch2 toxicity section 
 Four KS clusters included \textit{G. holmesii} and \textit{G. polynesiensis} only, one of which contained 4 contigs from \textit{G. polynesiensis} and 1 from \textit{G. holmesii}. 
@@ -502,9 +504,9 @@ A further 22 and 75 clusters only contained \textit{G. holmesii} and \textit{G. 
 These clusters                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 could be of interest for further investigation into KS domains involved in CTX synthesis. 
 
 
-\subsection{Areas for possible improvement in this study.}
+\subsection{Areas for possible improvement in this study}
 This chapter presents a novel approach to analyzing \textit{Gambierdiscus} transcriptomes and possible avenues for investigation for ciguatoxin production pathways. 
-However there are several aspects that can be improved upon with future studies.
+However, there are several aspects that can be improved upon with future studies.
 
 \paragraph{Contaminants in dataset.}
 The RNA-seq libraries were constructed from whole RNA seq runs with non-axenic cultures, hence it is likely that bacterial RNA is a subset of the analysis. 
@@ -515,7 +517,7 @@ Hence it would be pertinent to  devise a method to separate bacterial from eukar
 
 \paragraph{Coverage of taxa.}
 As with bacterial pan-transcriptomics, eukaryotic studies reveal a correlation between the number of species and strains included for refining the core transcriptome and expanding the unique fraction of the transcriptome \cite{koid2014comparative,tettelin2005genome,jin2016maize}. 
-For \textit{Gambierdiscus}, the importance of including several strains of a species becomes apparent with the discovery of a non-ciguatoxic \textit{G. polynesiensis} strain \cite{rhodes2017epiphytic}. 
+For \textit{Gambierdiscus}, including several strains of a species is essential for the discovery of a non-ciguatoxic \textit{G. polynesiensis} strain \cite{rhodes2017epiphytic}. 
 Variability in morphology and toxicity has also been observed in \textit{G. lapillus} \cite{kretzschmar2017characterization}. 
 While this study sought to cover taxa from the three main \textit{Gambierdiscus} clades, an increase in species and strain coverage is highly likely to impact the resolution of the core and unique portions especially as the sequencing coverage of the \textit{G. australes} transcriptome is less in depth than the other four species (Table ~\ref{tbl:ClustTable}).
 Hence due to limited species and the singular strain per species coverage, this represents an exploratory study for establishing a pan-transcriptome for \textit{Gambierdiscus} which should be improved upon. 
@@ -531,1459 +533,10 @@ Protists represent a large section of the tree of life and are involved in vital
 Yet due to the convoluted nature of their genomes, querying the genetic content of these organisms is fraught with obstacles. 
 This study presents a pan-transcriptome for the genus \textit{Gambierdiscus}, some species of which are involved in CTX production. 
 The approach opens up an alternative avenue for investigation of the differences and similarities of toxic \textit{Gambierdiscus} species in general, and specifically in regard to the toxin production pathway(s). 
-While providing a starting point, it is recommended that this dataset is expanded to encompass both more \textit{Gambierdiscus} species and strains to crystallize the genus' pan-transcriptome in more detail.
-
-\section*{Supplementary}
-- need to add australes
-
-\FloatBarrier
-\begin{longtable}{ | p{2.2cm} | p{4cm} |p{2cm} | p{2cm} | p{2cm} | p{2cm} |}
-\caption{GO terms and number of contigs per species at GO ontology level 1.}\\
-\hline
-\label{tbl:SpGO1}
-GO acession&GO terms&\emph{G. carpenteri}&\emph{G. lapillus}&\emph{G. polynesiensis}&\emph{G. holmesii}\\
-\hline
- \multicolumn{6}{| c |}{Biological processes}\\
- \hline
-GO:0002376&immune system process&3&3&3&3\\
- \hline
-GO:0008152&metabolic process&388&384&396&396\\
- \hline
-GO:0009987&cellular process&451&440&457&462\\
- \hline
-GO:0022414&reproductive process&3&2&1&3\\
- \hline
-GO:0022610&biological adhesion&3&2&2&2\\
- \hline
-GO:0023052&signaling&1&1&1&1\\
- \hline
-GO:0032501&multicellular organismal process&3&2&3&2\\
- \hline
-GO:0032502&developmental process&1&1&3&2\\
- \hline
-GO:0040007&growth&0&0&1&1\\
- \hline
-GO:0040011&locomotion&4&4&3&2\\
- \hline
-GO:0048511&rhythmic process&0&1&1&1\\
- \hline
-GO:0050896&response to stimulus&30&27&27&27\\
- \hline
-GO:0051179&localization&90&84&88&88\\
- \hline
-GO:0051704&multi-organism process&5&4&4&5\\
- \hline
-GO:0065007&biological regulation&94&85&91&89\\
- \hline
-GO:0071840&cellular component organization/biogenesis&70&63&67&68\\
- \hline
-GO:0098754&detoxification&1&1&1&1\\
-\hline
- \multicolumn{6}{| c |}{Cellular components}\\
- \hline
-GO:0016020&membrane&9&9&9&10\\
- \hline
-GO:0030054&cell junction&1&0&0&1\\
- \hline
-GO:0031974&membrane-enclosed lumen&3&3&3&3\\
- \hline
-GO:0032991&protein-containing complex&146&141&145&144\\
- \hline
-GO:0043226&organelle&22&22&22&21\\
- \hline
-GO:0044421&extracellular region part&4&4&4&4\\
- \hline
-GO:0044422&organelle part&94&88&89&88\\
- \hline
-GO:0044423&virion part&1&0&1&1\\
- \hline
-GO:0044425&membrane part&50&49&50&47\\
- \hline
-GO:0044456&synapse part&1&0&1&1\\
- \hline
-GO:0044464&cell part&182&174&178&177\\
- \hline
-GO:0099080&supramolecular complex&1&1&1&2\\
-\hline
- \multicolumn{6}{| c |}{Molecular function}\\
-\hline
-GO:0003824&catalytic activity&601&592&603&604\\
-\hline
-GO:0005198&structural molecule activity&6&4&5&5\\
-\hline
-GO:0005215&transporter activity&67&63&63&66\\
-\hline
-GO:0005488&binding&125&121&117&120\\
-\hline
-GO:0016209&antioxidant activity&5&5&5&5\\
-\hline
-GO:0038024&cargo receptor activity&1&1&1&1\\
-\hline
-GO:0060089&molecular transducer activity&8&8&8&10\\
-\hline
-%988_MMETSP0766_Gambierdiscus-australes_DN11896_c0_g2_i1.p1.faa	6	40	29	24	31	130 \\ WTF IS THIS
-%8866_MMETSP0766_Gambierdiscus-australes_DN22301_c0_g2_i1.p1.faa	3	24	14	24	16	81
-%3681_MMETSP0766_Gambierdiscus-australes_DN15885_c0_g1_i1.p1.faa	7	14	16	9	12	58
-%1921_MMETSP0766_Gambierdiscus-australes_DN13038_c0_g1_i1.p1.faa	3	10	6	4	6	29
-%46550_MMETSP0766_Gambierdiscus-australes_DN42196_c9_g13_i1.p1.faa	3	4	1	8	5	21
-%215601_UTSMER9A3_Gambierdiscus-carpenteri_DN18221_c2_g10_i1.p1.faa	0	4	1	8	5	18
-%360_MMETSP0766_Gambierdiscus-australes_DN10555_c0_g1_i1.p1.faa	1	4	3	3	4	15
-%15645_MMETSP0766_Gambierdiscus-australes_DN27800_c0_g2_i1.p1.faa	4	2	0	4	1	11
-%132980_UTSMER9A3_Gambierdiscus-carpenteri_DN14854_c1_g5_i1.p1.faa	0	1	4	3	2	10
-GO:0098772&molecular function regulator&23&23&21&22\\
-\hline
-GO:0140104&molecular carrier activity&1&0&0&0\\
-\hline
-GO:0140110&transcription regulator activity&6&4&7&4\\
-\hline
-\end{longtable}
-
-\FloatBarrier
-\begin{longtable}{ | p{2.2cm} | p{4cm} |p{2cm} | p{2cm} | p{2cm} | p{2cm} |}
-\caption{GO terms and number of contigs per species at GO ontology level 2, child terms of Table ~\ref{tbl:SpGO1}.}\\
-\hline
-\label{tbl:SpGO2}
-GO acession&GO terms&\emph{G. carpenteri}&\emph{G. lapillus}&\emph{G. polynesiensis}&\emph{G. holmesii}\\
-\hline
- \multicolumn{6}{| c |}{Biological processes}\\
- \hline
-GO:0000075&cell cycle checkpoint&2&3&3&3\\
- \hline
-GO:0002252&immune effector process&2&2&2&2\\
- \hline
-GO:0003008&system process&2&1&2&1\\
- \hline
-GO:0006457&protein folding&2&2&2&2\\
- \hline
-GO:0006807&nitrogen compound metabolic process&279&268&278&281\\
- \hline
-GO:0006928&movement of cell or subcellular component&7&7&7&6\\
- \hline
-GO:0006950&response to stress&20&18&18&18\\
- \hline
-GO:0006955&immune response&1&1&1&1\\
- \hline
-GO:0007017&microtubule-based process&10&9&7&9\\
- \hline
-GO:0007049&cell cycle&1&1&1&1\\
- \hline
-GO:0007059&chromosome segregation&2&2&0&2\\
- \hline
-GO:0007154&cell communication&3&3&4&3\\
- \hline
-GO:0007155&cell adhesion&2&1&1&1\\
- \hline
-GO:0007163&establishment or maintenance of cell polarity&1&0&1&1\\
- \hline
-GO:0007165&signal transduction&10&10&10&12\\
- \hline
-GO:0008037&cell recognition&1&0&0&1\\
- \hline
-GO:0008219&cell death&0&1&1&1\\
- \hline
-GO:0009056&catabolic process&50&54&51&54\\
- \hline
-GO:0009058&biosynthetic process&124&119&131&123\\
- \hline
-GO:0009605&response to external stimulus&6&6&6&6\\
- \hline
-GO:0009607&response to biotic stimulus&2&2&1&2\\
- \hline
-GO:0009628&response to abiotic stimulus&4&4&4&4\\
- \hline
-GO:0009719&response to endogenous stimulus&1&0&0&0\\
- \hline
-GO:0016043&cellular component organization&66&60&63&64\\
- \hline
-GO:0019725&cellular homeostasis&3&2&3&2\\
- \hline
-GO:0019748&secondary metabolic process&3&4&4&4\\
- \hline
-GO:0022402&cell cycle process&9&12&7&11\\
- \hline
-GO:0022406&membrane docking&1&1&1&1\\
- \hline
-GO:0030029&actin filament-based process&1&0&1&2\\
- \hline
-GO:0031503&protein-containing complex localization&3&3&3&3\\
- \hline
-GO:0032259&methylation&12&12&11&11\\
- \hline
-GO:0033036&macromolecule localization&15&15&0&14\\
- \hline
-GO:0035036&sperm-egg recognition&1&0&16&1\\
- \hline
-GO:0042221&response to chemical&5&4&4&4\\
- \hline
-GO:0042330&taxis&1&1&0&0\\
- \hline
-GO:0042440&pigment metabolic process&7&8&8&8\\
- \hline
-GO:0044085&cellular component biogenesis&4&3&4&4\\
- \hline
-GO:0044237&cellular metabolic process&344&338&353&354\\
- \hline
-GO:0044238&primary metabolic process&295&284&295&294\\
- \hline
-GO:0044281&small molecule metabolic process&139&141&144&150\\
- \hline
-GO:0044419&interspecies interaction between organisms&3&2&3&3\\
- \hline
-GO:0048856&anatomical structure development&1&1&2&2\\
- \hline
-GO:0048869&cellular developmental process&0&0&1&\\
- \hline
-GO:0048870&cell motility&2&2&2&1\\
- \hline
-GO:0050789&regulation of biological process&78&72&76&75\\
- \hline
-GO:0051234&establishment of localization&86&79&84&84\\
- \hline
-GO:0051235&maintenance of location&2&2&2&2\\
- \hline
-GO:0051606&detection of stimulus&2&2&2&2\\
- \hline
-GO:0051641&cellular localization&20&20&22&20\\
- \hline
-GO:0051716&cellular response to stimulus&13&13&14&13\\
- \hline
-GO:0055114&oxidation-reduction process&10&13&12&9\\
- \hline
-GO:0061919&process utilizing autophagic mechanism&2&2&3&2\\
- \hline
-GO:0065008&regulation of biological quality&19&16&19&17\\
- \hline
-GO:0065009&regulation of molecular function&12&12&11&11\\
- \hline
-GO:0070085&glycosylation&3&3&3&3\\
- \hline
-GO:0070988&demethylation&3&3&3&3\\
-
-GO:0071554&cell wall organization or biogenesis&1&1&1&1\\
-
-GO:0071704&organic substance metabolic process&355&349&361&362\\
- \hline
-GO:0072376&protein activation cascade&1&1&1&1\\
- \hline
-GO:0140029&exocytic process&1&1&1&1\\
- \hline
-GO:1903046&meiotic cell cycle process&2&2&1&2\\
- \hline
-GO:1990748&cellular detoxification&1&1&1&1\\
-\hline
- \multicolumn{6}{| c |}{Cellular components}\\
- \hline
-GO:0005911&cell-cell junction&1&0&0&1\\
- \hline
-GO:0005929&cilium&2&2&2&2\\
- \hline
-GO:0008287&protein serine/threonine phosphatase complex&2&2&2&2\\
- \hline
-GO:0019867&outer membrane&1&1&1&2\\
- \hline
-GO:0030312&external encapsulating structure&0&0&0&1\\
- \hline
-GO:0031012&extracellular matrix&1&1&1&1\\
- \hline
-GO:0031090&organelle membrane&5&5&5&5\\
- \hline
-GO:0031224&intrinsic component of membrane&7&7&8&7\\
- \hline
-GO:0031975&envelope&1&1&1&1\\
- \hline
-GO:0032993&protein-DNA complex&2&3&3&2\\
- \hline
-GO:0033061&DNA recombinase mediator complex&1&0&1&1\\
- \hline
-GO:0034518&RNA cap binding complex&0&1&0&1\\
- \hline
-GO:0036338&viral membrane&0&0&1&1\\
- \hline
-GO:0042597&periplasmic space&1&1&1&1\\
- \hline
-GO:0042995&cell projection&4&4&3&3\\
- \hline
-GO:0043227&membrane-bounded organelle&11&10&12&11\\
- \hline
-GO:0043228&non-membrane-bounded organelle&8&9&7&7\\
- \hline
-GO:0043229&intracellular organelle&18&18&19&18\\
- \hline
-GO:0043233&organelle lumen&3&3&3&3\\
- \hline
-GO:0043235&receptor complex&1&1&1&1\\
- \hline
-GO:0044424&intracellular part&156&153&159&155\\
- \hline
-GO:0044441&ciliary part&5&4&4&5\\
- \hline
-GO:0044446&intracellular organelle part&88&85&87&85\\
- \hline
-GO:0044449&contractile fiber part&0&0&1&1\\
- \hline
-GO:0044455&mitochondrial membrane part&4&4&2&2\\
- \hline
-GO:0044459&plasma membrane part&9&9&10&8\\
- \hline
-GO:0044461&bacterial-type flagellum part&3&1&0&0\\
- \hline
-GO:0044462&external encapsulating structure part&0&0&0&1\\
- \hline
-GO:0044463&cell projection part&8&5&4&5\\
- \hline
-GO:0044815&DNA packaging complex&2&2&2&2\\
- \hline
-GO:0070069&cytochrome complex&2&2&2&2\\
- \hline
-GO:0097458&neuron part&1&0&1&1\\
- \hline
-GO:0098796&membrane protein complex&42&41&41&39\\
- \hline
-GO:0098805&whole membrane&2&2&2&2\\
- \hline
-GO:0099023&tethering complex&3&3&3&3\\
- \hline
-GO:0099081&supramolecular polymer&1&1&1&2\\
- \hline
-GO:0120114&Sm-like protein family complex&5&5&5&5\\
- \hline
-GO:1902494&catalytic complex&38&36&41&37\\
- \hline
-GO:1990204&oxidoreductase complex&6&5&6&5\\
- \hline
-GO:1990351&transporter complex&6&5&7&5\\
- \hline
-GO:1990391&DNA repair complex&1&1&1&1\\
- \hline
-GO:1990904&ribonucleoprotein complex&17&17&17&17\\
-\hline
- \multicolumn{6}{| c |}{Molecular function}\\
-\hline
-GO:0001871&pattern binding&3&3&3&3\\
-\hline
-GO:0003700&DNA-binding transcription factor activity&2&0&1&0\\
-\hline
-GO:0003712&transcription coregulator activity&1&2&3&2\\
-\hline
-GO:0004133&glycogen debranching enzyme activity&2&2&2&2\\
-\hline
-GO:0005319&lipid transporter activity&2&2&2&2\\
-\hline
-GO:0005326&neurotransmitter transporter activity&1&1&1&1\\
-\hline
-GO:0005515&protein binding&33&32&32&35\\
-\hline
-GO:0008144&drug binding&7&9&8&7\\
-\hline
-GO:0008289&lipid binding&3&2&2&2\\
-\hline
-GO:0008565&protein transporter activity&1&1&1&1\\
-\hline
-GO:0009975&cyclase activity&1&2&2&2\\
-\hline
-GO:0016491&oxidoreductase activity&104&104&104&104\\
-\hline
-GO:0016530&metallochaperone activity&1&0&0&0\\
-\hline
-GO:0016740&transferase activity&194&187&192&190\\
-\hline
-GO:0016787&hydrolase activity&178&174&172&175\\
-\hline
-GO:0016829&lyase activity&46&48&55&51\\
-\hline
-GO:0016853&isomerase activity&27&28&32&31\\
-\hline
-GO:0016874&ligase activity&47&47&42&48\\
-\hline
-GO:0022857&transmembrane transporter activity&62&58&58&61\\
-\hline
-GO:0030234&enzyme regulator activity&20&19&17&18\\
-\hline
-GO:0030246&carbohydrate binding&4&4&4&5\\
-\hline
-GO:0030545&receptor regulator activity&0&1&1&1\\
-\hline
-GO:0032451&demethylase activity&1&1&1&1\\
-\hline
-GO:0033218&amide binding&5&5&5&5\\
-\hline
-GO:0036094&small molecule binding&24&24&22&23\\
-\hline
-GO:0038023&signaling receptor activity&7&7&7&9\\
-\hline
-GO:0043167&ion binding&35&34&33&33\\
-\hline
-GO:0044877&protein-containing complex binding&4&4&3&4\\
-\hline
-GO:0048037&cofactor binding&19&19&18&18\\
-\hline
-GO:0050824&water binding&1&1&1&1\\
-\hline
-GO:0051540&metal cluster binding&3&3&3&3\\
-\hline
-GO:0060090&molecular adaptor activity&1&1&1&1\\
-\hline
-GO:0061783&peptidoglycan muralytic activity&1&1&1&1\\
-\hline
-GO:0072341&modified amino acid binding&2&2&2&2\\
-\hline
-GO:0097159&organic cyclic compound binding&46&45&42&40\\
-\hline
-GO:0097367&carbohydrate derivative binding&10&9&8&8\\
-\hline
-GO:0140096&catalytic activity, acting on a protein&68&62&62&61\\
-\hline
-GO:0140097&catalytic activity, acting on DNA&25&21&25&24\\
-\hline
-GO:0140098&catalytic activity, acting on RNA&55&56&54&57\\
-\hline
-GO:1901363&heterocyclic compound binding&46&45&42&40\\
-\hline
-GO:1901567&fatty acid derivative binding&1&1&1&1\\
-\hline
-GO:1901681&sulfur compound binding&3&3&3&3\\
-\hline
-\end{longtable}
+This study provides a starting point for \textit{Gambierdiscus} pan-transcriptomic exploration and a rudimentary reference for future sequencing efforts.
+It is recommended that this dataset is expanded to encompass both more \textit{Gambierdiscus} species and strains to crystallize the genus' pan-transcriptome in more detail.
 
 
-\FloatBarrier
-\begin{longtable}{ | p{2.2cm} | p{4cm} |p{2cm} | p{2cm} | p{2cm} | }
-\caption{GO terms and number of contigs found in core, softcore and accessory transcriptome of \textit{Gambierdiscus} at GO ontology level 1.}\\
-\hline
-\label{tbl:PanGO1}
-GO acession&GO terms&Core&Softcore&Accessory\\
-\hline
- \multicolumn{5}{| c |}{Biological processes}\\
- \hline
-GO:0002376&immune system process&2&2&3\\
- \hline
-GO:0008152&metabolic process&324&309&323\\
- \hline
-GO:0009987&cellular process&360&354&378\\
- \hline
-GO:0022414&reproductive process&0&2&3\\
- \hline
-GO:0022610&biological adhesion&1&1&3\\
- \hline
-GO:0023052&signaling&1&1&1\\
- \hline
-GO:0032501&multicellular organismal process&1&1&3\\
- \hline
-GO:0032502&developmental process&4&1&1\\
- \hline
-GO:0040011&locomotion&1&1&3\\
- \hline
-GO:0048511&rhythmic process&0&1&1\\
- \hline
-GO:0050896&response to stimulus&19&22&25\\
- \hline
-GO:0051179&localization&65&75&78\\
- \hline
-GO:0051704&multi-organism process&3&4&3\\
- \hline
-GO:0065007&biological regulation&64&56&78\\
- \hline
-GO:0071840&cellular component organization or biogenesis&53&54&56\\
- \hline
-GO:0098754&detoxification&1&1&1\\
-\hline
- \multicolumn{5}{| c |}{Cellular components}\\
- \hline
-GO:0016020&membrane&7&9&10\\ 
- \hline 
-GO:0030054&cell junction&0&0&1\\ 
- \hline 
-GO:0031974&membrane-enclosed lumen&3&2&3\\ 
- \hline 
-GO:0032991&protein-containing complex&109&93&119\\ 
- \hline 
-GO:0043226&organelle&15&18&19\\ 
- \hline 
-GO:0044421&extracellular region part&4&3&3\\ 
- \hline 
-GO:0044422&organelle part&62&64&79\\ 
- \hline 
-GO:0044423&virion part&0&0&1\\ 
- \hline 
-GO:0044425&membrane part&41&31&38\\ 
- \hline 
-GO:0044456&synapse part&1&0&0\\ 
- \hline 
-GO:0044464&cell part&132&122&151\\ 
- \hline 
-GO:0099080&supramolecular complex&1&1&2\\ 
-\hline
- \multicolumn{5}{| c |}{Molecular function}\\
-\hline
-GO:0003824&catalytic activity&472&449&476\\ 
- \hline 
-GO:0005198&structural molecule activity&4&4&5\\ 
- \hline 
-GO:0005215&transporter activity&49&54&58\\ 
- \hline 
-GO:0005488&binding&100&107&113\\ 
- \hline 
-GO:0016209&antioxidant activity&4&4&5\\ 
- \hline 
-GO:0038024&cargo receptor activity&1&1&1\\ 
- \hline 
-GO:0060089&molecular transducer activity&5&5&10\\ 
- \hline 
-GO:0098772&molecular function regulator&18&14&19\\ 
- \hline 
-GO:0140104&molecular carrier activity&0&0&1\\ 
- \hline 
-GO:0140110&transcription regulator activity&2&5&7\\ 
-\hline
-\end{longtable}
-
-\FloatBarrier
-\begin{longtable}{ | p{2.2cm} | p{4cm} |p{2cm} | p{2cm} | p{2cm} | }
-\caption{GO terms and number of contigs found in core, softcore and accessory transcriptome of \textit{Gambierdiscus} at GO ontology level 2, childer to Table ~\ref{tbl:PanGO1}.}\\
-\hline
-\label{tbl:PanGO2}
-GO acession&GO terms&Core&Softcore&Accessory\\
-\hline
- \multicolumn{5}{| c |}{Biological processes}\\
- \hline
-GO:0000075&cell cycle checkpoint&1&2&2\\ 
- \hline 
-GO:0002252&immune effector process&1&1&2\\ 
- \hline 
-GO:0003008&system process&0&0&2\\ 
- \hline 
-GO:0006457&protein folding&2&0&1\\ 
- \hline 
-GO:0006807&nitrogen compound metabolic process&227&215&228\\ 
- \hline 
-GO:0006928&movement of cell or subcellular component&4&5&6\\ 
- \hline 
-GO:0006950&response to stress&14&14&16\\ 
- \hline 
-GO:0006955&immune response&0&0&1\\ 
- \hline 
-GO:0007017&microtubule-based process&4&9&8\\ 
- \hline 
-GO:0007049&cell cycle&1&1&1\\ 
- \hline 
-GO:0007059&chromosome segregation&0&2&2\\ 
- \hline 
-GO:0007154&cell communication&3&2&3\\ 
- \hline 
-GO:0007155&cell adhesion&0&0&2\\ 
- \hline 
-GO:0007163&establishment or maintenance of cell polarity&0&1&1\\ 
- \hline 
-GO:0007165&signal transduction&8&9&9\\ 
- \hline 
-GO:0008037&cell death&0&1&1\\ 
- \hline 
-GO:0008219&cell death&0&0&1\\ 
- \hline 
-GO:0009056&catabolic process&41&35&43\\ 
- \hline 
-GO:0009058&biosynthetic process&109&101&93\\ 
- \hline 
-GO:0009605&response to external stimulus&4&4&5\\ 
- \hline 
-GO:0009607&response to biotic stimulus&1&2&1\\ 
- \hline 
-GO:0009628&response to abiotic stimulus&2&2&3\\ 
- \hline 
-GO:0009719&response to endogenous stimulus&0&1&0\\ 
- \hline 
-GO:0016043&cellular component organization&51&51&54\\ 
- \hline 
-GO:0019725&cellular homeostasis&3&1&2\\ 
- \hline 
-GO:0019748&secondary metabolic process&2&3&4\\ 
- \hline 
-GO:0022402&cell cycle process&2&10&10\\ 
- \hline 
-GO:0022406&membrane docking&1&1&1\\ 
- \hline 
-GO:0030029&actin filament-based process&2&1&1\\ 
- \hline 
-GO:0031503&protein-containing complex localization&2&2&2\\ 
- \hline 
-GO:0032259&methylation&10&8&10\\ 
- \hline 
-GO:0033036&macromolecule localization&12&12&14\\ 
- \hline 
-GO:0035036&sperm-egg recognition&0&0&1\\ 
- \hline 
-GO:0042221&response to chemical&3&5&4\\ 
- \hline 
-GO:0042440&pigment metabolic process&5&7&3\\ 
- \hline 
-GO:0044085&cellular component biogenesis&2&3&2\\ 
- \hline 
-GO:0044237&cellular metabolic process&282&268&288\\ 
- \hline 
-GO:0044238&primary metabolic process&246&230&233\\ 
- \hline 
-GO:0044281&small molecule metabolic process&130&107&104\\ 
- \hline 
-GO:0044419&interspecies interaction between organisms&2&2&2\\ 
- \hline 
-GO:0048856&anatomical structure development&3&1&1\\ 
- \hline 
-GO:0048869&cellular developmental process&1&1&0\\ 
- \hline 
-GO:0048870&cell motility&0&0&2\\ 
- \hline 
-GO:0050789&regulation of biological process&52&47&66\\ 
- \hline 
-GO:0051234&establishment of localization&62&71&73\\ 
- \hline 
-GO:0051235&maintenance of location&1&2&2\\ 
- \hline 
-GO:0051606&detection of stimulus&1&0&2\\ 
- \hline 
-GO:0051641&cellular localization&15&16&16\\ 
- \hline 
-GO:0051716&cellular response to stimulus&10&9&13\\ 
- \hline 
-GO:0055114&oxidation-reduction process&8&11&13\\ 
- \hline 
-GO:0061919&process utilizing autophagic mechanism&1&2&2\\ 
- \hline 
-GO:0065008&regulation of biological quality&15&14&16\\ 
- \hline 
-GO:0065009&regulation of molecular function&5&6&8\\ 
- \hline 
-GO:0070085&glycosylation&3&3&3\\ 
- \hline 
-GO:0070988&demethylation&2&2&2\\ 
- \hline 
-GO:0071554&cell wall organization or biogenesis&0&1&1\\ 
- \hline 
-GO:0071704&organic substance metabolic process&294&278&288\\ 
- \hline 
-GO:0072376&protein activation cascade&0&0&1\\ 
- \hline 
-GO:0140029&exocytic process&1&1&1\\ 
- \hline 
-GO:1903046&meiotic cell cycle process&0&2&2\\ 
- \hline 
-GO:1990748&cellular detoxification&1&1&1\\ 
- \hline 
- \multicolumn{5}{| c |}{Cellular components}\\
- \hline
-GO:0005911&cell-cell junction&0&0&1\\ 
- \hline 
-GO:0005929&cilium&1&0&2\\ 
- \hline 
-GO:0008287&protein serine/threonine phosphatase complex&1&1&1\\ 
- \hline 
-GO:0019867&outer membrane&1&1&2\\ 
- \hline 
-GO:0031090&extracellular matrix&1&0&0\\ 
- \hline 
-GO:0031090&organelle membrane&4&5&0\\ 
- \hline 
-GO:0031224&intrinsic component of membrane&5&4&5\\ 
- \hline 
-GO:0031975&envelope&1&0&0\\ 
- \hline 
-GO:0032993&protein-DNA complex&1&2&3\\ 
- \hline 
-GO:0033061&DNA recombinase mediator complex&0&1&1\\ 
- \hline 
-GO:0034518&RNA cap binding complex&1&0&1\\ 
- \hline 
-GO:0036338&viral membrane&0&0&1\\ 
- \hline 
-GO:0042597&periplasmic space&1&0&1\\ 
- \hline 
-GO:0042995&cell projection&1&1&3\\ 
- \hline 
-GO:0043227&membrane-bounded organelle&9&9&9\\ 
- \hline 
-GO:0043228&non-membrane-bounded organelle&5&8&8\\ 
- \hline 
-GO:0043229&intracellular organelle&14&17&16\\ 
- \hline 
-GO:0043233&organelle lumen&3&2&3\\ 
- \hline 
-GO:0043235&receptor complex&1&1&1\\ 
- \hline 
-GO:0044424&intracellular part&119&112&128\\ 
- \hline 
-GO:0044441&ciliary part&3&1&4\\ 
- \hline 
-GO:0044446&intracellular organelle part&61&64&74\\ 
- \hline 
-GO:0044449&contractile fiber part&0&0&1\\ 
- \hline 
-GO:0044455&mitochondrial membrane part&4&2&3\\ 
- \hline 
-GO:0044459&plasma membrane part&8&5&8\\ 
- \hline 
-GO:0044461&bacterial-type flagellum part&0&0&2\\ 
- \hline 
-GO:0044462&external encapsulating structure part&0&0&1\\ 
- \hline 
-GO:0044463&cell projection part&3&1&6\\ 
- \hline 
-GO:0044815&DNA packaging complex&2&2&2\\ 
- \hline 
-GO:0070069&cytochrome complex&2&2&2\\ 
- \hline 
-GO:0097458&neuron part&1&0&0\\ 
- \hline 
-GO:0098796&membrane protein complex&35&25&32\\ 
- \hline 
-GO:0098805&whole membrane&1&2&2\\ 
- \hline 
-GO:0099023&tethering complex&2&2&2\\ 
- \hline 
-GO:0099081&supramolecular polymer&1&1&2\\ 
- \hline 
-GO:0120114&Sm-like protein family complex&5&2&4\\ 
- \hline 
-GO:1902494&catalytic complex&29&26&30\\ 
- \hline 
-GO:1990204&oxidoreductase complex&6&3&4\\ 
- \hline 
-GO:1990351&transporter complex&4&3&6\\ 
- \hline 
-GO:1990391&DNA repair complex&1&1&1\\ 
- \hline 
-GO:1990904&ribonucleoprotein complex&14&9&16\\ 
- \hline 
- \multicolumn{5}{| c |}{Molecular function}\\
-\hline
-GO:0001871&pattern binding&3&3&3\\ 
- \hline 
-GO:0003700&DNA-binding transcription factor activity&0&0&2\\ 
- \hline 
-GO:0003712&transcription coregulator activity&1&2&3\\ 
- \hline 
-GO:0004133&glycogen debranching enzyme activity&2&0&2\\ 
- \hline 
-GO:0005319&lipid transporter activity&2&2&2\\ 
- \hline 
-GO:0005326&neurotransmitter transporter activity&0&1&1\\ 
- \hline 
-GO:0005515&protein binding&24&25&31\\ 
- \hline 
-GO:0008144&drug binding&6&6&7\\ 
- \hline 
-GO:0008289&lipid binding&1&3&2\\ 
- \hline 
-GO:0008565&protein transporter activity&1&0&1\\ 
- \hline 
-GO:0009975&cyclase activity&1&2&0\\ 
- \hline 
-GO:0016491&oxidoreductase activity&92&72&90\\ 
- \hline 
-GO:0016530&metallochaperone activity&0&0&1\\ 
- \hline 
-GO:0016740&transferase activity&148&142&144\\ 
- \hline 
-GO:0016787&hydrolase activity&125&143&144\\ 
- \hline 
-GO:0016829&lyase activity&38&36&35\\ 
- \hline 
-GO:0016853&isomerase activity&23&19&23\\ 
- \hline 
-GO:0016874&ligase activity&40&32&33\\ 
- \hline 
-GO:0022857&transmembrane transporter activity&45&49&54\\ 
- \hline 
-GO:0030234&enzyme regulator activity&14&11&15\\ 
- \hline 
-GO:0030246&carbohydrate binding&4&5&4\\ 
- \hline 
-GO:0030545&receptor regulator activity&1&1&1\\ 
- \hline 
-GO:0032451&demethylase activity&1&1&1\\ 
- \hline 
-GO:0033218&amide binding&4&4&5\\ 
- \hline 
-GO:0036094&small molecule binding&21&21&22\\ 
- \hline 
-GO:0038023&signaling receptor activity&4&5&10\\ 
- \hline 
-GO:0043167&ion binding&29&30&32\\ 
- \hline 
-GO:0044877&protein-containing complex binding&4&2&3\\ 
- \hline 
-GO:0048037&cofactor binding&18&19&17\\ 
- \hline 
-GO:0050824&water binding&0&0&1\\ 
- \hline 
-GO:0051540&metal cluster binding&3&3&3\\ 
- \hline 
-GO:0060090&molecular adaptor activity&1&1&1\\ 
- \hline 
-GO:0061783&peptidoglycan muralytic activity&0&1&1\\ 
- \hline 
-GO:0072341&modified amino acid binding&1&2&2\\ 
- \hline 
-GO:0097159&organic cyclic compound binding&36&42&39\\ 
- \hline 
-GO:0097367&carbohydrate derivative binding&8&8&8\\ 
- \hline 
-GO:0140096&catalytic activity, acting on a protein&54&50&55\\ 
- \hline 
-GO:0140097&catalytic activity, acting on DNA&11&21&22\\ 
- \hline 
-GO:0140098&catalytic activity, acting on RNA&37&48&47\\ 
- \hline 
-GO:1901363&heterocyclic compound binding&36&42&39\\ 
- \hline 
-GO:1901567&fatty acid derivative binding&1&1&1\\ 
- \hline 
-GO:1901681&sulfur compound binding&3&3&3\\ 
- \hline 
-\end{longtable}
-
-\FloatBarrier
-
-\clearpage% Flush earlier floats (otherwise order might not be correct)
-\begin{landscape}% Landscape page
-    \centering % Center table
-
-%\begin{longtable}{ | p{2cm} | p{2cm} |p{2.5cm} | p{2cm} | p{2.5cm} |  p{2cm} | p{2cm} |}
-\begin{longtable}{ | c | c |c | c | c |  c | p{1.5cm} |}
-\caption{KS domains found per cluster and total number of contigs present.}\\
-\hline
-\label{tbl:KS}
-\textbf{Cluster ID}&\textit{G. a.}&\emph{G. c.}&\emph{G. l.}&\emph{G. p.}&\emph{G. h.}&\textbf{Total contigs}\\
- \hline 
- 988&6&40&29&24&31&130\\ % 988\_MMETSP0766\_Gambierdiscus-australes\_DN11896\_c0\_g2\_i1.p1.faa
- \hline 
-8866&3&24&14&24&16&81\\ %8866\_MMETSP0766\_Gambierdiscus-australes\_DN22301\_c0\_g2\_i1.p1.faa
- \hline 
-3681&7&14&16&9&12&58\\ %3681\_MMETSP0766\_Gambierdiscus-australes\_DN15885\_c0\_g1\_i1.p1.faa
- \hline 
-1921&3&10&6&4&6&29\\ %1921\_MMETSP0766\_Gambierdiscus-australes\_DN13038\_c0\_g1\_i1.p1.faa
- \hline 
-46550&3&4&1&8&5&21\\ %46550\_MMETSP0766\_Gambierdiscus-australes\_DN42196\_c9\_g13\_i1.p1.faa
- \hline 
-215601&0&4&1&8&5&18\\ %215601\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN18221\_c2\_g10\_i1.p1.faa
- \hline 
-360&1&4&3&3&4&15\\ %360\_MMETSP0766\_Gambierdiscus-australes\_DN10555\_c0\_g1\_i1.p1.faa
- \hline 
-15645&4&2&0&4&1&11\\%15645\_MMETSP0766\_Gambierdiscus-australes\_DN27800\_c0\_g2\_i1.p1.faa 
- \hline 
-132980&0&1&4&3&2&10\\ %132980\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN14854\_c1\_g5\_i1.p1.faa
- \hline 
-45086&1&3&1&1&3&9\\ %45086\_MMETSP0766\_Gambierdiscus-australes\_DN42104\_c9\_g9\_i1.p1.faa
- \hline 
-78009&0&2&2&3&2&9\\ %78009\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN12833\_c1\_g3\_i1.p1.faa
- \hline 
-38915&2&2&2&1&2&9\\ %38915\_MMETSP0766\_Gambierdiscus-australes\_DN41569\_c0\_g1\_i1.p1.faa
- \hline 
-109763&0&2&0&5&1&8\\% 109763\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN13976\_c1\_g2\_i1.p1.faa 
- \hline 
-37859&2&2&1&2&1&8\\ %37859\_MMETSP0766\_Gambierdiscus-australes\_DN41388\_c0\_g1\_i1.p1.faa
- \hline 
-24847&1&1&1&3&2&8\\ %24847\_MMETSP0766\_Gambierdiscus-australes\_DN35413\_c0\_g1\_i1.p1.faa
- \hline 
-162333&0&2&2&2&1&7\\ %162333\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN15967\_c2\_g7\_i2.p1.faa
- \hline 
-52333&1&2&1&1&1&6\\ %52333\_MMETSP0766\_Gambierdiscus-australes\_DN44912\_c0\_g1\_i1.p1.faa
- \hline 
-136782&0&1&2&1&2&6\\%136782\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN15006\_c0\_g1\_i1.p1.faa 
- \hline 
-301971&0&0&2&2&2&6\\%301971\_HG4\_Gambierdiscus-lapillus\_DN38722\_c0\_g2\_i1.p1.faa 
- \hline 
-152898&0&3&1&1&0&5\\%152898\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN15616\_c0\_g5\_i1.p1.faa 
- \hline 
-117472&0&2&1&1&1&5\\%117472\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN14266\_c3\_g6\_i1.p1.faa 
- \hline 
-196360&0&2&1&1&1&5\\%196360\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN17371\_c0\_g1\_i1.p1.faa 
- \hline 
-145445&0&1&1&2&1&5\\%145445\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN15339\_c3\_g6\_i2.p1.faa 
- \hline 
-131919&0&1&0&1&3&5\\%131919\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN14815\_c2\_g4\_i1.p1.faa 
- \hline 
-59207&1&1&1&1&1&5\\%59207\_MMETSP0766\_Gambierdiscus-australes\_DN56703\_c0\_g1\_i1.p1.faa 
- \hline 
-31669&1&1&1&1&1&5\\%31669\_MMETSP0766\_Gambierdiscus-australes\_DN39295\_c0\_g3\_i1.p1.faa 
- \hline 
-55678&1&1&1&1&1&5\\%55678\_MMETSP0766\_Gambierdiscus-australes\_DN50627\_c0\_g1\_i1.p1.faa 
- \hline 
-40462&1&1&1&1&1&5\\ %40462\_MMETSP0766\_Gambierdiscus-australes\_DN41785\_c0\_g5\_i1.p1.faa
- \hline 
-46899&1&1&1&1&1&5\\%46899\_MMETSP0766\_Gambierdiscus-australes\_DN42219\_c6\_g11\_i1.p1.faa 
- \hline 
-37886&1&1&1&1&1&5\\%37886\_MMETSP0766\_Gambierdiscus-australes\_DN41392\_c1\_g1\_i1.p1.faa 
- \hline 
-475329&0&0&0&4&1&5\\ %475329\_CG15\_Gambierdiscus-polynesiensis\_DN39159\_c1\_g2\_i1.p1.faa
- \hline 
-162320\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN15967\_c2\_g1\_i2.p1.faa&0&3&0&1&0&4\\ 
- \hline 
-21082\_MMETSP0766\_Gambierdiscus-australes\_DN32692\_c0\_g1\_i1.p1.faa&0&1&0&2&1&4\\ 
- \hline 
-195242\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN17326\_c2\_g5\_i1.p1.faa&0&1&1&1&1&4\\ 
- \hline 
-83891\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN13035\_c1\_g4\_i1.p1.faa&0&1&1&1&1&4\\ 
- \hline 
-99486\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN13588\_c0\_g3\_i1.p1.faa&0&1&1&1&1&4\\ 
- \hline 
-328911\_HG4\_Gambierdiscus-lapillus\_DN41464\_c0\_g1\_i1.p1.faa&0&0&1&3&0&4\\ 
- \hline 
-643864\_HG5\_Gambierdiscus-silvae\_DN47931\_c1\_g3\_i1.p2.faa&0&0&0&0&4&4\\ 
- \hline 
-186957\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN16979\_c3\_g3\_i1.p1.faa&0&1&1&1&0&3\\ 
- \hline 
-193820\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN17268\_c1\_g8\_i4.p1.faa&0&1&1&1&0&3\\ 
- \hline 
-147284\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN15408\_c1\_g3\_i2.p1.faa&0&1&1&1&0&3\\ 
- \hline 
-116539\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN14227\_c2\_g1\_i4.p1.faa&0&1&2&0&0&3\\ 
- \hline 
-242595\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN9176\_c0\_g1\_i3.p1.faa&0&1&2&0&0&3\\ 
- \hline 
-524928\_CG15\_Gambierdiscus-polynesiensis\_DN43543\_c1\_g1\_i1.p1.faa&0&0&0&3&0&3\\ 
- \hline 
-1040\_MMETSP0766\_Gambierdiscus-australes\_DN11947\_c0\_g1\_i1.p1.faa&1&0&0&0&2&3\\ 
- \hline 
-38402\_MMETSP0766\_Gambierdiscus-australes\_DN41494\_c1\_g1\_i3.p1.faa&2&0&1&0&0&3\\ 
- \hline 
-154624\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN15679\_c0\_g6\_i1.p1.faa&0&2&0&0&0&2\\ 
- \hline 
-63665\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN10182\_c0\_g1\_i2.p1.faa&0&2&0&0&0&2\\ 
- \hline 
-205876\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN17803\_c0\_g4\_i1.p1.faa&0&2&0&0&0&2\\ 
- \hline 
-224239\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN18618\_c3\_g6\_i1.p1.faa&0&2&0&0&0&2\\ 
- \hline 
-196786\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN17387\_c2\_g2\_i1.p1.faa&0&1&0&1&0&2\\ 
- \hline 
-131133\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN14782\_c2\_g4\_i3.p1.faa&0&1&0&0&1&2\\ 
- \hline 
-19133\_MMETSP0766\_Gambierdiscus-australes\_DN30780\_c0\_g2\_i1.p1.faa&1&1&0&0&0&2\\ 
- \hline 
-37007\_MMETSP0766\_Gambierdiscus-australes\_DN41205\_c1\_g7\_i1.p1.faa&1&1&0&0&0&2\\ 
- \hline 
-424979\_CG15\_Gambierdiscus-polynesiensis\_DN34166\_c0\_g9\_i1.p1.faa&0&0&0&2&0&2\\ 
- \hline 
-358554\_CG15\_Gambierdiscus-polynesiensis\_DN15070\_c0\_g1\_i1.p2.faa&0&0&0&2&0&2\\ 
- \hline 
-408901\_CG15\_Gambierdiscus-polynesiensis\_DN32288\_c2\_g1\_i1.p1.faa&0&0&0&2&0&2\\ 
- \hline 
-479997\_CG15\_Gambierdiscus-polynesiensis\_DN39607\_c0\_g2\_i1.p1.faa&0&0&0&1&1&2\\ 
- \hline 
-485470\_CG15\_Gambierdiscus-polynesiensis\_DN40097\_c0\_g1\_i2.p1.faa&0&0&0&1&1&2\\ 
- \hline 
-258909\_HG4\_Gambierdiscus-lapillus\_DN22432\_c0\_g1\_i2.p1.faa&0&0&0&1&1&2\\ 
- \hline 
-263811\_HG4\_Gambierdiscus-lapillus\_DN25138\_c0\_g1\_i1.p1.faa&0&0&1&0&1&2\\ 
- \hline 
-319034\_HG4\_Gambierdiscus-lapillus\_DN40675\_c3\_g1\_i2.p1.faa&0&0&1&0&1&2\\ 
- \hline 
-319505\_HG4\_Gambierdiscus-lapillus\_DN40711\_c1\_g8\_i1.p1.faa&0&0&1&0&1&2\\ 
- \hline 
-1041\_MMETSP0766\_Gambierdiscus-australes\_DN11947\_c0\_g2\_i1.p1.faa&1&0&0&0&1&2\\ 
- \hline 
-27066\_MMETSP0766\_Gambierdiscus-australes\_DN36729\_c0\_g1\_i1.p2.faa&1&0&0&0&1&2\\ 
- \hline 
-274389\_HG4\_Gambierdiscus-lapillus\_DN30113\_c0\_g1\_i2.p1.faa&0&0&2&0&0&2\\ 
- \hline 
-46553\_MMETSP0766\_Gambierdiscus-australes\_DN42196\_c9\_g4\_i1.p1.faa&2&0&0&0&0&2\\ 
- \hline 
-148669\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN15462\_c1\_g7\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-234513\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN23482\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-63664\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN10182\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-72166\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN1258\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-210660\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN18011\_c6\_g4\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-88291\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN13188\_c2\_g8\_i2.p2.faa&0&1&0&0&0&1\\ 
- \hline 
-235070\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN25711\_c0\_g1\_i1.p2.faa&0&1&0&0&0&1\\ 
- \hline 
-236919\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN33286\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-234708\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN24051\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-75892\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN12749\_c1\_g2\_i3.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-207498\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN17871\_c4\_g9\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-234298\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN22896\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-84448\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN13053\_c3\_g3\_i4.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-104611\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN13776\_c4\_g7\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-242597\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN9176\_c0\_g2\_i2.p2.faa&0&1&0&0&0&1\\ 
- \hline 
-233698\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN2009\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-115505\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN14189\_c2\_g12\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-238946\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN4887\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-208524\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN17914\_c1\_g3\_i4.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-131131\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN14782\_c2\_g4\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-215621\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN18221\_c2\_g6\_i3.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-225926\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN18701\_c1\_g3\_i2.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-239297\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN5390\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-233616\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN19857\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-208525\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN17914\_c1\_g3\_i5.p2.faa&0&1&0&0&0&1\\ 
- \hline 
-236171\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN30145\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-241217\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN7872\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-212813\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN18098\_c3\_g3\_i2.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-147705\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN15422\_c1\_g3\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-242594\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN9176\_c0\_g1\_i2.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-86631\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN13131\_c1\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-238247\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN38343\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-212812\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN18098\_c3\_g3\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-211703\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN18052\_c3\_g5\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-239230\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN5288\_c0\_g1\_i1.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-103957\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN13754\_c3\_g2\_i4.p1.faa&0&1&0&0&0&1\\ 
- \hline 
-462243\_CG15\_Gambierdiscus-polynesiensis\_DN37930\_c0\_g1\_i2.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-355979\_CG15\_Gambierdiscus-polynesiensis\_DN10471\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-524904\_CG15\_Gambierdiscus-polynesiensis\_DN43540\_c1\_g1\_i2.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-471036\_CG15\_Gambierdiscus-polynesiensis\_DN38733\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-527904\_CG15\_Gambierdiscus-polynesiensis\_DN43803\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-494332\_CG15\_Gambierdiscus-polynesiensis\_DN40908\_c1\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-475327\_CG15\_Gambierdiscus-polynesiensis\_DN39159\_c1\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-446377\_CG15\_Gambierdiscus-polynesiensis\_DN36357\_c3\_g7\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-415511\_CG15\_Gambierdiscus-polynesiensis\_DN33112\_c0\_g1\_i3.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-524930\_CG15\_Gambierdiscus-polynesiensis\_DN43543\_c1\_g1\_i4.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-500254\_CG15\_Gambierdiscus-polynesiensis\_DN41444\_c1\_g3\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-408903\_CG15\_Gambierdiscus-polynesiensis\_DN32288\_c3\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-211708\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN18052\_c3\_g5\_i7.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-524905\_CG15\_Gambierdiscus-polynesiensis\_DN43540\_c1\_g1\_i3.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-528784\_CG15\_Gambierdiscus-polynesiensis\_DN47453\_c0\_g1\_i1.p3.faa&0&0&0&1&0&1\\ 
- \hline 
-528223\_CG15\_Gambierdiscus-polynesiensis\_DN44935\_c0\_g1\_i1.p2.faa&0&0&0&1&0&1\\ 
- \hline 
-362866\_CG15\_Gambierdiscus-polynesiensis\_DN18821\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-408898\_CG15\_Gambierdiscus-polynesiensis\_DN32288\_c1\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-473656\_CG15\_Gambierdiscus-polynesiensis\_DN39000\_c2\_g2\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-505619\_CG15\_Gambierdiscus-polynesiensis\_DN41913\_c1\_g3\_i1.p2.faa&0&0&0&1&0&1\\ 
- \hline 
-357110\_CG15\_Gambierdiscus-polynesiensis\_DN13123\_c0\_g1\_i2.p2.faa&0&0&0&1&0&1\\ 
- \hline 
-529123\_CG15\_Gambierdiscus-polynesiensis\_DN48937\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-419597\_CG15\_Gambierdiscus-polynesiensis\_DN33575\_c2\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-486622\_CG15\_Gambierdiscus-polynesiensis\_DN40207\_c2\_g2\_i2.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-518712\_CG15\_Gambierdiscus-polynesiensis\_DN43045\_c0\_g2\_i6.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-505617\_CG15\_Gambierdiscus-polynesiensis\_DN41913\_c1\_g2\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-419857\_CG15\_Gambierdiscus-polynesiensis\_DN33604\_c1\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-319033\_HG4\_Gambierdiscus-lapillus\_DN40675\_c3\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-505612\_CG15\_Gambierdiscus-polynesiensis\_DN41913\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-505621\_CG15\_Gambierdiscus-polynesiensis\_DN41913\_c1\_g5\_i1.p2.faa&0&0&0&1&0&1\\ 
- \hline 
-368243\_CG15\_Gambierdiscus-polynesiensis\_DN21805\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-531066\_CG15\_Gambierdiscus-polynesiensis\_DN7198\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-411779\_CG15\_Gambierdiscus-polynesiensis\_DN32643\_c5\_g2\_i3.p2.faa&0&0&0&1&0&1\\ 
- \hline 
-529709\_CG15\_Gambierdiscus-polynesiensis\_DN51840\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-424815\_CG15\_Gambierdiscus-polynesiensis\_DN34144\_c0\_g1\_i6.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-388829\_CG15\_Gambierdiscus-polynesiensis\_DN29147\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-528991\_CG15\_Gambierdiscus-polynesiensis\_DN4849\_c0\_g1\_i1.p2.faa&0&0&0&1&0&1\\ 
- \hline 
-529886\_CG15\_Gambierdiscus-polynesiensis\_DN52795\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-517572\_CG15\_Gambierdiscus-polynesiensis\_DN42942\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-162319\_UTSMER9A3\_Gambierdiscus-carpenteri\_DN15967\_c2\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-486374\_CG15\_Gambierdiscus-polynesiensis\_DN40177\_c0\_g2\_i3.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-424977\_CG15\_Gambierdiscus-polynesiensis\_DN34166\_c0\_g6\_i1.p2.faa&0&0&0&1&0&1\\ 
- \hline 
-480000\_CG15\_Gambierdiscus-polynesiensis\_DN39607\_c0\_g2\_i4.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-524933\_CG15\_Gambierdiscus-polynesiensis\_DN43543\_c1\_g1\_i7.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-529340\_CG15\_Gambierdiscus-polynesiensis\_DN50363\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-382787\_CG15\_Gambierdiscus-polynesiensis\_DN27509\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-455767\_CG15\_Gambierdiscus-polynesiensis\_DN37290\_c0\_g4\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-454667\_CG15\_Gambierdiscus-polynesiensis\_DN37192\_c1\_g3\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-505616\_CG15\_Gambierdiscus-polynesiensis\_DN41913\_c1\_g1\_i3.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-408904\_CG15\_Gambierdiscus-polynesiensis\_DN32288\_c3\_g2\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-519735\_CG15\_Gambierdiscus-polynesiensis\_DN43127\_c3\_g5\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-524932\_CG15\_Gambierdiscus-polynesiensis\_DN43543\_c1\_g1\_i6.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-419608\_CG15\_Gambierdiscus-polynesiensis\_DN33575\_c2\_g2\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-489214\_CG15\_Gambierdiscus-polynesiensis\_DN40447\_c0\_g1\_i2.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-407098\_CG15\_Gambierdiscus-polynesiensis\_DN32057\_c0\_g1\_i2.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-486620\_CG15\_Gambierdiscus-polynesiensis\_DN40207\_c2\_g1\_i2.p2.faa&0&0&0&1&0&1\\ 
- \hline 
-529847\_CG15\_Gambierdiscus-polynesiensis\_DN52688\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-355910\_CG15\_Gambierdiscus-polynesiensis\_DN1036\_c0\_g1\_i1.p2.faa&0&0&0&1&0&1\\ 
- \hline 
-419599\_CG15\_Gambierdiscus-polynesiensis\_DN33575\_c2\_g1\_i11.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-368244\_CG15\_Gambierdiscus-polynesiensis\_DN21805\_c0\_g2\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-528301\_CG15\_Gambierdiscus-polynesiensis\_DN45312\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-431157\_CG15\_Gambierdiscus-polynesiensis\_DN34812\_c2\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-429838\_CG15\_Gambierdiscus-polynesiensis\_DN3467\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-485799\_CG15\_Gambierdiscus-polynesiensis\_DN40132\_c0\_g3\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-449384\_CG15\_Gambierdiscus-polynesiensis\_DN36673\_c0\_g1\_i3.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-530384\_CG15\_Gambierdiscus-polynesiensis\_DN55090\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-357109\_CG15\_Gambierdiscus-polynesiensis\_DN13123\_c0\_g1\_i1.p2.faa&0&0&0&1&0&1\\ 
- \hline 
-466543\_CG15\_Gambierdiscus-polynesiensis\_DN38313\_c1\_g3\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-367731\_CG15\_Gambierdiscus-polynesiensis\_DN21547\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-438506\_CG15\_Gambierdiscus-polynesiensis\_DN35575\_c0\_g1\_i7.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-491823\_CG15\_Gambierdiscus-polynesiensis\_DN40690\_c4\_g5\_i2.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-530249\_CG15\_Gambierdiscus-polynesiensis\_DN54681\_c0\_g1\_i1.p1.faa&0&0&0&1&0&1\\ 
- \hline 
-661643\_HG5\_Gambierdiscus-silvae\_DN57114\_c0\_g1\_i1.p1.faa&0&0&0&0&1&1\\ 
- \hline 
-601478\_HG5\_Gambierdiscus-silvae\_DN43780\_c7\_g8\_i1.p1.faa&0&0&0&0&1&1\\ 
- \hline 
-567939\_HG5\_Gambierdiscus-silvae\_DN35530\_c0\_g3\_i1.p1.faa&0&0&0&0&1&1\\ 
- \hline 
-593688\_HG5\_Gambierdiscus-silvae\_DN42661\_c0\_g1\_i1.p1.faa&0&0&0&0&1&1\\ 
- \hline 
-540524\_HG5\_Gambierdiscus-silvae\_DN20879\_c0\_g2\_i1.p1.faa&0&0&0&0&1&1\\ 
- \hline 
-649671\_HG5\_Gambierdiscus-silvae\_DN48408\_c0\_g1\_i4.p1.faa&0&0&0&0&1&1\\ 
- \hline 
-620146\_HG5\_Gambierdiscus-silvae\_DN45801\_c1\_g1\_i1.p2.faa&0&0&0&0&1&1\\ 
- \hline 
-589550\_HG5\_Gambierdiscus-silvae\_DN41996\_c3\_g12\_i1.p1.faa&0&0&0&0&1&1\\ 
- \hline 
-643868\_HG5\_Gambierdiscus-silvae\_DN47931\_c1\_g3\_i5.p1.faa&0&0&0&0&1&1\\ 
- \hline 
-657026\_HG5\_Gambierdiscus-silvae\_DN48988\_c0\_g3\_i1.p1.faa&0&0&0&0&1&1\\ 
- \hline 
-589562\_HG5\_Gambierdiscus-silvae\_DN41996\_c3\_g5\_i1.p2.faa&0&0&0&0&1&1\\ 
- \hline 
-608846\_HG5\_Gambierdiscus-silvae\_DN44648\_c2\_g1\_i1.p1.faa&0&0&0&0&1&1\\ 
- \hline 
-593690\_HG5\_Gambierdiscus-silvae\_DN42661\_c0\_g2\_i3.p1.faa&0&0&0&0&1&1\\ 
- \hline 
-550256\_HG5\_Gambierdiscus-silvae\_DN27602\_c0\_g2\_i1.p1.faa&0&0&0&0&1&1\\ 
- \hline 
-608853\_HG5\_Gambierdiscus-silvae\_DN44648\_c2\_g6\_i1.p1.faa&0&0&0&0&1&1\\ 
- \hline 
-559711\_HG5\_Gambierdiscus-silvae\_DN32102\_c0\_g1\_i2.p1.faa&0&0&0&0&1&1\\ 
- \hline 
-575231\_HG5\_Gambierdiscus-silvae\_DN38322\_c1\_g2\_i1.p1.faa&0&0&0&0&1&1\\ 
- \hline 
-591087\_HG5\_Gambierdiscus-silvae\_DN42232\_c1\_g4\_i1.p2.faa&0&0&0&0&1&1\\ 
- \hline 
-657027\_HG5\_Gambierdiscus-silvae\_DN48988\_c0\_g3\_i2.p1.faa&0&0&0&0&1&1\\ 
- \hline 
-540525\_HG5\_Gambierdiscus-silvae\_DN20879\_c0\_g3\_i1.p1.faa&0&0&0&0&1&1\\ 
- \hline 
-601479\_HG5\_Gambierdiscus-silvae\_DN43780\_c7\_g9\_i1.p1.faa&0&0&0&0&1&1\\ 
- \hline 
-589619\_HG5\_Gambierdiscus-silvae\_DN42009\_c0\_g1\_i3.p1.faa&0&0&0&0&1&1\\ 
- \hline 
-596728\_HG5\_Gambierdiscus-silvae\_DN43120\_c1\_g4\_i4.p1.faa&0&0&0&0&1&1\\ 
- \hline 
-254977\_HG4\_Gambierdiscus-lapillus\_DN19871\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-244474\_HG4\_Gambierdiscus-lapillus\_DN10661\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-354441\_HG4\_Gambierdiscus-lapillus\_DN7536\_c0\_g1\_i1.p2.faa&0&0&1&0&0&1\\ 
- \hline 
-277633\_HG4\_Gambierdiscus-lapillus\_DN31491\_c0\_g2\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-312699\_HG4\_Gambierdiscus-lapillus\_DN40082\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-319501\_HG4\_Gambierdiscus-lapillus\_DN40711\_c1\_g5\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-244476\_HG4\_Gambierdiscus-lapillus\_DN10661\_c0\_g2\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-355588\_HG4\_Gambierdiscus-lapillus\_DN9793\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-351360\_HG4\_Gambierdiscus-lapillus\_DN46619\_c0\_g1\_i1.p2.faa&0&0&1&0&0&1\\ 
- \hline 
-319490\_HG4\_Gambierdiscus-lapillus\_DN40711\_c1\_g10\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-249529\_HG4\_Gambierdiscus-lapillus\_DN15767\_c0\_g4\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-350445\_HG4\_Gambierdiscus-lapillus\_DN4403\_c0\_g2\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-249527\_HG4\_Gambierdiscus-lapillus\_DN15767\_c0\_g2\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-247959\_HG4\_Gambierdiscus-lapillus\_DN14263\_c0\_g2\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-354628\_HG4\_Gambierdiscus-lapillus\_DN8017\_c0\_g2\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-327310\_HG4\_Gambierdiscus-lapillus\_DN41349\_c0\_g1\_i2.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-245201\_HG4\_Gambierdiscus-lapillus\_DN11411\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-328839\_HG4\_Gambierdiscus-lapillus\_DN41459\_c1\_g5\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-332373\_HG4\_Gambierdiscus-lapillus\_DN41718\_c2\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-310068\_HG4\_Gambierdiscus-lapillus\_DN39797\_c2\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-355491\_HG4\_Gambierdiscus-lapillus\_DN9601\_c0\_g2\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-264742\_HG4\_Gambierdiscus-lapillus\_DN25642\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-310329\_HG4\_Gambierdiscus-lapillus\_DN39821\_c0\_g4\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-351275\_HG4\_Gambierdiscus-lapillus\_DN46352\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-298246\_HG4\_Gambierdiscus-lapillus\_DN38038\_c1\_g5\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-312700\_HG4\_Gambierdiscus-lapillus\_DN40082\_c0\_g2\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-245202\_HG4\_Gambierdiscus-lapillus\_DN11411\_c0\_g1\_i2.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-270811\_HG4\_Gambierdiscus-lapillus\_DN28598\_c0\_g3\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-311957\_HG4\_Gambierdiscus-lapillus\_DN40004\_c3\_g1\_i2.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-270397\_HG4\_Gambierdiscus-lapillus\_DN2840\_c0\_g1\_i2.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-351199\_HG4\_Gambierdiscus-lapillus\_DN46156\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-308197\_HG4\_Gambierdiscus-lapillus\_DN39584\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-354586\_HG4\_Gambierdiscus-lapillus\_DN792\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-350059\_HG4\_Gambierdiscus-lapillus\_DN43172\_c0\_g1\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-264744\_HG4\_Gambierdiscus-lapillus\_DN25642\_c0\_g2\_i1.p1.faa&0&0&1&0&0&1\\ 
- \hline 
-27277\_MMETSP0766\_Gambierdiscus-australes\_DN36847\_c0\_g3\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-38401\_MMETSP0766\_Gambierdiscus-australes\_DN41494\_c1\_g1\_i2.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-14801\_MMETSP0766\_Gambierdiscus-australes\_DN27057\_c0\_g3\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-38397\_MMETSP0766\_Gambierdiscus-australes\_DN41494\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-19134\_MMETSP0766\_Gambierdiscus-australes\_DN30780\_c0\_g3\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-33030\_MMETSP0766\_Gambierdiscus-australes\_DN39895\_c0\_g4\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-35041\_MMETSP0766\_Gambierdiscus-australes\_DN40638\_c0\_g8\_i1.p2.faa&1&0&0&0&0&1\\ 
- \hline 
-40251\_MMETSP0766\_Gambierdiscus-australes\_DN41766\_c4\_g24\_i2.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-18687\_MMETSP0766\_Gambierdiscus-australes\_DN30415\_c0\_g4\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-18486\_MMETSP0766\_Gambierdiscus-australes\_DN30257\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-61098\_MMETSP0766\_Gambierdiscus-australes\_DN6084\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-36998\_MMETSP0766\_Gambierdiscus-australes\_DN41205\_c1\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-13967\_MMETSP0766\_Gambierdiscus-australes\_DN26272\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-19163\_MMETSP0766\_Gambierdiscus-australes\_DN30800\_c0\_g7\_i1.p2.faa&1&0&0&0&0&1\\ 
- \hline 
-35033\_MMETSP0766\_Gambierdiscus-australes\_DN40638\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-18548\_MMETSP0766\_Gambierdiscus-australes\_DN30296\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-36992\_MMETSP0766\_Gambierdiscus-australes\_DN41205\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-36641\_MMETSP0766\_Gambierdiscus-australes\_DN41111\_c0\_g2\_i2.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-37002\_MMETSP0766\_Gambierdiscus-australes\_DN41205\_c1\_g4\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-28106\_MMETSP0766\_Gambierdiscus-australes\_DN37278\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-72\_MMETSP0766\_Gambierdiscus-australes\_DN10092\_c0\_g1\_i1.p2.faa&1&0&0&0&0&1\\ 
- \hline 
-15646\_MMETSP0766\_Gambierdiscus-australes\_DN27800\_c0\_g3\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-27067\_MMETSP0766\_Gambierdiscus-australes\_DN36729\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-24849\_MMETSP0766\_Gambierdiscus-australes\_DN35413\_c0\_g3\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-35035\_MMETSP0766\_Gambierdiscus-australes\_DN40638\_c0\_g3\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-35352\_MMETSP0766\_Gambierdiscus-australes\_DN40756\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-13100\_MMETSP0766\_Gambierdiscus-australes\_DN25567\_c0\_g3\_i1.p2.faa&1&0&0&0&0&1\\ 
- \hline 
-38396\_MMETSP0766\_Gambierdiscus-australes\_DN41494\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-27068\_MMETSP0766\_Gambierdiscus-australes\_DN36729\_c0\_g3\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-35359\_MMETSP0766\_Gambierdiscus-australes\_DN40756\_c1\_g4\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-30964\_MMETSP0766\_Gambierdiscus-australes\_DN38922\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-30406\_MMETSP0766\_Gambierdiscus-australes\_DN38631\_c0\_g4\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-36994\_MMETSP0766\_Gambierdiscus-australes\_DN41205\_c0\_g3\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-13103\_MMETSP0766\_Gambierdiscus-australes\_DN25567\_c0\_g6\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-18485\_MMETSP0766\_Gambierdiscus-australes\_DN30257\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-23610\_MMETSP0766\_Gambierdiscus-australes\_DN34624\_c0\_g3\_i1.p2.faa&1&0&0&0&0&1\\ 
- \hline 
-18487\_MMETSP0766\_Gambierdiscus-australes\_DN30257\_c0\_g2\_i2.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-46548\_MMETSP0766\_Gambierdiscus-australes\_DN42196\_c9\_g10\_i1.p2.faa&1&0&0&0&0&1\\ 
- \hline 
-15765\_MMETSP0766\_Gambierdiscus-australes\_DN27921\_c0\_g3\_i1.p2.faa&1&0&0&0&0&1\\ 
- \hline 
-30418\_MMETSP0766\_Gambierdiscus-australes\_DN38640\_c0\_g5\_i1.p2.faa&1&0&0&0&0&1\\ 
- \hline 
-17953\_MMETSP0766\_Gambierdiscus-australes\_DN29796\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-37006\_MMETSP0766\_Gambierdiscus-australes\_DN41205\_c1\_g6\_i1.p2.faa&1&0&0&0&0&1\\ 
- \hline 
-13101\_MMETSP0766\_Gambierdiscus-australes\_DN25567\_c0\_g4\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-46559\_MMETSP0766\_Gambierdiscus-australes\_DN42196\_c9\_g6\_i3.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-17396\_MMETSP0766\_Gambierdiscus-australes\_DN2924\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-18547\_MMETSP0766\_Gambierdiscus-australes\_DN30296\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-7245\_MMETSP0766\_Gambierdiscus-australes\_DN20901\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-17216\_MMETSP0766\_Gambierdiscus-australes\_DN29099\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-30404\_MMETSP0766\_Gambierdiscus-australes\_DN38631\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-40250\_MMETSP0766\_Gambierdiscus-australes\_DN41766\_c4\_g23\_i1.p2.faa&1&0&0&0&0&1\\ 
- \hline 
-41420\_MMETSP0766\_Gambierdiscus-australes\_DN41862\_c2\_g4\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-26875\_MMETSP0766\_Gambierdiscus-australes\_DN36626\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-28107\_MMETSP0766\_Gambierdiscus-australes\_DN37278\_c0\_g4\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-14799\_MMETSP0766\_Gambierdiscus-australes\_DN27057\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-37863\_MMETSP0766\_Gambierdiscus-australes\_DN41388\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-38400\_MMETSP0766\_Gambierdiscus-australes\_DN41494\_c1\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-23609\_MMETSP0766\_Gambierdiscus-australes\_DN34624\_c0\_g2\_i1.p2.faa&1&0&0&0&0&1\\ 
- \hline 
-10084\_MMETSP0766\_Gambierdiscus-australes\_DN23190\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-17955\_MMETSP0766\_Gambierdiscus-australes\_DN29796\_c0\_g3\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-13099\_MMETSP0766\_Gambierdiscus-australes\_DN25567\_c0\_g2\_i1.p2.faa&1&0&0&0&0&1\\ 
- \hline 
-37003\_MMETSP0766\_Gambierdiscus-australes\_DN41205\_c1\_g4\_i2.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-42718\_MMETSP0766\_Gambierdiscus-australes\_DN41959\_c8\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-52639\_MMETSP0766\_Gambierdiscus-australes\_DN45380\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-38398\_MMETSP0766\_Gambierdiscus-australes\_DN41494\_c0\_g3\_i1.p2.faa&1&0&0&0&0&1\\ 
- \hline 
-28109\_MMETSP0766\_Gambierdiscus-australes\_DN37278\_c0\_g6\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-24850\_MMETSP0766\_Gambierdiscus-australes\_DN35413\_c0\_g4\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-35358\_MMETSP0766\_Gambierdiscus-australes\_DN40756\_c1\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-15764\_MMETSP0766\_Gambierdiscus-australes\_DN27921\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-28108\_MMETSP0766\_Gambierdiscus-australes\_DN37278\_c0\_g5\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-18688\_MMETSP0766\_Gambierdiscus-australes\_DN30415\_c0\_g5\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-35357\_MMETSP0766\_Gambierdiscus-australes\_DN40756\_c0\_g5\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-35353\_MMETSP0766\_Gambierdiscus-australes\_DN40756\_c0\_g1\_i3.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-37009\_MMETSP0766\_Gambierdiscus-australes\_DN41205\_c1\_g9\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-15763\_MMETSP0766\_Gambierdiscus-australes\_DN27921\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-41417\_MMETSP0766\_Gambierdiscus-australes\_DN41862\_c2\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-28600\_MMETSP0766\_Gambierdiscus-australes\_DN37530\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-7400\_MMETSP0766\_Gambierdiscus-australes\_DN21004\_c0\_g1\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-35356\_MMETSP0766\_Gambierdiscus-australes\_DN40756\_c0\_g4\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-30416\_MMETSP0766\_Gambierdiscus-australes\_DN38640\_c0\_g3\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-18686\_MMETSP0766\_Gambierdiscus-australes\_DN30415\_c0\_g2\_i1.p1.faa&1&0&0&0&0&1\\ 
- \hline 
-16842\_MMETSP0766\_Gambierdiscus-australes\_DN28731\_c0\_g3\_i1.p2.faa&1&0&0&0&0&1\\ 
- \hline 
-\end{longtable}
-
-\end{landscape}
 \clearpage% Flush page
 
 \newpage

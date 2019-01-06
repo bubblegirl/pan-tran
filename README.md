@@ -1,4 +1,7 @@
 # pan-tran
+
+For chapter 5 of PhD please redirtect to subdirectory `ch5`
+
 Work flow 
 
 

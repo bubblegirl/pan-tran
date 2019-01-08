@@ -1,12 +1,17 @@
 # ALK PhD chapter 5
 
-* [Work dir on HPC:] 
-	/shared/homes/125155/pant-transcriptomes/re-run-wo-digi/Feb18_all-AA-clust/OMCL/no-secondary-clust/cluster-analysis
-* [sub-dirs:]
+* Work dir on HPC: /shared/homes/125155/pant-transcriptomes/re-run-wo-digi/Feb18_all-AA-clust/OMCL/no-secondary-clust/cluster-analysis
+
+* sub-dirs:
+
 	cores
+
 	unique
+
 	specis-gosum 
+
 	pks
+
 	dinoSL
 
 ## 1. get-homologs

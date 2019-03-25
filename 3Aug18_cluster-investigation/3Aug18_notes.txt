@@ -234,3 +234,12 @@ runBlast.pl -b p -f /shared/homes/125155/pant-transcriptomes/re-run-wo-digi/Feb1
 /shared/homes/125155/pant-transcriptomes/re-run-wo-digi/old-indiv-files-run/HG5-Gambierdiscus-sivae_comb.1.fastq.gz-assembly.fasta_cdhit.fasta.transdecoder.pep
 /shared/homes/125155/pant-transcriptomes/re-run-wo-digi/old-indiv-files-run/MMETSP0766_2-Gambierdiscus-australes-CAWD149.1.fastq.gz.forward_paired.fq.gz-assembly.fasta_cdhit.fasta.transdecoder.pep													
 /shared/homes/125155/pant-transcriptomes/re-run-wo-digi/old-indiv-files-run/UTSMER9A3_Gambierdiscus-carpenteri_comb.1.fastq.gz-assembly.fasta_cdhit.fasta.transdecoder.pep
+
+========
+Mar19 revisons
+work dir: /shared/homes/125155/pant-transcriptomes/Mar19/
+
+1. get_hom-est /get_hom-est
+
+2. get_hom with supertranscripts /supertranscripts
+

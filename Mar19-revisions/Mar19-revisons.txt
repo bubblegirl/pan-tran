@@ -1,0 +1,14 @@
+work dir: /shared/homes/125155/pant-transcriptomes/Mar19/
+
+1. get_hom-est /get_hom-est
+- use assemblies from BUSCO or w/o diginorm
+- 1_gethom-est_OMCL.sh
+
+2. get_hom with supertranscripts /supertranscripts
+	/1-processing
+- nametag.py
+- pep-to-get-hom.py
+- transdecoder.sh
+	/2B-get_hom
+- get-hom_OMCL.sh
+	/3-dinoSL
